@@ -1806,6 +1806,12 @@
           "Type": "List",
           "UpdateType": "Mutable"
         },
+        "Region": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-region",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "RoleArn": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-rolearn",
           "PrimitiveType": "String",
@@ -1866,6 +1872,23 @@
         },
         "Type": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::CodePipeline::Pipeline.ArtifactStoreMap": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html",
+      "Properties": {
+        "ArtifactStore": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-artifactstore",
+          "Required": true,
+          "Type": "ArtifactStore",
+          "UpdateType": "Mutable"
+        },
+        "Region": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-region",
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
@@ -9939,7 +9962,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "2.12.0",
+  "ResourceSpecificationVersion": "2.13.0",
   "ResourceTypes": {
     "AWS::ApiGateway::Account": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html",
@@ -11762,8 +11785,16 @@
       "Properties": {
         "ArtifactStore": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-artifactstore",
-          "Required": true,
+          "Required": false,
           "Type": "ArtifactStore",
+          "UpdateType": "Mutable"
+        },
+        "ArtifactStores": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-artifactstores",
+          "DuplicatesAllowed": false,
+          "ItemType": "ArtifactStoreMap",
+          "Required": false,
+          "Type": "List",
           "UpdateType": "Mutable"
         },
         "DisableInboundStageTransitions": {
