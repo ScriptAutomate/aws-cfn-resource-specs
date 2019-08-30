@@ -2249,6 +2249,18 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "GitCloneDepth": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-gitclonedepth",
+          "PrimitiveType": "Integer",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "InsecureSsl": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-insecuressl",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Location": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-location",
           "PrimitiveType": "String",
@@ -3882,6 +3894,17 @@
         "WriteCapacityUnits": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html#cfn-dynamodb-provisionedthroughput-writecapacityunits",
           "PrimitiveType": "Long",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::DynamoDB::Table.SSESpecification": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html",
+      "Properties": {
+        "SSEEnabled": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled",
+          "PrimitiveType": "Boolean",
           "Required": true,
           "UpdateType": "Mutable"
         }
@@ -12483,7 +12506,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "1.12.0",
+  "ResourceSpecificationVersion": "1.13.0",
   "ResourceTypes": {
     "AWS::ApiGateway::Account": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html",
@@ -15842,6 +15865,12 @@
           "Required": true,
           "Type": "ProvisionedThroughput",
           "UpdateType": "Mutable"
+        },
+        "SSESpecification": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification",
+          "Required": false,
+          "Type": "SSESpecification",
+          "UpdateType": "Conditional"
         },
         "StreamSpecification": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification",
