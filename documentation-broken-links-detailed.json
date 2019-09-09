@@ -62,6 +62,20 @@
                 "DiscoveredInVersion": "5.3.0",
                 "DateOfDiscovery": "2019-09-01"
             },
+            "AWS::Config::RemediationConfiguration.ExecutionControls": {
+                "Broken": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-executioncontrols.html",
+                "Fix": null,
+                "Problem": "Missing from both GitHub repo and AWS Docs official site. Page simply doesn't exist.",
+                "DiscoveredInVersion": "6.0.0",
+                "DateOfDiscovery": "2019-09-08"
+            },
+            "AWS::Config::RemediationConfiguration.SsmControls": {
+                "Broken": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html",
+                "Fix": null,
+                "Problem": "Missing from both GitHub repo and AWS Docs official site. Page simply doesn't exist.",
+                "DiscoveredInVersion": "6.0.0",
+                "DateOfDiscovery": "2019-09-08"
+            },
             "AWS::OpsWorks::Instance.EbsBlockDevice": {
                 "Broken": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html",
                 "Fix": null,
@@ -82,9 +96,16 @@
                 "Problem": "AWS Doc html page is broken, with this page unreachable and redirecting to UserGuide home.",
                 "DiscoveredInVersion": "5.3.0",
                 "DateOfDiscovery": "2019-09-01"
+            },
+            "Tag": {
+                "Broken": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-input-tag.html",
+                "Fix": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html",
+                "Problem": "This looks like the Documentation property was accidentally updated with the wrong documentation link. The previous link, listed as the value for Fix, still works. The incorrect link looks related to the AWS::IoTEvents::Input resource and the Tags property, maybe and as of yet added PropertyType of AWS::IoTEvents::Input.Tag",
+                "DiscoveredInVersion": "6.0.0",
+                "DateOfDiscovery": "2019-09-08"
             }
         },
-        "ResourceSpecificationVersion": "5.3.0",
+        "ResourceSpecificationVersion": "6.0.0",
         "ResourceTypes": {
             "MissingDocLinks": {},
             "BrokenDocLinks": {}
