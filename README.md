@@ -15,6 +15,9 @@ I created this repository as an easy, versioned git repository that shows change
 .
 ├── README.md                   <-- This README file
 ├── all-cfn-versions.json       <-- Tracks version history
+├── documentation-broken...json <-- Detailed info on BrokenDocLinks
+├── documentation-lookup...json <-- All Documentation property errors
+├── regions.json                <-- Non-API-generated list of regions
 └── example_region_folder       <-- Region resource spec dir
      └── CloudFormationResourceSpecification.json
 ```
