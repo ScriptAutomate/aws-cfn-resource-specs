@@ -1,5 +1,4 @@
 import json
-import re
 import os
 from datetime import date
 from pathlib import Path
