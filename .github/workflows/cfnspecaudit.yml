@@ -34,7 +34,7 @@ jobs:
     - name: Audit documentation links and cfn user guide
       run: |
         pipenv run python cfn-supported-region-generator.py  
-    - name: Create Pull Request
+    - name: Create pull request if any files were updated
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |

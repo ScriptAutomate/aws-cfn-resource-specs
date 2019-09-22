@@ -25,8 +25,8 @@ resource_spec_dir = 'specs'
 
 # Dependent on latest documentation
 Repo.clone_from("https://github.com/awsdocs/aws-cloudformation-user-guide.git","aws-cloudformation-user-guide")
-if Path.cwd().joinpath(f"{resource_spec_dir}/regions.json").exists():
-    with open(f"{resource_spec_dir}/regions.json", 'r') as file_to_read:
+if Path.cwd().joinpath('regions.json').exists():
+    with open('regions.json', 'r') as file_to_read:
         regions_data = json.loads(file_to_read.read())
         regions = []
         for key in regions_data.keys():
@@ -224,9 +224,9 @@ supported_resources["ResourceSpecificationVersion"] = resource_spec_version
 documentation_lookup["ResourceSpecificationVersion"] = resource_spec_version
 
 # Dump sorted results
-with open(f"{resource_spec_dir}/supported-regions-per-resource.json", 'w') as file_to_dump:
+with open('supported-regions-per-resource.json', 'w') as file_to_dump:
     json.dump(supported_resources, file_to_dump, indent=2, sort_keys=True)
 
 # Dump sorted results
-with open(f"{resource_spec_dir}/documentation-lookup-errors.json", 'w') as file_to_dump:
+with open('documentation-lookup-errors.json', 'w') as file_to_dump:
     json.dump(documentation_lookup, file_to_dump, indent=2, sort_keys=True)
