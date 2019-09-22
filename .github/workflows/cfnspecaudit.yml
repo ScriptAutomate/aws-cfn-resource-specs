@@ -1,6 +1,8 @@
-name: CFN Spec Audit
+name: CFN Specification and User Guide Doc Audit
 
-on: [push]
+on:
+  schedule:
+  - cron: 0 2 * * 1-5
 
 jobs:
   build:
@@ -16,7 +18,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip setuptools
-        git submodule update --init --recursive
+        git submodule update --init --recursive --remote
         pip install pipenv
         pipenv install --dev
     - name: Lint with flake8
