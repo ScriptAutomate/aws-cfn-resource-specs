@@ -13,12 +13,16 @@ I created this repository as an easy, versioned git repository that shows change
 
 ```bash
 .
+├── LICENSE                     <-- Repo code license
 ├── README.md                   <-- This README file
 ├── all-cfn-versions.json       <-- Tracks version history
 ├── documentation-broken...json <-- Detailed info on BrokenDocLinks
 ├── documentation-lookup...json <-- All Documentation property errors
 ├── regions.json                <-- Non-API-generated list of regions
 ├── supported-regions...json    <-- What types are supported in what regions
-└── example_region_folder       <-- Region resource spec dir
-     └── CloudFormationResourceSpecification.json
+└── specs                       <-- Region resource spec dir
+     ├── us-east-1
+     |    └── CloudFormationResourceSpecification.json
+     ├── ...
+     ├── ...
 ```
