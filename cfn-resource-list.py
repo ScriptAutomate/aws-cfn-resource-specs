@@ -164,8 +164,8 @@ if updated_regions:
     git_name = os.environ['GITHUB_ACTOR'] + '@users.noreply.github.com'
     github_repo = os.environ['GITHUB_REPOSITORY']
     github_token = os.environ['GITHUB_TOKEN']
-    git.config('--global', 'user.email', f"{email}")
-    git.config('--global', 'user.name', f"{name}")
+    git.config('--global', 'user.email', f"{git_email}")
+    git.config('--global', 'user.name', f"{git_name}")
     repo = git.Repo(f"{Path.cwd()}") # git repo base info
     for version in version_master:
         index = repo.index # current git head
