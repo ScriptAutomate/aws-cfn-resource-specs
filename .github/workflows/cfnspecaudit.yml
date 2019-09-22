@@ -31,3 +31,11 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         pipenv run python cfn-resource-list.py
+    - name: Audit documentation links and cfn user guide
+      run: |
+        pipenv run python cfn-supported-region-generator.py  
+    - name: Create Pull Request
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        pipenv run python create-pull-request.py
