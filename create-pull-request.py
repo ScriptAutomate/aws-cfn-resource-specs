@@ -24,8 +24,8 @@ def get_github_event(github_event_path):
     return github_event
 
 
-def ignore_event(event_name, event_data):
-    if event_name == "push":
+def ignore_event(event_name, event_data, skip_ignore):
+    if event_name == "push" and not skip_ignore:
         # Ignore push events on deleted branches
         # The event we want to ignore occurs when a PR is created but the repository owner decides
         # not to commit the changes. They close the PR and delete the branch. This creates a 
@@ -130,8 +130,10 @@ def process_event(event_name, event_data, repo, branch, base):
 # Get the JSON event data
 event_name = os.environ['GITHUB_EVENT_NAME']
 event_data = get_github_event(os.environ['GITHUB_EVENT_PATH'])
+skip_ignore_event = bool(os.environ.get('SKIP_IGNORE'))
+
 # Check if this event should be ignored
-if not ignore_event(event_name, event_data):
+if not ignore_event(event_name, event_data, skip_ignore_event):
     # Set the repo to the working directory
     repo = Repo(os.getcwd())
 
