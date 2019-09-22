@@ -3,7 +3,6 @@ from pathlib import Path
 
 # Third-Party modules
 import requests
-from git import Repo
 
 def valid_doc_link_check(doc_type, key, url, source_dict):
     # Broken doc links default redirect to UserGuide main page
@@ -23,8 +22,6 @@ def valid_md_file_check(doc_type, key, url, source_dict):
 cfn_json = 'CloudFormationResourceSpecification.json'
 resource_spec_dir = 'specs'
 
-# Dependent on latest documentation
-Repo.clone_from("https://github.com/awsdocs/aws-cloudformation-user-guide.git","aws-cloudformation-user-guide")
 if Path.cwd().joinpath('regions.json').exists():
     with open('regions.json', 'r') as file_to_read:
         regions_data = json.loads(file_to_read.read())
