@@ -1,6 +1,6 @@
 # AWS CloudFormation Resource Specification Auditor
 
-> *A Completely Tracked and Versioned Collection of CloudFormation Resource Files*
+> *A Completely Tracked, Versioned, and Audited Collection Store of CloudFormationResource.json Resource Specification Files*
 
 ## Purpose
 
