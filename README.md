@@ -1,4 +1,4 @@
-# AWS CloudFormation Resource Specification Audit Library
+# AWS CloudFormation Resource Specification Auditor
 
 > *A Completely Tracked and Versioned Collection of CloudFormation Resource Files*
 
