@@ -2,11 +2,19 @@
 '''
 Create Pull Request
 
-Author Credit:
-  GitHub - @peter-evans
-  Twitter - @peterevans0
-GitHub Source: https://github.com/peter-evans/create-pull-request
+Version v1.2.1
+- Author GitHub / Twitter: @ScriptAutomate
+- Added check for SKIP_IGNORE env variable
+  - If present, skips execution of ignore_event function
+  - I found need for this, especially during testing,
+      so thought adding a flag made it easy to implement
+      without impacting default behavior.
+
 Version: v1.2.0
+Original Author Credit:
+- GitHub:  @peter-evans
+- Twitter: @peterevans0
+GitHub Original Source: https://github.com/peter-evans/create-pull-request
 
 '''
 import json
