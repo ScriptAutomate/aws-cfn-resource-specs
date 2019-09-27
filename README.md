@@ -30,3 +30,54 @@ I created this repository as an easy, versioned git repository that shows change
      ├── ...
      ├── ...
 ```
+
+## GitHub Actions
+
+This repository automatically updates itself over time.
+
+### Build Steps
+
+- Checkout repo
+- Install Python 3.7
+- Install dependencies via Pipenv
+- Lint with flake8
+- Look for and update new CFN specs if found
+- Audit documentation links and cfn user guide
+- Create pull request if any files were updated
+
+> ***NOTE:*** _The **Install dependencies via Pipenv** step also updates the `aws-cloudformation-user-guide` submodule, if any updates are available._
+
+#### Step: Look for and update new CFN specs if found
+
+The following is executed:
+
+- `tools/cfn-resource-list.py`
+
+I went the _Continuous Deployment_ route when it comes to how the repository updates the specification files in the `spec` directory, meaning I don't need to visit the repo and accept a PR whenever new spec files are published.
+
+The following JSON file is also auto-updated / merged to `master` whenever the `spec` dir is updated:
+
+- `all-cfn-versions.json`
+
+#### Step: Audit documentation links and cfn user guide
+
+The following is executed:
+
+- `tools/cfn-supported-region-generator.py`
+
+The following files may be updated:
+
+- `supported-regions-per-resource.json`
+- `documentation-lookup-errors.json`
+
+> ***NOTE:*** __If any files are updated, either the JSON files listed above or the `aws-cloudformation-user-guide` submodule, then the last build step creates a new branch with a PR: **Create pull request if any files were updated**_
+
+#### Yet to Automate
+
+The following is still manually managed:
+
+- `documentation-broken-links-detailed.json`
+
+Some of the troubleshooting steps for finding a fix to the documentation errors can be rather involved. I'd like to reduce this to the most helpful potential-fix steps done in an automated fashion.
+
+> ***NOTE:*** _This doc also tracks the amount of days passed since certain bugs were discovered. This has helped in understanding that the [AWS CloudFormation User Guide source](https://github.com/awsdocs/aws-cloudformation-user-guide/) is being managed in a confusing (mostly manual) fashion by AWS._
