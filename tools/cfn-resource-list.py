@@ -30,7 +30,7 @@ def resource_spec_versions(cfn_resource_spec_bucket):
 
 def resource_spec_date(version, cfn_resource_spec_bucket, cfn_json):
     '''Find the release date (last modified timestamp) of a CFN Resource Specification file'''
-    key = version + '/' + cfn_json
+    key = version + '/gzip/' + cfn_json
     s3 = resource('s3',region_name='us-east-1')
     obj = s3.Object(cfn_resource_spec_bucket, key)
     return str(obj.last_modified.date())
@@ -38,19 +38,20 @@ def resource_spec_date(version, cfn_resource_spec_bucket, cfn_json):
 
 def resource_download(resource_spec_dir, version, region_name, cfn_resource_spec_bucket, cfn_json, standard=True):
     '''Download a CFN Resource Specification file'''
-    key = version + '/' + cfn_json
+    key = version + '/gzip/' + cfn_json
     if standard:
         resource('s3',region_name='us-east-1').Bucket(cfn_resource_spec_bucket).download_file(key, f"{resource_spec_dir}/{region_name}/{cfn_json}")
     else:
         extension = 'com'
         if region_name.startswith('cn'):
             extension += '.cn'
-        url = f"https://s3.{region_name}.amazonaws.{extension}/{cfn_resource_spec_bucket}/{version}/{cfn_json}"
+        url = f"https://{cfn_resource_spec_bucket}.s3.{region_name}.amazonaws.{extension}/{version}/gzip/{cfn_json}"
         print(f"[INFO][{region_name}][DOWNLOADING]Latest resource spec")
         cfn_request = requests.get(url)
         print(f"[INFO][{region_name}][DOWNLOADED]Latest resource spec")
         with open(f"{resource_spec_dir}/{region_name}/{cfn_json}", 'wb') as cfn_download:
             cfn_download.write(cfn_request.content)
+        
     return Path.cwd().joinpath(f"{resource_spec_dir}/{region_name}/{cfn_json}")
 
 
@@ -65,6 +66,7 @@ def resource_json_sort_keys(resource_json_file_path):
 
 resource_spec_dir = 'specs'
 cfn_json = 'CloudFormationResourceSpecification.json'
+debugging = False
 
 if Path.cwd().joinpath("regions.json").exists():
     with open(Path.cwd().joinpath("regions.json"), 'r') as file_to_read:
@@ -112,7 +114,7 @@ for region_name in supported_regions:
                     spec_date = resource_spec_date(
                         version, cfn_resource_spec_bucket, cfn_json
                     )
-                    if region_details_old.get(region_name) and region_details_old[region_name][version] == spec_date:
+                    if region_details_old.get(region_name) and region_details_old[region_name].get(version) and region_details_old[region_name][version] == spec_date:
                         break
                     print(f"[INFO][{region_name}][DISCOVERED]New Resource Spec: {version} - {spec_date}")
                     if region_details.get(region_name): 
@@ -159,12 +161,13 @@ for region_name in supported_regions:
 version_master.sort(key=StrictVersion)
 
 if updated_regions:
-    git_email = os.environ['GITHUB_ACTOR']
-    git_name = os.environ['GITHUB_ACTOR'] + '@users.noreply.github.com'
-    github_repo = os.environ['GITHUB_REPOSITORY']
-    github_token = os.environ['GITHUB_TOKEN']
-    git.config('--global', 'user.email', f"{git_email}")
-    git.config('--global', 'user.name', f"{git_name}")
+    if not debugging:
+        git_email = os.environ['GITHUB_ACTOR']
+        git_name = os.environ['GITHUB_ACTOR'] + '@users.noreply.github.com'
+        github_repo = os.environ['GITHUB_REPOSITORY']
+        github_token = os.environ['GITHUB_TOKEN']
+        git.config('--global', 'user.email', f"{git_email}")
+        git.config('--global', 'user.name', f"{git_name}")
     repo = git.Repo(f"{Path.cwd()}") # git repo base info
     for version in version_master:
         index = repo.index # current git head
@@ -200,8 +203,11 @@ if updated_regions:
         else:
             index.commit(f"Version {version} {commit_date_note}") # git commit
             new_tag = repo.create_tag(f"v{version}", force=True, message="New CFN Resource Spec release")
-        origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
-        origin.push()
+        if debugging:
+            origin = repo.remotes[0]
+        else:
+            origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
+        origin.push() # git push
         origin.push(new_tag) # git push
     
     # Lastly, update the all-cfn-version.json with latest info
@@ -212,5 +218,8 @@ if updated_regions:
     index = repo.index
     index.add(["all-cfn-versions.json"]) # git add
     index.commit(f"Latest Version {version_master[-1]}-{date.today():%Y%m%d} {commit_date_note}") # git commit
-    origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
+    if debugging:
+        origin = repo.remotes[0]
+    else:
+        origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
     origin.push() # git push
