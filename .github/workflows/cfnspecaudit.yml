@@ -40,6 +40,5 @@ jobs:
     - name: Create pull request if any files were updated
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SKIP_IGNORE: True
       run: |
         pipenv run python tools/create-pull-request.py
