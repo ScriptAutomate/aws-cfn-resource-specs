@@ -20,7 +20,8 @@ I created this repository as an easy, versioned git repository that shows change
 ├── documentation-lookup...json <-- All Documentation property errors
 ├── regions.json                <-- Non-API-generated list of regions
 ├── supported-regions...json    <-- What types are supported in what regions
-└── tools                       
+└── tools
+     ├── iampolicy.json         <-- Copy of AWS IAM policy perms to read s3
      ├── cfn-resource-list.py   <-- Checks for and downloads latest spec files
      ├── cfn-supported...py     <-- Audits supported services and cfn docs
      └── create-pull-request.py <-- Creates PR if audit files update
