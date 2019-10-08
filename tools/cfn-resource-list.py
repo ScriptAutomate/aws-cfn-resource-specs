@@ -167,8 +167,8 @@ if updated_regions:
         git_name = os.environ['GITHUB_ACTOR'] + '@users.noreply.github.com'
         github_repo = os.environ['GITHUB_REPOSITORY']
         github_token = os.environ['GITHUB_TOKEN']
-        repo.config('--global', 'user.email', f"{git_email}")
-        repo.config('--global', 'user.name', f"{git_name}")
+        repo.git.config('--global', 'user.email', f"{git_email}")
+        repo.git.config('--global', 'user.name', f"{git_name}")
     for version in version_master:
         index = repo.index # current git head
         changes_to_commit = []
@@ -206,6 +206,8 @@ if updated_regions:
         if debugging:
             origin = repo.remotes[0]
         else:
+            repo.git.config('--global', 'user.email', f"{git_email}")
+            repo.git.config('--global', 'user.name', f"{git_name}")
             origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
         origin.push() # git push
         origin.push(new_tag) # git push
@@ -221,5 +223,7 @@ if updated_regions:
     if debugging:
         origin = repo.remotes[0]
     else:
+        repo.git.config('--global', 'user.email', f"{git_email}")
+        repo.git.config('--global', 'user.name', f"{git_name}")
         origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
     origin.push() # git push
