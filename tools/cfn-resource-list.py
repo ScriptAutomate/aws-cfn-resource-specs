@@ -210,12 +210,15 @@ if updated_regions:
             new_tag = repo.create_tag(f"v{version}", force=True, message="New CFN Resource Spec release")
         if debugging:
             origin = repo.remotes[0]
+            origin.push()
         else:
             repo.git.config('--global', 'user.email', f"{git_email}")
             repo.git.config('--global', 'user.name', f"{git_name}")
-            origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
-        origin.push() # git push
-        origin.push(new_tag) # git push
+            repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
+            repo.git.push('-f', 'origin', 'master')
+            #repo.git.tag('-a',f"v{version}", '-m', "New CFN Resource Spec release")
+            #repo.git.push('-f', 'origin', f"v{version}")
+        origin.push(new_tag)
         
     # Lastly, update the all-cfn-version.json with latest info
     with open("all-cfn-versions.json", 'w') as file_to_dump:
