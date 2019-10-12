@@ -1,4 +1,5 @@
 import json
+from gzip import GzipFile
 import os
 from datetime import date
 from pathlib import Path
@@ -55,10 +56,14 @@ def resource_download(resource_spec_dir, version, region_name, cfn_resource_spec
     return Path.cwd().joinpath(f"{resource_spec_dir}/{region_name}/{cfn_json}")
 
 
-def resource_json_sort_keys(resource_json_file_path):
+def resource_json_sort_keys(resource_json_file_path, gzipped = True):
     # Open JSON
-    with open(resource_json_file_path, 'r') as file_to_read:
-        json_contents = json.loads(file_to_read.read())
+    if gzipped:
+        with GzipFile(resource_json_file_path, 'r') as file_to_read:
+            json_contents = json.loads(file_to_read.read().decode('utf-8'))
+    else:
+        with open(resource_json_file_path, 'r') as file_to_read:
+            json_contents = json.loads(file_to_read.read())
     # Rewrite downloaded JSON with sorted keys for proper git diff generation
     with open(resource_json_file_path, 'w') as file_to_dump:
         json.dump(json_contents, file_to_dump, indent=2, sort_keys=True)
@@ -137,7 +142,7 @@ for region_name in supported_regions:
             resource_spec_dir, 'latest', region_name, cfn_resource_spec_bucket, cfn_json, False
         )
         # Sort keys in downloaded JSON
-        resource_json_sort_keys(downloaded_cfn)
+        resource_json_sort_keys(downloaded_cfn, False)
         with downloaded_cfn.open('r') as cfn_content:
             json_contents = json.loads(cfn_content.read())
             new_version = json_contents['ResourceSpecificationVersion']
@@ -211,7 +216,7 @@ if updated_regions:
             origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
         origin.push() # git push
         origin.push(new_tag) # git push
-    
+        
     # Lastly, update the all-cfn-version.json with latest info
     with open("all-cfn-versions.json", 'w') as file_to_dump:
         json.dump(region_details_old, file_to_dump, indent=2, sort_keys=True)
