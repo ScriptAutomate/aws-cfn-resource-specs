@@ -33,6 +33,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
+        git checkout master
         pipenv run python tools/cfn-resource-list.py
     - name: Audit documentation links and cfn user guide
       run: |
