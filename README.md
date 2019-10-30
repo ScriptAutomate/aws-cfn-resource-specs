@@ -9,6 +9,10 @@ I created this repository as an easy, versioned git repository that shows change
 * [AWS CloudFormation Resource Specification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-resource-specification.html)
   * [Source Code Repo](https://github.com/awsdocs/aws-cloudformation-user-guide/blob/master/doc_source/cfn-resource-specification.md)
 
+For more information, please read the following blog post:
+
+- [AWS CloudFormation Resource Specification Auditor: How wanting to generate code, from CloudFormation specification files, led to auditing AWS docs with Python and GitHub Actions](https://dev.to/scriptautomate/aws-cloudformation-resource-specification-auditor-26g)
+
 ## Directory Structure
 
 ```
