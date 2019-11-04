@@ -226,14 +226,7 @@ if updated_regions:
     with open("all-cfn-versions.json", 'w') as file_to_dump:
         json.dump(region_details_old, file_to_dump, indent=2, sort_keys=True)
 
-    repo = git.Repo(f"{Path.cwd()}")
-    index = repo.index
+    # Update all-cfn-versions.json
     index.add(["all-cfn-versions.json"]) # git add
     index.commit(f"Latest Version {version_master[-1]}-{date.today():%Y%m%d} {commit_date_note}") # git commit
-    if debugging:
-        origin = repo.remotes[0]
-    else:
-        repo.git.config('--global', 'user.email', f"{git_email}")
-        repo.git.config('--global', 'user.name', f"{git_name}")
-        origin = repo.git.remote('set-url', 'origin', "https://x-access-token:%s@github.com/%s" % (github_token, github_repo))
     origin.push() # git push
