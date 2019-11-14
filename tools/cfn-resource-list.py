@@ -168,8 +168,8 @@ version_master.sort(key=StrictVersion)
 if updated_regions:
     repo = git.Repo(f"{Path.cwd()}") # git repo base info
     if not debugging:
-        git_email = os.environ['GITHUB_ACTOR']
-        git_name = os.environ['GITHUB_ACTOR'] + '@users.noreply.github.com'
+        git_email = os.environ['GITHUB_ACTOR'] + '@users.noreply.github.com'
+        git_name = os.environ['GITHUB_ACTOR']
         github_repo = os.environ['GITHUB_REPOSITORY']
         github_token = os.environ['GITHUB_TOKEN']
         repo.git.config('--global', 'user.email', f"{git_email}")
