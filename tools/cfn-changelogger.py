@@ -39,7 +39,7 @@ with open('supported-regions-per-resource.json', 'r') as file_to_read:
 # Change = [increase, decrease]
 for total in totals:
     changelog["Totals"][total] = {"Value": supported_new[total], "Change": [supported_new[total] - supported_old[total]]}
-changelog["TypesNotInUSEAST1"]["Total"] = {"Value": supported_new[total], "Change": [supported_new[total] - supported_old[total]]}
+changelog["TypesNotInUSEAST1"]["Total"] = {"Value": supported_new["TypesNotInUSEAST1"]["Total"], "Change": [0,0]}
 changelog["ResourceSpecificationVersionOld"] = supported_old["ResourceSpecificationVersion"]
 
 for each_type in ["ResourceTypes", "PropertyTypes"]:
@@ -72,12 +72,14 @@ for each_type in ["ResourceTypes", "PropertyTypes"]:
                 "Fixed": False,
                 "Regions": supported_new["TypesNotInUSEAST1"][each_type][resource]["Regions"]
             }
+            changelog["TypesNotInUSEAST1"]["Total"]["Change"][0] += 1
     for resource in supported_old["TypesNotInUSEAST1"][each_type].keys():
         if not supported_new[each_type].get(resource):
             changelog["TypesNotInUSEAST1"][each_type][resource] = {
                 "Since": supported_old["ResourceSpecificationVersion"],
                 "Fixed": True
             }
+            changelog["TypesNotInUSEAST1"]["Total"]["Change"][1] += 1
 
 changelog_major_version = supported_new["ResourceSpecificationVersion"].split('.')[0]
 target_json = Path(f"changelogs/v{changelog_major_version}-changelog.json")
