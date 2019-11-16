@@ -1,6 +1,7 @@
 ## [8.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v8.0.0)
 
 - [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v8-changelog.json)
+  - Change source is a diff between [v8.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v8.0.0) and [v7.4.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v7.4.0)
 
 ### Totals
 
@@ -176,7 +177,5 @@
 
   - [AWS::AppStream::Stack.AccessEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html)
     - Was missing since v7.4.0
-
-
 
 > **NOTE:** _Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_

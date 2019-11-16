@@ -126,8 +126,9 @@ for release in release_versions:
     release_markdown = []
     release_markdown.append(f"## [{release}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{release})\n\n")
     #release_header.append(f"- [Full Git Diff](https://github.com/ScriptAutomate/aws-cfn-resource-specs/commit/{commit_id})\n")
-    release_markdown.append(f"- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v{release.split('.')[0]}-changelog.json)\n\n")
-    
+    release_markdown.append(f"- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v{release.split('.')[0]}-changelog.json)\n")
+    release_markdown.append(f"  - Change source is a diff between [v{release}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{release}) and [v{changelog_source[release]['ResourceSpecificationVersionOld']}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{changelog_source[release]['ResourceSpecificationVersionOld']})\n\n")
+
     # Release totals
     release_markdown.append(f"### Totals\n\n")
     for total in totals:
@@ -157,7 +158,7 @@ for release in release_versions:
             release_markdown.extend(value)
 
     # Release end note
-    release_markdown.append("\n\n> **NOTE:** _Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_")
+    release_markdown.append("> **NOTE:** _Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_")
 
 
 with open(changelog_md_file, 'w') as markdown_writer:
