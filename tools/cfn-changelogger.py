@@ -44,42 +44,56 @@ changelog["ResourceSpecificationVersionOld"] = supported_old["ResourceSpecificat
 
 for each_type in ["ResourceTypes", "PropertyTypes"]:
     for resource in supported_new[each_type].keys():
+        # Check for change in regions for existing types
         if supported_old[each_type].get(resource):
             diff = compare_regions(supported_new[each_type][resource], supported_old[each_type][resource])
             if diff:
                 diff["Type"] = 'Existing'
                 diff["Documentation"] = supported_new[each_type][resource]["Documentation"]
                 changelog[each_type][resource] = diff
+        # Or is entirely new type
         else:
             changelog[each_type][resource] =  {
                 "Type": "New",
                 "AllRegions": supported_new[each_type][resource]["AllRegions"],
-                "Regions": supported_new[each_type][resource]["Regions"]
+                "Regions": supported_new[each_type][resource]["Regions"],
+                "Documentation": supported_new[each_type][resource]["Documentation"]
             }
-
-
-for each_type in ["ResourceTypes", "PropertyTypes"]:
+    # Types found entirely deleted
+    for resource in supported_old[each_type].keys():
+        if resource not in supported_new[each_type].keys():
+            changelog[each_type][resource] =  {
+                "Type": "Deleted",
+                "Regions": supported_old[each_type][resource]["Regions"],
+                "Documentation": supported_old[each_type][resource]["Documentation"]
+            }
+    # "TypesNotInUSEAST1" types either still missing or newly missing
     for resource in supported_new["TypesNotInUSEAST1"][each_type].keys():
         if supported_old[each_type].get(resource):
             changelog["TypesNotInUSEAST1"][each_type][resource] = {
                 "Since": supported_old["ResourceSpecificationVersion"],
                 "Fixed": False,
-                "Regions": supported_new["TypesNotInUSEAST1"][each_type][resource]["Regions"]
+                "Regions": supported_new["TypesNotInUSEAST1"][each_type][resource]["Regions"],
+                "Documentation": supported_new[each_type][resource]["Documentation"]
             }
         else:
             changelog["TypesNotInUSEAST1"][each_type][resource] = {
                 "Since": supported_new["ResourceSpecificationVersion"],
                 "Fixed": False,
-                "Regions": supported_new["TypesNotInUSEAST1"][each_type][resource]["Regions"]
+                "Regions": supported_new["TypesNotInUSEAST1"][each_type][resource]["Regions"],
+                "Documentation": supported_new[each_type][resource]["Documentation"]
             }
             changelog["TypesNotInUSEAST1"]["Total"]["Change"][0] += 1
+    # "TypesNotInUSEAST1" types no longer missing in latest version
     for resource in supported_old["TypesNotInUSEAST1"][each_type].keys():
-        if not supported_new[each_type].get(resource):
+        if not supported_new["TypesNotInUSEAST1"][each_type].get(resource):
             changelog["TypesNotInUSEAST1"][each_type][resource] = {
                 "Since": supported_old["ResourceSpecificationVersion"],
-                "Fixed": True
+                "Fixed": True,
+                "Documentation": supported_new[each_type][resource]["Documentation"]
             }
             changelog["TypesNotInUSEAST1"]["Total"]["Change"][1] += 1
+
 
 changelog_major_version = supported_new["ResourceSpecificationVersion"].split('.')[0]
 target_json = Path(f"changelogs/v{changelog_major_version}-changelog.json")
