@@ -1,4 +1,5 @@
 import json
+import shutil
 from pathlib import Path
 from distutils.version import StrictVersion
 
@@ -110,9 +111,10 @@ totals = [
 
 # Setup changelog header
 changelog_markdown = []
-changelog_markdown.append("# Changelog")
+changelog_markdown.append("# Changelog\n\n")
 changelog_markdown.append(f"This changelog is auto-managed by [`tools/create-changelog.py`](tools/create-changelog.py) with the [`changelogs/v{latest_major}-changelog.json`](changelogs/v8-changelog.json) data source. All JSON data in [changelogs](changelogs) is generated and managed by [`tools/cfn-changelogger.py`](tools/cfn-changelogger.py)\n\n")
 changelog_markdown.append("Changelogs are duplicated to the [changelogs](changelogs) sub-directory with each new major version.\n\n")
+changelog_markdown.append("> _**NOTE:** Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_\n\n")
 
 # Open the source changelog; start with latest version
 with open(changelog_source_file, 'r') as source_json:
@@ -122,9 +124,12 @@ release_versions = list(changelog_source.keys())
 release_versions.sort(key=StrictVersion, reverse=True)
 
 for release in release_versions:
+    with open("all-cfn-versions.json", 'r') as source_json:
+        version_date = json.loads(source_json.read())['us-east-1'][release]
+    
     # Release header
     release_markdown = []
-    release_markdown.append(f"## [{release}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{release})\n\n")
+    release_markdown.append(f"## [{release}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{release}) ({version_date})\n\n")
     #release_header.append(f"- [Full Git Diff](https://github.com/ScriptAutomate/aws-cfn-resource-specs/commit/{commit_id})\n")
     release_markdown.append(f"- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v{release.split('.')[0]}-changelog.json)\n")
     release_markdown.append(f"  - Change source is a diff between [v{release}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{release}) and [v{changelog_source[release]['ResourceSpecificationVersionOld']}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{changelog_source[release]['ResourceSpecificationVersionOld']})\n\n")
@@ -157,9 +162,10 @@ for release in release_versions:
         if len(value) > 1:
             release_markdown.extend(value)
 
-    # Release end note
-    release_markdown.append("> **NOTE:** _Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_")
 
-
+changelog_markdown.extend(release_markdown)
 with open(changelog_md_file, 'w') as markdown_writer:
-    markdown_writer.writelines(release_markdown)
+    markdown_writer.writelines(changelog_markdown)
+
+# Copy latest major changelog to repo root
+shutil.copy(changelog_md_file,Path.cwd().joinpath('CHANGELOG.md'))

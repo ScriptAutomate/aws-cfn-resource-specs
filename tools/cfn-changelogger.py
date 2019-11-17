@@ -29,12 +29,16 @@ totals = [
 ]
 
 # Import old
-with open('testing/supported-regions-per-resource-old.json', 'r') as file_to_read:
+with open('supported-regions-per-resource-old.json', 'r') as file_to_read:
     supported_old = json.loads(file_to_read.read())
 
 # Import new
 with open('supported-regions-per-resource.json', 'r') as file_to_read:
     supported_new = json.loads(file_to_read.read())
+
+if supported_new["ResourceSpecificationVersion"] == supported_old["ResourceSpecificationVersion"]:
+    print("No new version.")
+    exit()
 
 # Change = [increase, decrease]
 for total in totals:

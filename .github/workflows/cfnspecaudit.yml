@@ -37,7 +37,14 @@ jobs:
         pipenv run python tools/cfn-resource-list.py
     - name: Audit documentation links and cfn user guide
       run: |
-        pipenv run python tools/cfn-supported-region-generator.py  
+        cp supported-regions-per-resource.json supported-regions-per-resource-old.json
+        pipenv run python tools/cfn-supported-region-generator.py
+    - name: Generate changelog source
+      run: |
+        pipenv run python tools/cfn-changelogger.py
+    - name: Generate changelog markdown
+      run: |
+        pipenv run python tools/create-changelog.py
     - name: Create pull request if any files were updated
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
