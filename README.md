@@ -19,6 +19,7 @@ For more information, please read the following blog post:
 .
 ├── LICENSE                     <-- Repo code license
 ├── README.md                   <-- This README file
+├── CHANGELOG.md                <-- Changelog of current major version
 ├── all-cfn-versions.json       <-- Tracks version history
 ├── documentation-broken...json <-- Detailed info on BrokenDocLinks
 ├── documentation-lookup...json <-- All Documentation property errors
@@ -28,7 +29,14 @@ For more information, please read the following blog post:
      ├── iampolicy.json         <-- Copy of AWS IAM policy perms to read s3
      ├── cfn-resource-list.py   <-- Checks for and downloads latest spec files
      ├── cfn-supported...py     <-- Audits supported services and cfn docs
+     ├── cfn-changelogger.py    <-- Creates changelogs/*.json changelogs
+     ├── create-changelog.py    <-- Creates changelogs/*.md and CHANGELOG.md
      └── create-pull-request.py <-- Creates PR if audit files update
+└── changelogs
+     ├── v8-changelog.json      <-- Machine-readable changelog of v8.*.*
+     ├── v8-changelog.md        <-- Human-readable changelog of v8.*.*
+     ├── ...
+     └── ...
 └── specs                       <-- Region resource spec dir
      ├── us-east-1
      │    └── CloudFormationResourceSpecification.json
@@ -48,6 +56,8 @@ This repository automatically updates itself over time.
 - Lint with flake8
 - Look for and update new CFN specs if found
 - Audit documentation links and cfn user guide
+- Generate changelog source file
+- Generate changelog markdown file
 - Create pull request if any files were updated
 
 > ***NOTE:*** _The **Install dependencies via Pipenv** step also updates the `aws-cloudformation-user-guide` submodule, if any updates are available._
@@ -75,7 +85,11 @@ The following files may be updated:
 - `supported-regions-per-resource.json`
 - `documentation-lookup-errors.json`
 
-> ***NOTE:*** __If any files are updated, either the JSON files listed above or the `aws-cloudformation-user-guide` submodule, then the last build step creates a new branch with a PR: **Create pull request if any files were updated**_
+> ***NOTE:*** _If any files are updated, either the JSON files listed above or the `aws-cloudformation-user-guide` submodule, then the last build step creates a new branch with a PR: **Create pull request if any files were updated**_
+
+#### Step: Generate changelog source file
+
+#### Step: Generate changelog markdown file
 
 #### Yet to Automate
 
