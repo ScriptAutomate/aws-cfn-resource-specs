@@ -89,6 +89,15 @@ The following files may be updated:
 
 #### Step: Generate changelog source file
 
+The following is executed:
+
+- `tools/cfn-changelogger.py`
+
+The following files may be updated:
+
+- `changelogs/v*-changelog.json`
+- `changelogs/v*-CHANGELOG.md`
+
 #### Step: Generate changelog markdown file
 
 #### Yet to Automate
