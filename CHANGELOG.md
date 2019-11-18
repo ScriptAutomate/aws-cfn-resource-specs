@@ -6,6 +6,56 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 > _**NOTE:** Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_
 
+## [8.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v8.1.0) (2019-11-15)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v8-changelog.json)
+  - Change source is a diff between [v8.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v8.1.0) and [v8.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v8.0.0)
+
+### Totals
+
+- TotalPropertyTypes: 1129 **(+4)**
+- TotalPropertyTypesSupportedGlobally: 469 **(+4)**
+- TotalResourceTypes: 467 **(+0)**
+- TotalResourceTypesSupportedGlobally: 189 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::GameLift::Fleet.CertificateConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-certificateconfiguration.html)
+  - Available in **ALL** regions.
+
+- [AWS::GameLift::Fleet.ResourceCreationLimitPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html)
+  - Available in **ALL** regions.
+
+- [AWS::GameLift::Fleet.RuntimeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-runtimeconfiguration.html)
+  - Available in **ALL** regions.
+
+- [AWS::GameLift::Fleet.ServerProcess](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html)
+  - Available in **ALL** regions.
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- PropertyType Still Missing
+  - Since v8.0.0: [AWS::ApiGatewayV2::Api.BodyS3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-api-bodys3location.html)
+    - `us-west-1`
+
+  - Since v8.0.0: [AWS::ApiGatewayV2::Api.Cors](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-api-cors.html)
+    - `us-west-1`
+
+  - Since v8.0.0: [AWS::ApiGatewayV2::Authorizer.JWTConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-authorizer-jwtconfiguration.html)
+    - `us-west-1`
+
+  - Since v8.0.0: [AWS::AppSync::DataSource.DeltaSyncConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-deltasyncconfig.html)
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v8.0.0: [AWS::AppSync::Resolver.LambdaConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-lambdaconfig.html)
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v8.0.0: [AWS::AppSync::Resolver.SyncConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-syncconfig.html)
+    - `us-east-2`
+    - `us-west-2`
+
 ## [8.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v8.0.0) (2019-11-08)
 
 - [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v8-changelog.json)
