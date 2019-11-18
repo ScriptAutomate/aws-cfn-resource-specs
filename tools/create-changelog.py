@@ -10,8 +10,11 @@ def parse_new_types(release, item_type):
         for key,value in release[item_type].items():
             if value["Type"] == 'New':
                 new_items.append(f"- [{key}]({value['Documentation']})\n")
-                for region in value["Regions"]:
-                    new_items.append(f"  - `{region}`\n")
+                if value["AllRegions"]:
+                    new_items.append(f"  - Available in **ALL** regions.\n")
+                else:
+                    for region in value["Regions"]:
+                        new_items.append(f"  - `{region}`\n")
                 new_items[-1] += "\n"            
     
     return new_items
@@ -36,8 +39,11 @@ def parse_expanded_types(release, item_type):
         for key,value in release[item_type].items():
             if value["Type"] == "Existing" and value["Expanded"]:
                 expanded_items.append(f"- [{key}]({value['Documentation']})\n")
-                for region in value["Expanded"]:
-                    expanded_items.append(f"  - `{region}`\n")
+                if value["AllRegions"]:
+                    expanded_items.append(f"  - Now available to **ALL** regions.\n")
+                else:
+                    for region in value["Expanded"]:
+                        expanded_items.append(f"  - `{region}`\n")
                 expanded_items[-1] += "\n"
     
     return expanded_items
@@ -123,12 +129,12 @@ with open(changelog_source_file, 'r') as source_json:
 release_versions = list(changelog_source.keys())
 release_versions.sort(key=StrictVersion, reverse=True)
 
+release_markdown = []
 for release in release_versions:
     with open("all-cfn-versions.json", 'r') as source_json:
         version_date = json.loads(source_json.read())['us-east-1'][release]
     
     # Release header
-    release_markdown = []
     release_markdown.append(f"## [{release}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{release}) ({version_date})\n\n")
     #release_header.append(f"- [Full Git Diff](https://github.com/ScriptAutomate/aws-cfn-resource-specs/commit/{commit_id})\n")
     release_markdown.append(f"- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v{release.split('.')[0]}-changelog.json)\n")
