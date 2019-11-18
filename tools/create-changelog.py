@@ -51,7 +51,7 @@ def parse_reduced_types(release, item_type):
                 reduced_items.append(f"- [{key}]({value['Documentation']})\n")
                 for region in value["Reduced"]:
                     reduced_items.append(f"  - `{region}`\n")
-                useast1_missing_items[-1] += "\n"
+                reduced_items[-1] += "\n"
     
     return reduced_items
 
