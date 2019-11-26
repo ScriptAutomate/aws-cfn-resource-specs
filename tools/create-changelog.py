@@ -53,11 +53,12 @@ def parse_reduced_types(release, item_type):
     reduced_items = []
     if release.get(item_type):
         for key,value in release[item_type].items():
-            if value["Type"] == "Existing" and value["Reduced"]:
-                reduced_items.append(f"- [{key}]({value['Documentation']})\n")
-                for region in value["Reduced"]:
-                    reduced_items.append(f"  - `{region}`\n")
-                reduced_items[-1] += "\n"
+            if value.get("Reduced"):
+                if value["Type"] == "Existing" and value["Reduced"]:
+                    reduced_items.append(f"- [{key}]({value['Documentation']})\n")
+                    for region in value["Reduced"]:
+                        reduced_items.append(f"  - `{region}`\n")
+                    reduced_items[-1] += "\n"
     
     return reduced_items
 
