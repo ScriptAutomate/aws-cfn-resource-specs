@@ -94,7 +94,7 @@ for each_type in ["ResourceTypes", "PropertyTypes"]:
             changelog["TypesNotInUSEAST1"][each_type][resource] = {
                 "Since": supported_old["ResourceSpecificationVersion"],
                 "Fixed": True,
-                "Documentation": supported_new[each_type][resource]["Documentation"]
+                "Documentation": supported_old[each_type][resource]["Documentation"]
             }
             changelog["TypesNotInUSEAST1"]["Total"]["Change"][1] += 1
 
