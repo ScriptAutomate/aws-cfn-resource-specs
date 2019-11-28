@@ -15,7 +15,7 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 - [8.0.0](#800-2019-11-08)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
-  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
 
 ## [8.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v8.1.0) (2019-11-15)
