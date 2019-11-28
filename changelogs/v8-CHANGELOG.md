@@ -6,6 +6,18 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 > _**NOTE:** Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_
 
+## Table of Contents
+
+- [8.1.0](#810-2019-11-15)
+  - [Totals](#totals)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
+- [8.0.0](#800-2019-11-08)
+  - [Totals](#totals-1)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+
 ## [8.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v8.1.0) (2019-11-15)
 
 - [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v8-changelog.json)

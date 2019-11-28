@@ -123,6 +123,10 @@ changelog_markdown.append(f"This changelog is auto-managed by [`tools/create-cha
 changelog_markdown.append("Changelogs are duplicated to the [changelogs](changelogs) sub-directory with each new major version.\n\n")
 changelog_markdown.append("> _**NOTE:** Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_\n\n")
 
+# Setup TOC
+changelog_toc_markdown = []
+changelog_toc_markdown.append("## Table of Contents\n\n")
+
 # Open the source changelog; start with latest version
 with open(changelog_source_file, 'r') as source_json:
     changelog_source = json.loads(source_json.read())
@@ -131,6 +135,17 @@ release_versions = list(changelog_source.keys())
 release_versions.sort(key=StrictVersion, reverse=True)
 
 release_markdown = []
+
+# TOC: GitHub Anchor management
+anchor_counters = {
+    'totals': [0,''],
+    'new_types': [0,''],
+    'deleted_types': [0,''],
+    'expanded_types': [0,''],
+    'reduced_types': [0,''],
+    'useast1_missing': [0,'']
+}
+
 for release in release_versions:
     with open("all-cfn-versions.json", 'r') as source_json:
         version_date = json.loads(source_json.read())['us-east-1'][release]
@@ -140,12 +155,19 @@ for release in release_versions:
     #release_header.append(f"- [Full Git Diff](https://github.com/ScriptAutomate/aws-cfn-resource-specs/commit/{commit_id})\n")
     release_markdown.append(f"- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v{release.split('.')[0]}-changelog.json)\n")
     release_markdown.append(f"  - Change source is a diff between [v{release}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{release}) and [v{changelog_source[release]['ResourceSpecificationVersionOld']}](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v{changelog_source[release]['ResourceSpecificationVersionOld']})\n\n")
+    # TOC: GitHub Anchor management
+    changelog_toc_markdown.append(f"- [{release}](#{release.replace('.','')}-{version_date})\n")
 
     # Release totals
     release_markdown.append(f"### Totals\n\n")
     for total in totals:
         release_markdown.append(f"- {total}: {changelog_source[release]['Totals'][total]['Value']} **(+{changelog_source[release]['Totals'][total]['Change'][0]})**\n")
     release_markdown[-1] += "\n"
+
+    # TOC: GitHub Anchor management
+    changelog_toc_markdown.append(f"  - [Totals](#totals{anchor_counters['totals'][1]})\n")
+    anchor_counters['totals'][0] += 1
+    anchor_counters['totals'][1] = f"-{anchor_counters['totals'][0]}"
 
     main_section = {
         'new_types': ['### Introduction of New ResourceTypes and/or PropertyTypes\n\n'],
@@ -168,8 +190,23 @@ for release in release_versions:
     for key, value in main_section.items():
         if len(value) > 1:
             release_markdown.extend(value)
+            if key == 'new_types':
+                changelog_toc_markdown.append(f"  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes{anchor_counters[key][1]})\n")
+            elif key == 'deleted_types':
+                changelog_toc_markdown.append(f"  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes{anchor_counters[key][1]})\n")
+            elif key == 'expanded_types':
+                changelog_toc_markdown.append(f"  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions{anchor_counters[key][1]})\n")
+            elif key == 'reduced_types':
+                changelog_toc_markdown.append(f"  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions{anchor_counters[key][1]})\n")
+            elif key == 'useast1_missing':
+                changelog_toc_markdown.append(f"  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1{anchor_counters[key][1]})\n")
+            
+            # TOC: GitHub Anchor management
+            anchor_counters[key][0] += 1
+            anchor_counters[key][1] = f"-{anchor_counters[key][0]}"
 
-
+changelog_toc_markdown.append("\n")
+changelog_markdown.extend(changelog_toc_markdown)
 changelog_markdown.extend(release_markdown)
 with open(changelog_md_file, 'w') as markdown_writer:
     markdown_writer.writelines(changelog_markdown)
