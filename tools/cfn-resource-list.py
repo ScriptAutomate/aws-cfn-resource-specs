@@ -152,8 +152,8 @@ for region_name in supported_regions:
             spec_date = None
             if region_details_old.get(supported_regions[0]):
                 spec_date = region_details_old[supported_regions[0]].get(new_version)
-            if not spec_date:
-                spec_date = region_details[supported_regions[0]].get(new_version)
+            #if not spec_date:
+            #    spec_date = region_details['us-east-1'].get(new_version)
             if not spec_date:
                 spec_date = f"{date.today():%Y-%m-%d}"
             print(f"[INFO][{region_name}][DISCOVERED]New resource spec: {new_version} - {spec_date}")
