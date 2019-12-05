@@ -103,7 +103,7 @@ changelog_dir = Path.cwd().joinpath('changelogs')
 versions = []
 for item in changelog_dir.iterdir():
     if item.suffix == '.json':
-        versions.append(item.name.split('-')[0].replace('v',''))
+        versions.append(int(item.name.split('-')[0].replace('v','')))
 
 latest_major = max(versions)
 changelog_source_file = changelog_dir.joinpath(f"v{latest_major}-changelog.json")
