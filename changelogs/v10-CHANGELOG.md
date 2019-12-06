@@ -1,6 +1,6 @@
 # Changelog
 
-This changelog is auto-managed by [`tools/create-changelog.py`](tools/create-changelog.py) with the [`changelogs/v10-changelog.json`](changelogs/v8-changelog.json) data source. All JSON data in [changelogs](changelogs) is generated and managed by [`tools/cfn-changelogger.py`](tools/cfn-changelogger.py)
+This changelog is auto-managed by [`tools/create-changelog.py`](tools/create-changelog.py) with the [`changelogs/v10-changelog.json`](changelogs/v10-changelog.json) data source. All JSON data in [changelogs](changelogs) is generated and managed by [`tools/cfn-changelogger.py`](tools/cfn-changelogger.py)
 
 Changelogs are duplicated to the [changelogs](changelogs) sub-directory with each new major version.
 

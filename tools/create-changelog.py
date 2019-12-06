@@ -119,7 +119,7 @@ totals = [
 # Setup changelog header
 changelog_markdown = []
 changelog_markdown.append("# Changelog\n\n")
-changelog_markdown.append(f"This changelog is auto-managed by [`tools/create-changelog.py`](tools/create-changelog.py) with the [`changelogs/v{latest_major}-changelog.json`](changelogs/v8-changelog.json) data source. All JSON data in [changelogs](changelogs) is generated and managed by [`tools/cfn-changelogger.py`](tools/cfn-changelogger.py)\n\n")
+changelog_markdown.append(f"This changelog is auto-managed by [`tools/create-changelog.py`](tools/create-changelog.py) with the [`changelogs/v{latest_major}-changelog.json`](changelogs/v{latest_major}-changelog.json) data source. All JSON data in [changelogs](changelogs) is generated and managed by [`tools/cfn-changelogger.py`](tools/cfn-changelogger.py)\n\n")
 changelog_markdown.append("Changelogs are duplicated to the [changelogs](changelogs) sub-directory with each new major version.\n\n")
 changelog_markdown.append("> _**NOTE:** Additional information related to Release History for CloudFormation specifications can be found in the official AWS CloudFormation User Guide documentation: [Release History](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)_\n\n")
 
