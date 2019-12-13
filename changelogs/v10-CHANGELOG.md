@@ -8,12 +8,100 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [10.0.0](#1000-2019-12-05)
+- [10.1.0](#1010-2019-12-13)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
+- [10.0.0](#1000-2019-12-05)
+  - [Totals](#totals-1)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+
+## [10.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v10.1.0) (2019-12-13)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v10-changelog.json)
+  - Change source is a diff between [v10.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v10.1.0) and [v10.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v10.0.0)
+
+### Totals
+
+- TotalPropertyTypes: 1255 **(+1)**
+- TotalPropertyTypesSupportedGlobally: 480 **(+0)**
+- TotalResourceTypes: 486 **(+0)**
+- TotalResourceTypesSupportedGlobally: 191 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::MediaLive::Channel.MultiplexProgramChannelDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.html)
+  - `ap-south-1`
+  - `eu-west-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::Glue::MLTransform](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html)
+  - `ap-south-1`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-southeast-2`
+  - `ap-northeast-2`
+  - `eu-west-2`
+
+- [AWS::Glue::MLTransform.FindMatchesParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformparameters-findmatchesparameters.html)
+  - `ap-south-1`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-southeast-2`
+  - `ap-northeast-2`
+  - `eu-west-2`
+
+- [AWS::Glue::MLTransform.GlueTables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-inputrecordtables-gluetables.html)
+  - `ap-south-1`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-southeast-2`
+  - `ap-northeast-2`
+  - `eu-west-2`
+
+- [AWS::Glue::MLTransform.InputRecordTables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-inputrecordtables.html)
+  - `ap-south-1`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-southeast-2`
+  - `ap-northeast-2`
+  - `eu-west-2`
+
+- [AWS::Glue::MLTransform.TransformParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformparameters.html)
+  - `ap-south-1`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-southeast-2`
+  - `ap-northeast-2`
+  - `eu-west-2`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- New PropertyType(s) Missing
+  - [AWS::MediaLive::Channel.MultiplexProgramChannelDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.html)
+    - `ap-south-1`
+    - `eu-west-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
 
 ## [10.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v10.0.0) (2019-12-05)
 
