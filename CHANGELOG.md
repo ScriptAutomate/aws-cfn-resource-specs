@@ -8,17 +8,256 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [10.1.0](#1010-2019-12-13)
+- [10.2.0](#1020-2019-12-23)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [10.0.0](#1000-2019-12-05)
+- [10.1.0](#1010-2019-12-13)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+- [10.0.0](#1000-2019-12-05)
+  - [Totals](#totals-2)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
+
+## [10.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v10.2.0) (2019-12-23)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v10-changelog.json)
+  - Change source is a diff between [v10.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v10.2.0) and [v10.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v10.1.0)
+
+### Totals
+
+- TotalPropertyTypes: 1263 **(+8)**
+- TotalPropertyTypesSupportedGlobally: 480 **(+0)**
+- TotalResourceTypes: 488 **(+2)**
+- TotalResourceTypesSupportedGlobally: 191 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::CodeBuild::ReportGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-east-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `me-south-1`
+
+- [AWS::EC2::GatewayRouteTableAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CodeBuild::ReportGroup.ReportExportConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-reportgroup-reportexportconfig.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-east-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `me-south-1`
+
+- [AWS::CodeBuild::ReportGroup.S3ReportExportConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-reportgroup-s3reportexportconfig.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-east-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `me-south-1`
+
+- [AWS::DLM::LifecyclePolicy.CrossRegionCopyRetainRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::DLM::LifecyclePolicy.CrossRegionCopyRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::MSK::Cluster.JmxExporter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-jmxexporter.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-east-1`
+
+- [AWS::MSK::Cluster.NodeExporter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-nodeexporter.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-east-1`
+
+- [AWS::MSK::Cluster.OpenMonitoring](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-openmonitoring.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-east-1`
+
+- [AWS::MSK::Cluster.Prometheus](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-prometheus.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-east-1`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::Route53Resolver::ResolverEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html)
+  - `ap-east-1`
+  - `eu-north-1`
+
+- [AWS::Route53Resolver::ResolverRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html)
+  - `ap-east-1`
+  - `eu-north-1`
+
+- [AWS::Route53Resolver::ResolverRuleAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html)
+  - `ap-east-1`
+  - `eu-north-1`
+
+- [AWS::Route53Resolver::ResolverEndpoint.IpAddressRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverendpoint-ipaddressrequest.html)
+  - `ap-east-1`
+  - `eu-north-1`
+
+- [AWS::Route53Resolver::ResolverRule.TargetAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html)
+  - `ap-east-1`
+  - `eu-north-1`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- PropertyType Still Missing
+  - Since v10.1.0: [AWS::MediaLive::Channel.MultiplexProgramChannelDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.html)
+    - `ap-south-1`
+    - `eu-west-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
 
 ## [10.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v10.1.0) (2019-12-13)
 
