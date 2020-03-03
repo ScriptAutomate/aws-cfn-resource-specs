@@ -8,17 +8,406 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [11.1.0](#1110-2020-02-21)
+- [11.2.0](#1120-2020-03-02)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [11.0.0](#1100-2020-02-17)
+- [11.1.0](#1110-2020-02-21)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+- [11.0.0](#1100-2020-02-17)
+  - [Totals](#totals-2)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
+
+## [11.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v11.2.0) (2020-03-02)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v11-changelog.json)
+  - Change source is a diff between [v11.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v11.2.0) and [v11.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v11.1.0)
+
+### Totals
+
+- TotalPropertyTypes: 1285 **(+18)**
+- TotalPropertyTypesSupportedGlobally: 509 **(+0)**
+- TotalResourceTypes: 506 **(+3)**
+- TotalResourceTypesSupportedGlobally: 193 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-2`
+  - `me-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-2`
+  - `me-south-1`
+
+- [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-2`
+  - `me-south-1`
+
+- [AWS::AppMesh::VirtualNode.BackendDefaults](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-backenddefaults.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.ClientPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicy.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.ClientPolicyTls](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicytls.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.ListenerTls](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertls.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.ListenerTlsAcmCertificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsacmcertificate.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.ListenerTlsCertificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlscertificate.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.ListenerTlsFileCertificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsfilecertificate.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.TlsValidationContext](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontext.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.TlsValidationContextAcmTrust](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontextacmtrust.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.TlsValidationContextFileTrust](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontextfiletrust.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppMesh::VirtualNode.TlsValidationContextTrust](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontexttrust.html)
+  - `us-east-1`
+  - `ap-south-1`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::Greengrass::ResourceDefinition.ResourceDownloadOwnerSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-northeast-2`
+  - `ap-southeast-1`
+  - `us-east-2`
+  - `cn-north-1`
+  - `us-gov-west-1`
+
+- [AWS::Greengrass::ResourceDefinitionVersion.ResourceDownloadOwnerSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedownloadownersetting.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-northeast-2`
+  - `ap-southeast-1`
+  - `us-east-2`
+  - `cn-north-1`
+  - `us-gov-west-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-2`
+  - `me-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-2`
+  - `me-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-2`
+  - `me-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-2`
+  - `me-south-1`
+
+- [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-2`
+  - `me-south-1`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::SSM::Parameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- New ResourceType(s) Missing
+  - [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+- PropertyType Still Missing
+  - Since v11.1.0: [AWS::CloudFront::Distribution.OriginGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroup.html)
+    - `ap-south-1`
+
+  - Since v11.1.0: [AWS::CloudFront::Distribution.OriginGroupFailoverCriteria](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupfailovercriteria.html)
+    - `ap-south-1`
+
+  - Since v11.1.0: [AWS::CloudFront::Distribution.OriginGroupMember](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupmember.html)
+    - `ap-south-1`
+
+  - Since v11.1.0: [AWS::CloudFront::Distribution.OriginGroupMembers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupmembers.html)
+    - `ap-south-1`
+
+  - Since v11.1.0: [AWS::CloudFront::Distribution.OriginGroups](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroups.html)
+    - `ap-south-1`
+
+  - Since v11.1.0: [AWS::CloudFront::Distribution.StatusCodes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-statuscodes.html)
+    - `ap-south-1`
+
+  - Since v11.1.0: [AWS::LakeFormation::Permissions.ColumnWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-columnwildcard.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+  - Since v11.1.0: [AWS::LakeFormation::Permissions.DataLocationResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-datalocationresource.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+  - Since v11.1.0: [AWS::LakeFormation::Permissions.TableWithColumnsResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewithcolumnsresource.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+- New PropertyType(s) Missing
+  - [AWS::Greengrass::ResourceDefinition.ResourceDownloadOwnerSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.html)
+    - `ap-south-1`
+    - `eu-west-2`
+    - `ap-northeast-2`
+    - `ap-southeast-1`
+    - `us-east-2`
+    - `cn-north-1`
+    - `us-gov-west-1`
+
+  - [AWS::Greengrass::ResourceDefinitionVersion.ResourceDownloadOwnerSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedownloadownersetting.html)
+    - `ap-south-1`
+    - `eu-west-2`
+    - `ap-northeast-2`
+    - `ap-southeast-1`
+    - `us-east-2`
+    - `cn-north-1`
+    - `us-gov-west-1`
+
+  - [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
 
 ## [11.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v11.1.0) (2020-02-21)
 
