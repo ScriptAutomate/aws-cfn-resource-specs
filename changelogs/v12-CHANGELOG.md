@@ -8,12 +8,211 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [12.0.0](#1200-2020-03-30)
+- [12.1.0](#1210-2020-04-03)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
+- [12.0.0](#1200-2020-03-30)
+  - [Totals](#totals-1)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+
+## [12.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v12.1.0) (2020-04-03)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v12-changelog.json)
+  - Change source is a diff between [v12.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v12.1.0) and [v12.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v12.0.0)
+
+### Totals
+
+- TotalPropertyTypes: 1322 **(+0)**
+- TotalPropertyTypesSupportedGlobally: 520 **(+2)**
+- TotalResourceTypes: 523 **(+0)**
+- TotalResourceTypesSupportedGlobally: 193 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::CloudWatch::InsightRule.Tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-insightrule-tags.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-east-1`
+  - `cn-northwest-1`
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+  - `me-south-1`
+
+### Complete Removal of ResourceTypes and/or PropertyTypes
+
+- [AWS::EC2::EC2Fleet.TagRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagrequest.html)
+  - `us-east-1`
+  - `eu-north-1`
+  - `ap-south-1`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `eu-west-1`
+  - `ap-northeast-3`
+  - `ap-northeast-2`
+  - `ap-northeast-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `us-east-2`
+  - `us-west-1`
+  - `ap-east-1`
+  - `cn-northwest-1`
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+  - `me-south-1`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::Detective::Graph](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)
+  - `us-west-1`
+  - `eu-north-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+  - `eu-west-3`
+  - `eu-west-1`
+  - `eu-central-1`
+  - `ca-central-1`
+  - `eu-west-2`
+
+- [AWS::Detective::MemberInvitation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html)
+  - `us-west-1`
+  - `eu-north-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+  - `eu-west-3`
+  - `eu-west-1`
+  - `eu-central-1`
+  - `ca-central-1`
+  - `eu-west-2`
+
+- [AWS::WAFv2::WebACLAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html)
+  - `me-south-1`
+  - `ap-east-1`
+
+- [AWS::EC2::EC2Fleet.CapacityReservationOptionsRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html)
+  - Now available to **ALL** regions.
+
+- [AWS::EC2::EC2Fleet.Placement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html)
+  - Now available to **ALL** regions.
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- ResourceType Still Missing
+  - Since v12.0.0: [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.0.0: [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.0.0: [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+- ResourceType(s) No Longer Missing
+  - [AWS::Detective::Graph](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)
+    - Was missing since v12.0.0
+
+  - [AWS::Detective::MemberInvitation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html)
+    - Was missing since v12.0.0
+
+- PropertyType Still Missing
+  - Since v12.0.0: [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.0.0: [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.0.0: [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.0.0: [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.0.0: [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.0.0: [AWS::LakeFormation::Permissions.ColumnWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-columnwildcard.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+  - Since v12.0.0: [AWS::LakeFormation::Permissions.DataLocationResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-datalocationresource.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+  - Since v12.0.0: [AWS::LakeFormation::Permissions.TableWithColumnsResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewithcolumnsresource.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+- PropertyType(s) No Longer Missing
+  - [AWS::EC2::EC2Fleet.CapacityReservationOptionsRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.html)
+    - Was missing since v12.0.0
+
+  - [AWS::EC2::EC2Fleet.Placement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html)
+    - Was missing since v12.0.0
 
 ## [12.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v12.0.0) (2020-03-30)
 
