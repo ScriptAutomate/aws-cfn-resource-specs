@@ -8,18 +8,130 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [12.1.0](#1210-2020-04-03)
+- [12.2.0](#1220-2020-04-08)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
-  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [12.0.0](#1200-2020-03-30)
+- [12.1.0](#1210-2020-04-03)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+- [12.0.0](#1200-2020-03-30)
+  - [Totals](#totals-2)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
   - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
-  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
+
+## [12.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v12.2.0) (2020-04-08)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v12-changelog.json)
+  - Change source is a diff between [v12.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v12.2.0) and [v12.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v12.1.0)
+
+### Totals
+
+- TotalPropertyTypes: 1324 **(+2)**
+- TotalPropertyTypesSupportedGlobally: 520 **(+0)**
+- TotalResourceTypes: 523 **(+0)**
+- TotalResourceTypesSupportedGlobally: 193 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::SSM::PatchBaseline.PatchStringDate]()
+  - `eu-central-1`
+
+- [AWS::StepFunctions::StateMachine.TracingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tracingconfiguration.html)
+  - `us-east-1`
+  - `eu-west-1`
+  - `eu-central-1`
+  - `us-east-2`
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- ResourceType Still Missing
+  - Since v12.1.0: [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.1.0: [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.1.0: [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+- PropertyType Still Missing
+  - Since v12.1.0: [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.1.0: [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.1.0: [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.1.0: [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.1.0: [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+    - `eu-north-1`
+    - `eu-west-1`
+    - `ap-southeast-2`
+    - `us-east-2`
+    - `us-west-2`
+    - `me-south-1`
+
+  - Since v12.1.0: [AWS::LakeFormation::Permissions.ColumnWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-columnwildcard.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+  - Since v12.1.0: [AWS::LakeFormation::Permissions.DataLocationResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-datalocationresource.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+  - Since v12.1.0: [AWS::LakeFormation::Permissions.TableWithColumnsResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewithcolumnsresource.html)
+    - `ap-northeast-1`
+    - `us-west-2`
+
+- New PropertyType(s) Missing
+  - [AWS::SSM::PatchBaseline.PatchStringDate]()
+    - `eu-central-1`
 
 ## [12.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v12.1.0) (2020-04-03)
 
