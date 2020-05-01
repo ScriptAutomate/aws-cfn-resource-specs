@@ -128,6 +128,7 @@ for region in regions:
             for key in json_contents["ResourceTypes"].keys():
                 if supported_resources["ResourceTypes"].get(key):
                     supported_resources["ResourceTypes"][key]["Regions"].append(region)
+                    supported_resources["ResourceTypes"][key]["Regions"] = sorted(supported_resources["ResourceTypes"][key]["Regions"])
                 else:
                     supported_resources["ResourceTypes"][key] = {
                         "Regions" : [
@@ -156,6 +157,7 @@ for region in regions:
             for key in json_contents["PropertyTypes"].keys():
                 if supported_resources["PropertyTypes"].get(key):
                     supported_resources["PropertyTypes"][key]["Regions"].append(region)
+                    supported_resources["PropertyTypes"][key]["Regions"] = sorted(supported_resources["PropertyTypes"][key]["Regions"])
                 else:
                     supported_resources["PropertyTypes"][key] = {
                         "Regions" : [
