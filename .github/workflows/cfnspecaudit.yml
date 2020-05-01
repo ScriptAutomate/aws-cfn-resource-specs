@@ -10,15 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
     - name: Install dependencies
       run: |
+        git fetch --depth=1 origin +refs/tags/*:refs/tags/*
         python -m pip install --upgrade pip setuptools
-        git submodule update --init --recursive --remote
         pip install pipenv
         pipenv install --dev
     - name: Lint with flake8
@@ -46,7 +48,12 @@ jobs:
       run: |
         pipenv run python tools/create-changelog.py
     - name: Create pull request if any files were updated
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      id: cpr
+      uses: peter-evans/create-pull-request@v2
+      with:
+        GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_PR_TOKEN }}
+        labels: automerge
+    - name: Check PR outputs
       run: |
-        pipenv run python tools/create-pull-request.py
+        echo "Pull Request Number - ${{ env.PULL_REQUEST_NUMBER }}"
+        echo "Pull Request Number - ${{ steps.cpr.outputs.pr_number }}"
