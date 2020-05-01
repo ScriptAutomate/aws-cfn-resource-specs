@@ -92,7 +92,7 @@ for each_type in ["ResourceTypes", "PropertyTypes"]:
     for resource in supported_old["TypesNotInUSEAST1"][each_type].keys():
         if not supported_new["TypesNotInUSEAST1"][each_type].get(resource):
             changelog["TypesNotInUSEAST1"][each_type][resource] = {
-                "Since": supported_old["ResourceSpecificationVersion"],
+                "Since": supported_old["TypesNotInUSEAST1"][each_type][resource]["Since"],
                 "Fixed": True,
                 "Documentation": supported_old[each_type][resource]["Documentation"]
             }
