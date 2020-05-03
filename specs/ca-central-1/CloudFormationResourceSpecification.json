@@ -23553,7 +23553,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "14.0.0",
+  "ResourceSpecificationVersion": "14.1.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -33893,6 +33893,34 @@
         }
       }
     },
+    "AWS::EventSchemas::RegistryPolicy": {
+      "Attributes": {
+        "Id": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html",
+      "Properties": {
+        "Policy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-policy",
+          "PrimitiveType": "Json",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "RegistryName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-registryname",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "RevisionId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-revisionid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Events::EventBus": {
       "Attributes": {
         "Arn": {
@@ -37139,8 +37167,26 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "RestoreToTime": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-restoretotime",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "RestoreType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-restoretype",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
         "SnapshotIdentifier": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-snapshotidentifier",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "SourceDBClusterIdentifier": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-sourcedbclusteridentifier",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
@@ -37157,6 +37203,12 @@
           "Required": false,
           "Type": "List",
           "UpdateType": "Mutable"
+        },
+        "UseLatestRestorableTime": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-uselatestrestorabletime",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Immutable"
         },
         "VpcSecurityGroupIds": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-vpcsecuritygroupids",
@@ -39388,7 +39440,7 @@
         },
         "Tags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html#cfn-resourcegroups-group-tags",
-          "ItemType": "Json",
+          "ItemType": "Tag",
           "Required": false,
           "Type": "List",
           "UpdateType": "Mutable"
@@ -41508,9 +41560,6 @@
         "Id": {
           "PrimitiveType": "String"
         },
-        "Name": {
-          "PrimitiveType": "String"
-        },
         "State": {
           "PrimitiveType": "String"
         }
@@ -41540,6 +41589,12 @@
           "PrimitiveType": "Integer",
           "Required": false,
           "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-name",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
         },
         "RunConfig": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-runconfig",

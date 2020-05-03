@@ -16829,7 +16829,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "14.0.0",
+  "ResourceSpecificationVersion": "14.1.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -24792,6 +24792,34 @@
         }
       }
     },
+    "AWS::EventSchemas::RegistryPolicy": {
+      "Attributes": {
+        "Id": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html",
+      "Properties": {
+        "Policy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-policy",
+          "PrimitiveType": "Json",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "RegistryName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-registryname",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "RevisionId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-revisionid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Events::EventBus": {
       "Attributes": {
         "Arn": {
@@ -28564,7 +28592,7 @@
         },
         "Tags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html#cfn-resourcegroups-group-tags",
-          "ItemType": "Json",
+          "ItemType": "Tag",
           "Required": false,
           "Type": "List",
           "UpdateType": "Mutable"
