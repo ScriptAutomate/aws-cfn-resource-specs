@@ -91,11 +91,11 @@ for each_type in ["ResourceTypes", "PropertyTypes"]:
     # "TypesNotInUSEAST1" types no longer missing in latest version
     for resource in supported_old["TypesNotInUSEAST1"][each_type].keys():
         if not supported_new["TypesNotInUSEAST1"][each_type].get(resource):
-            changelog["TypesNotInUSEAST1"][each_type][resource] = {
-                "Since": supported_old["TypesNotInUSEAST1"][each_type][resource]["Since"],
-                "Fixed": True,
-                "Documentation": supported_old[each_type][resource]["Documentation"]
-            }
+            #changelog["TypesNotInUSEAST1"][each_type][resource] = {
+            #    "Since": supported_old["TypesNotInUSEAST1"][each_type][resource]["Since"],
+            #    "Fixed": True,
+            #    "Documentation": supported_old[each_type][resource]["Documentation"]
+            #}
             changelog["TypesNotInUSEAST1"]["Total"]["Change"][1] += 1
 
 
