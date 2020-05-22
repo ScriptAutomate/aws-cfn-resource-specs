@@ -8478,16 +8478,22 @@
     "AWS::DLM::LifecyclePolicy.CreateRule": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html",
       "Properties": {
+        "CronExpression": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html#cfn-dlm-lifecyclepolicy-createrule-cronexpression",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Interval": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html#cfn-dlm-lifecyclepolicy-createrule-interval",
           "PrimitiveType": "Integer",
-          "Required": true,
+          "Required": false,
           "UpdateType": "Mutable"
         },
         "IntervalUnit": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html#cfn-dlm-lifecyclepolicy-createrule-intervalunit",
           "PrimitiveType": "String",
-          "Required": true,
+          "Required": false,
           "UpdateType": "Mutable"
         },
         "Times": {
@@ -8505,13 +8511,13 @@
         "Interval": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-interval",
           "PrimitiveType": "Integer",
-          "Required": false,
+          "Required": true,
           "UpdateType": "Mutable"
         },
         "IntervalUnit": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-intervalunit",
           "PrimitiveType": "String",
-          "Required": false,
+          "Required": true,
           "UpdateType": "Mutable"
         }
       }
@@ -8534,7 +8540,7 @@
         "Encrypted": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted",
           "PrimitiveType": "Boolean",
-          "Required": false,
+          "Required": true,
           "UpdateType": "Mutable"
         },
         "RetainRule": {
@@ -8546,7 +8552,7 @@
         "TargetRegion": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html#cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion",
           "PrimitiveType": "String",
-          "Required": false,
+          "Required": true,
           "UpdateType": "Mutable"
         }
       }
@@ -9336,6 +9342,12 @@
           "Type": "DirectoryServiceAuthenticationRequest",
           "UpdateType": "Mutable"
         },
+        "FederatedAuthentication": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-federatedauthentication",
+          "Required": false,
+          "Type": "FederatedAuthenticationRequest",
+          "UpdateType": "Mutable"
+        },
         "MutualAuthentication": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-mutualauthentication",
           "Required": false,
@@ -9378,6 +9390,17 @@
       "Properties": {
         "DirectoryId": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.html#cfn-ec2-clientvpnendpoint-directoryserviceauthenticationrequest-directoryid",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::EC2::ClientVpnEndpoint.FederatedAuthenticationRequest": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.html",
+      "Properties": {
+        "SAMLProviderArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.html#cfn-ec2-clientvpnendpoint-federatedauthenticationrequest-samlproviderarn",
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
@@ -23523,6 +23546,41 @@
         }
       }
     },
+    "AWS::MediaStore::Container.MetricPolicy": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html",
+      "Properties": {
+        "ContainerLevelMetrics": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-containerlevelmetrics",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "MetricPolicyRules": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html#cfn-mediastore-container-metricpolicy-metricpolicyrules",
+          "ItemType": "MetricPolicyRule",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::MediaStore::Container.MetricPolicyRule": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html",
+      "Properties": {
+        "ObjectGroup": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroup",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "ObjectGroupName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicyrule.html#cfn-mediastore-container-metricpolicyrule-objectgroupname",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::NetworkManager::Device.Location": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-device-location.html",
       "Properties": {
@@ -29725,7 +29783,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "14.3.0",
+  "ResourceSpecificationVersion": "14.4.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -31178,12 +31236,6 @@
         "Description": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-description",
           "PrimitiveType": "String",
-          "Required": false,
-          "UpdateType": "Mutable"
-        },
-        "DisableExecuteApiEndpoint": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html#cfn-apigatewayv2-api-disableexecuteapiendpoint",
-          "PrimitiveType": "Boolean",
           "Required": false,
           "UpdateType": "Mutable"
         },
@@ -45938,14 +45990,14 @@
         },
         "FindingCriteria": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-findingcriteria",
-          "Required": false,
+          "Required": true,
           "Type": "FindingCriteria",
           "UpdateType": "Mutable"
         },
         "Name": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-name",
           "PrimitiveType": "String",
-          "Required": false,
+          "Required": true,
           "UpdateType": "Mutable"
         },
         "Position": {
@@ -46343,10 +46395,23 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "MetricPolicy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-metricpolicy",
+          "Required": false,
+          "Type": "MetricPolicy",
+          "UpdateType": "Mutable"
+        },
         "Policy": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-policy",
           "PrimitiveType": "String",
           "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "Tags": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-tags",
+          "ItemType": "Tag",
+          "Required": false,
+          "Type": "List",
           "UpdateType": "Mutable"
         }
       }
@@ -46448,8 +46513,26 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "RestoreToTime": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-restoretotime",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "RestoreType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-restoretype",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
         "SnapshotIdentifier": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-snapshotidentifier",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "SourceDBClusterIdentifier": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-sourcedbclusteridentifier",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
@@ -46466,6 +46549,12 @@
           "Required": false,
           "Type": "List",
           "UpdateType": "Mutable"
+        },
+        "UseLatestRestorableTime": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-uselatestrestorabletime",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Immutable"
         },
         "VpcSecurityGroupIds": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html#cfn-neptune-dbcluster-vpcsecuritygroupids",

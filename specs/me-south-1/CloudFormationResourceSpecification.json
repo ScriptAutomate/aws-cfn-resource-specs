@@ -6077,19 +6077,19 @@
         }
       }
     },
-    "AWS::ECS::Cluster.ClusterSetting": {
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersetting.html",
+    "AWS::ECS::Cluster.ClusterSettings": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html",
       "Properties": {
         "Name": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersetting.html#cfn-ecs-cluster-clustersetting-name",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-name",
           "PrimitiveType": "String",
-          "Required": true,
+          "Required": false,
           "UpdateType": "Mutable"
         },
         "Value": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersetting.html#cfn-ecs-cluster-clustersetting-value",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html#cfn-ecs-cluster-clustersettings-value",
           "PrimitiveType": "String",
-          "Required": true,
+          "Required": false,
           "UpdateType": "Mutable"
         }
       }
@@ -15219,19 +15219,6 @@
         }
       }
     },
-    "AWS::SSM::Association.ParameterValues": {
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-parametervalues.html",
-      "Properties": {
-        "ParameterValues": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-parametervalues.html#cfn-ssm-association-parametervalues-parametervalues",
-          "DuplicatesAllowed": false,
-          "PrimitiveItemType": "String",
-          "Required": true,
-          "Type": "List",
-          "UpdateType": "Mutable"
-        }
-      }
-    },
     "AWS::SSM::Association.S3OutputLocation": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html",
       "Properties": {
@@ -15246,6 +15233,12 @@
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Mutable"
+        },
+        "OutputS3Region": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3region",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -15256,15 +15249,14 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-target.html#cfn-ssm-association-target-key",
           "PrimitiveType": "String",
           "Required": true,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         },
         "Values": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-target.html#cfn-ssm-association-target-values",
-          "DuplicatesAllowed": false,
           "PrimitiveItemType": "String",
           "Required": true,
           "Type": "List",
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -16981,7 +16973,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "14.3.0",
+  "ResourceSpecificationVersion": "14.4.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -22141,15 +22133,13 @@
         },
         "ClusterSettings": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-clustersettings",
-          "DuplicatesAllowed": false,
-          "ItemType": "ClusterSetting",
+          "ItemType": "ClusterSettings",
           "Required": false,
           "Type": "List",
           "UpdateType": "Mutable"
         },
         "Tags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-tags",
-          "DuplicatesAllowed": true,
           "ItemType": "Tag",
           "Required": false,
           "Type": "List",
@@ -29372,10 +29362,27 @@
       }
     },
     "AWS::SSM::Association": {
+      "Attributes": {
+        "AssociationId": {
+          "PrimitiveType": "String"
+        }
+      },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html",
       "Properties": {
         "AssociationName": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-associationname",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "AutomationTargetParameterName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-automationtargetparametername",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "ComplianceSeverity": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-complianceseverity",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Mutable"
@@ -29390,13 +29397,25 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-instanceid",
           "PrimitiveType": "String",
           "Required": false,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
+        },
+        "MaxConcurrency": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-maxconcurrency",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "MaxErrors": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-maxerrors",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
         },
         "Name": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-name",
           "PrimitiveType": "String",
           "Required": true,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         },
         "OutputLocation": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-outputlocation",
@@ -29406,7 +29425,6 @@
         },
         "Parameters": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-parameters",
-          "DuplicatesAllowed": false,
           "ItemType": "ParameterValues",
           "Required": false,
           "Type": "Map",
@@ -29418,13 +29436,24 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "SyncCompliance": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-synccompliance",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Targets": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets",
-          "DuplicatesAllowed": false,
           "ItemType": "Target",
           "Required": false,
           "Type": "List",
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
+        },
+        "WaitForSuccessTimeoutSeconds": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-waitforsuccesstimeoutseconds",
+          "PrimitiveType": "Integer",
+          "Required": false,
+          "UpdateType": "Mutable"
         }
       }
     },
