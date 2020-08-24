@@ -13417,8 +13417,9 @@
       "Properties": {
         "Options": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-options",
+          "PrimitiveItemType": "String",
           "Required": false,
-          "Type": "Options",
+          "Type": "Map",
           "UpdateType": "Immutable"
         },
         "Type": {
@@ -13606,8 +13607,9 @@
         },
         "Options": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.html#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options",
+          "PrimitiveItemType": "String",
           "Required": false,
-          "Type": "Options",
+          "Type": "Map",
           "UpdateType": "Immutable"
         },
         "SecretOptions": {
@@ -13641,9 +13643,6 @@
           "UpdateType": "Immutable"
         }
       }
-    },
-    "AWS::ECS::TaskDefinition.Options": {
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-options.html"
     },
     "AWS::ECS::TaskDefinition.PortMapping": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.html",
@@ -27623,17 +27622,39 @@
         }
       }
     },
+    "AWS::Route53::HostedZone.HostedZoneConfig": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html",
+      "Properties": {
+        "Comment": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Route53::HostedZone.HostedZoneTag": {
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html",
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html",
       "Properties": {
         "Key": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-key",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-key",
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
         },
         "Value": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-value",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-value",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Route53::HostedZone.QueryLoggingConfig": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html",
+      "Properties": {
+        "CloudWatchLogsLogGroupArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn",
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
@@ -27641,16 +27662,16 @@
       }
     },
     "AWS::Route53::HostedZone.VPC": {
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-vpc.html",
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html",
       "Properties": {
         "VPCId": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-vpc.html#cfn-route53-hostedzone-vpc-vpcid",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcid",
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
         },
         "VPCRegion": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-vpc.html#cfn-route53-hostedzone-vpc-vpcregion",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcregion",
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
@@ -32753,7 +32774,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "17.0.0",
+  "ResourceSpecificationVersion": "18.0.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -34502,6 +34523,12 @@
         },
         "IntegrationMethod": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-integrationmethod",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "IntegrationSubtype": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-integrationsubtype",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Mutable"
@@ -43153,7 +43180,6 @@
         },
         "RepositoryPolicyText": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositorypolicytext",
-          "PrimitiveType": "Json",
           "Required": false,
           "UpdateType": "Mutable"
         },
@@ -43485,12 +43511,6 @@
           "ItemType": "Tag",
           "Required": false,
           "Type": "List",
-          "UpdateType": "Mutable"
-        },
-        "TaskDefinitionStatus": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskdefinitionstatus",
-          "PrimitiveType": "String",
-          "Required": false,
           "UpdateType": "Mutable"
         },
         "TaskRoleArn": {
@@ -49029,6 +49049,9 @@
       "Attributes": {
         "Arn": {
           "PrimitiveType": "String"
+        },
+        "KeyId": {
+          "PrimitiveType": "String"
         }
       },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html",
@@ -49053,7 +49076,6 @@
         },
         "KeyPolicy": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keypolicy",
-          "PrimitiveType": "Json",
           "Required": true,
           "UpdateType": "Mutable"
         },
@@ -49071,7 +49093,7 @@
         },
         "Tags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-tags",
-          "DuplicatesAllowed": true,
+          "DuplicatesAllowed": false,
           "ItemType": "Tag",
           "Required": false,
           "Type": "List",
@@ -53261,11 +53283,7 @@
     },
     "AWS::Route53::HostedZone": {
       "Attributes": {
-        "Id": {
-          "PrimitiveType": "String"
-        },
         "NameServers": {
-          "DuplicatesAllowed": true,
           "PrimitiveItemType": "String",
           "Type": "List"
         }
@@ -53274,13 +53292,13 @@
       "Properties": {
         "HostedZoneConfig": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzoneconfig",
-          "PrimitiveType": "Json",
           "Required": false,
+          "Type": "HostedZoneConfig",
           "UpdateType": "Mutable"
         },
         "HostedZoneTags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags",
-          "DuplicatesAllowed": false,
+          "DuplicatesAllowed": true,
           "ItemType": "HostedZoneTag",
           "Required": false,
           "Type": "List",
@@ -53294,17 +53312,17 @@
         },
         "QueryLoggingConfig": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-queryloggingconfig",
-          "PrimitiveType": "Json",
           "Required": false,
+          "Type": "QueryLoggingConfig",
           "UpdateType": "Mutable"
         },
         "VPCs": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-vpcs",
-          "DuplicatesAllowed": false,
+          "DuplicatesAllowed": true,
           "ItemType": "VPC",
           "Required": false,
           "Type": "List",
-          "UpdateType": "Mutable"
+          "UpdateType": "Conditional"
         }
       }
     },
@@ -54705,6 +54723,12 @@
           "ItemType": "ContainerDefinition",
           "Required": false,
           "Type": "List",
+          "UpdateType": "Immutable"
+        },
+        "EnableNetworkIsolation": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-enablenetworkisolation",
+          "PrimitiveType": "Boolean",
+          "Required": false,
           "UpdateType": "Immutable"
         },
         "ExecutionRoleArn": {

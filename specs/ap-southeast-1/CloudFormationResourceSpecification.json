@@ -12899,8 +12899,9 @@
       "Properties": {
         "Options": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html#cfn-ecs-taskdefinition-firelensconfiguration-options",
+          "PrimitiveItemType": "String",
           "Required": false,
-          "Type": "Options",
+          "Type": "Map",
           "UpdateType": "Immutable"
         },
         "Type": {
@@ -13088,8 +13089,9 @@
         },
         "Options": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration.html#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options",
+          "PrimitiveItemType": "String",
           "Required": false,
-          "Type": "Options",
+          "Type": "Map",
           "UpdateType": "Immutable"
         },
         "SecretOptions": {
@@ -13123,9 +13125,6 @@
           "UpdateType": "Immutable"
         }
       }
-    },
-    "AWS::ECS::TaskDefinition.Options": {
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-options.html"
     },
     "AWS::ECS::TaskDefinition.PortMapping": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-portmappings.html",
@@ -30972,7 +30971,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "17.0.0",
+  "ResourceSpecificationVersion": "18.0.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -32721,6 +32720,12 @@
         },
         "IntegrationMethod": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-integrationmethod",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "IntegrationSubtype": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html#cfn-apigatewayv2-integration-integrationsubtype",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Mutable"
@@ -40649,7 +40654,6 @@
         },
         "RepositoryPolicyText": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositorypolicytext",
-          "PrimitiveType": "Json",
           "Required": false,
           "UpdateType": "Mutable"
         },
@@ -40981,12 +40985,6 @@
           "ItemType": "Tag",
           "Required": false,
           "Type": "List",
-          "UpdateType": "Mutable"
-        },
-        "TaskDefinitionStatus": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskdefinitionstatus",
-          "PrimitiveType": "String",
-          "Required": false,
           "UpdateType": "Mutable"
         },
         "TaskRoleArn": {
@@ -46005,6 +46003,9 @@
       "Attributes": {
         "Arn": {
           "PrimitiveType": "String"
+        },
+        "KeyId": {
+          "PrimitiveType": "String"
         }
       },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html",
@@ -46029,7 +46030,6 @@
         },
         "KeyPolicy": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keypolicy",
-          "PrimitiveType": "Json",
           "Required": true,
           "UpdateType": "Mutable"
         },
@@ -46047,7 +46047,7 @@
         },
         "Tags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-tags",
-          "DuplicatesAllowed": true,
+          "DuplicatesAllowed": false,
           "ItemType": "Tag",
           "Required": false,
           "Type": "List",
@@ -48528,6 +48528,9 @@
         },
         "Endpoint": {
           "PrimitiveType": "String"
+        },
+        "Id": {
+          "PrimitiveType": "String"
         }
       },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html",
@@ -48582,6 +48585,7 @@
         },
         "EngineAttributes": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-engineattributes",
+          "DuplicatesAllowed": true,
           "ItemType": "EngineAttribute",
           "Required": false,
           "Type": "List",
@@ -48631,6 +48635,7 @@
         },
         "SecurityGroupIds": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-securitygroupids",
+          "DuplicatesAllowed": true,
           "PrimitiveItemType": "String",
           "Required": false,
           "Type": "List",
@@ -48650,6 +48655,7 @@
         },
         "SubnetIds": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-subnetids",
+          "DuplicatesAllowed": true,
           "PrimitiveItemType": "String",
           "Required": false,
           "Type": "List",
@@ -48657,6 +48663,7 @@
         },
         "Tags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html#cfn-opsworkscm-server-tags",
+          "DuplicatesAllowed": true,
           "ItemType": "Tag",
           "Required": false,
           "Type": "List",
@@ -51611,6 +51618,12 @@
           "ItemType": "ContainerDefinition",
           "Required": false,
           "Type": "List",
+          "UpdateType": "Immutable"
+        },
+        "EnableNetworkIsolation": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-enablenetworkisolation",
+          "PrimitiveType": "Boolean",
+          "Required": false,
           "UpdateType": "Immutable"
         },
         "ExecutionRoleArn": {
