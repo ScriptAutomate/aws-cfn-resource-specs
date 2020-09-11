@@ -8,24 +8,2277 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [18.2.0](#1820-2020-09-05)
+- [18.3.0](#1830-2020-09-10)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [18.1.0](#1810-2020-08-28)
+- [18.2.0](#1820-2020-09-05)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
-- [18.0.0](#1800-2020-08-24)
+- [18.1.0](#1810-2020-08-28)
   - [Totals](#totals-2)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
+- [18.0.0](#1800-2020-08-24)
+  - [Totals](#totals-3)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-3)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-3)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-2)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-3)
+
+## [18.3.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.3.0) (2020-09-10)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v18-changelog.json)
+  - Change source is a diff between [v18.3.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.3.0) and [v18.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.2.0)
+
+### Totals
+
+- TotalPropertyTypes: 1659 **(+50)**
+- TotalPropertyTypesSupportedGlobally: 488 **(+0)**
+- TotalResourceTypes: 568 **(+6)**
+- TotalResourceTypesSupportedGlobally: 187 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::IoT::Authorizer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html)
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Faq](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-faq.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::SSO::Assignment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::SSO::PermissionSet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::IoT::Authorizer.Tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-authorizer-tags.html)
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::IoT::Authorizer.TokenSigningPublicKeys](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-authorizer-tokensigningpublickeys.html)
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.AccessControlListConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-accesscontrollistconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.AclConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-aclconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.ChangeDetectingColumns](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-changedetectingcolumns.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.ColumnConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-columnconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.ConnectionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-connectionconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.DataSourceConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourceconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.DataSourceInclusionsExclusionsStrings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.DataSourceToIndexFieldMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourcetoindexfieldmapping.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.DataSourceToIndexFieldMappingList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourcetoindexfieldmappinglist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.DataSourceVpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-datasourcevpcconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.DatabaseConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-databaseconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.DocumentsMetadataConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-documentsmetadataconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.OneDriveConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.OneDriveUserList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveuserlist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.OneDriveUsers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveusers.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.S3DataSourceConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-s3datasourceconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.S3Path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-s3path.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceChatterFeedConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcechatterfeedconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceChatterFeedIncludeFilterTypes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcechatterfeedincludefiltertypes.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceCustomKnowledgeArticleTypeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcecustomknowledgearticletypeconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceCustomKnowledgeArticleTypeConfigurationList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcecustomknowledgearticletypeconfigurationlist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceKnowledgeArticleConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceknowledgearticleconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceKnowledgeArticleStateList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceknowledgearticlestatelist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceStandardKnowledgeArticleTypeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceStandardObjectAttachmentConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardobjectattachmentconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceStandardObjectConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardobjectconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SalesforceStandardObjectConfigurationList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardobjectconfigurationlist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.ServiceNowConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.ServiceNowKnowledgeArticleConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.ServiceNowServiceCatalogConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowservicecatalogconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SharePointConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sharepointconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.SqlConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sqlconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::DataSource.TagList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-taglist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Faq.S3Path](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-faq-s3path.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Faq.TagList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-faq-taglist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.CapacityUnitsConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-capacityunitsconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.DocumentMetadataConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.DocumentMetadataConfigurationList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfigurationlist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.Relevance](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.Search](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-search.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.ServerSideEncryptionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-serversideencryptionconfiguration.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.TagList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-taglist.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.ValueImportanceItem](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-valueimportanceitem.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Kendra::Index.ValueImportanceItems](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-valueimportanceitems.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::Permissions.TableWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewildcard.html)
+  - `ap-northeast-1`
+  - `us-west-2`
+
+- [AWS::MSK::Cluster.Sasl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-sasl.html)
+  - `ap-northeast-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::MSK::Cluster.Scram](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-scram.html)
+  - `ap-northeast-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::Chatbot::SlackChannelConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html)
+  - `me-south-1`
+  - `ap-east-1`
+
+- [AWS::StepFunctions::StateMachine](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)
+  - `ap-southeast-1`
+  - `cn-north-1`
+
+- [AWS::ECR::Repository.LifecyclePolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-lifecyclepolicy.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-2`
+  - `us-west-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `eu-north-1`
+  - `us-east-2`
+  - `eu-west-1`
+  - `ap-east-1`
+
+- [AWS::MediaLive::Channel.AacSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Ac3Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.ArchiveContainerSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archivecontainersettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.ArchiveGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archivegroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.ArchiveOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archiveoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AribDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aribdestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AudioChannelMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiochannelmapping.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AudioCodecSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiocodecsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AudioDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AudioNormalizationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AudioOnlyHlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audioonlyhlssettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AudioTrack](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiotrack.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AudioTrackSelection](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiotrackselection.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AutomaticInputFailoverSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-automaticinputfailoversettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AvailBlanking](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availblanking.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AvailConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availconfiguration.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.AvailSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.BlackoutSlate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-blackoutslate.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.BurnInDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-burnindestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.CaptionDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.CaptionDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.CaptionLanguageMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionlanguagemapping.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.ColorSpacePassthroughSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-colorspacepassthroughsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.DvbNitSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbnitsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.DvbSdtSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsdtsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.DvbSubDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsubdestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.DvbTdtSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbtdtsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Eac3Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-eac3settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.EbuTtDDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ebuttddestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.EmbeddedDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-embeddeddestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.EmbeddedPlusScte20DestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-embeddedplusscte20destinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.EncoderSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-encodersettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.FeatureActivations](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-featureactivations.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.FecOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fecoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Fmp4HlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fmp4hlssettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.FrameCaptureGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturegroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.FrameCaptureOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecaptureoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.FrameCaptureSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturesettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.GlobalConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.H264ColorSpaceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264colorspacesettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.H264FilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264filtersettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.H264Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.H265ColorSpaceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265colorspacesettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.H265FilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265filtersettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.H265Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Hdr10Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hdr10settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.HlsAkamaiSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsakamaisettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.HlsBasicPutSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsbasicputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.HlsCdnSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlscdnsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.HlsGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsgroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.HlsMediaStoreSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsmediastoresettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.HlsOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.HlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlssettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.HlsWebdavSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlswebdavsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.InputChannelLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputchannellevel.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.InputLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlocation.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.InputLossBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlossbehavior.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.KeyProviderSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-keyprovidersettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.M2tsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-m2tssettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.M3u8Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-m3u8settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.MediaPackageGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mediapackagegroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.MediaPackageOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mediapackageoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Mp2Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mp2settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.MsSmoothGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mssmoothgroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.MsSmoothOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mssmoothoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.MultiplexGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexgroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.MultiplexOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.NielsenConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsenconfiguration.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-output.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.OutputGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroup.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.OutputGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.OutputLocationRef](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputlocationref.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.OutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.PassThroughSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-passthroughsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Rec601Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rec601settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Rec709Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rec709settings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.RemixSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-remixsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.RtmpCaptionInfoDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpcaptioninfodestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.RtmpGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.RtmpOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Scte20PlusEmbeddedDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte20plusembeddeddestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Scte27DestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte27destinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Scte35SpliceInsert](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35spliceinsert.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.Scte35TimeSignalApos](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35timesignalapos.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.SmpteTtDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-smptettdestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.StandardHlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-standardhlssettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.StaticKeySettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-statickeysettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.TeletextDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-teletextdestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.TemporalFilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-temporalfiltersettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.TimecodeConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-timecodeconfig.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.TtmlDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ttmldestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.UdpContainerSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpcontainersettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.UdpGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpgroupsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.UdpOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpoutputsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.VideoCodecSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videocodecsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.VideoDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videodescription.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Channel.WebvttDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-webvttdestinationsettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Input.InputDeviceRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::MediaLive::Input.InputDeviceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html)
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `eu-west-1`
+  - `ap-northeast-1`
+
+- [AWS::StepFunctions::StateMachine.CloudWatchLogsLogGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html)
+  - `ap-southeast-1`
+  - `cn-north-1`
+
+- [AWS::StepFunctions::StateMachine.DefinitionSubstitutions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-definitionsubstitutions.html)
+  - `ap-southeast-1`
+  - `cn-north-1`
+
+- [AWS::StepFunctions::StateMachine.LogDestination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html)
+  - `ap-southeast-1`
+  - `cn-north-1`
+
+- [AWS::StepFunctions::StateMachine.LoggingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-loggingconfiguration.html)
+  - `ap-southeast-1`
+  - `cn-north-1`
+
+- [AWS::StepFunctions::StateMachine.S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-s3location.html)
+  - `ap-southeast-1`
+  - `cn-north-1`
+
+- [AWS::StepFunctions::StateMachine.TagsEntry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tagsentry.html)
+  - `ap-southeast-1`
+  - `cn-north-1`
+
+- [AWS::StepFunctions::StateMachine.TracingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tracingconfiguration.html)
+  - `ap-southeast-1`
+  - `cn-north-1`
+
+### Existing ResourceTypes and PropertyTypes: Removed Regions
+
+- [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+  - `eu-west-2`
+  - `us-west-1`
+  - `eu-west-3`
+  - `ap-northeast-2`
+  - `eu-north-1`
+  - `us-east-2`
+  - `me-south-1`
+  - `ap-northeast-3`
+  - `ap-east-1`
+
+- [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+  - `eu-west-2`
+  - `us-west-1`
+  - `eu-west-3`
+  - `ap-northeast-2`
+  - `eu-north-1`
+  - `us-east-2`
+  - `me-south-1`
+  - `ap-northeast-3`
+  - `ap-east-1`
+
+- [AWS::Route53::HostedZone.HostedZoneConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html)
+  - `us-west-2`
+
+- [AWS::Route53::HostedZone.QueryLoggingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html)
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- ResourceType Still Missing
+  - Since v18.2.0: [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+- PropertyType Still Missing
+  - Since v18.2.0: [AWS::AppSync::FunctionConfiguration.LambdaConflictHandlerConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html)
+    - `ap-northeast-2`
+
+  - Since v18.2.0: [AWS::AppSync::FunctionConfiguration.SyncConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html)
+    - `ap-northeast-2`
+
+  - Since v18.2.0: [AWS::ECS::Cluster.ClusterSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersetting.html)
+    - `af-south-1`
+    - `ap-northeast-3`
+    - `eu-south-1`
+
+  - Since v18.2.0: [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AacSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Ac3Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.ArchiveContainerSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archivecontainersettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.ArchiveGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archivegroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.ArchiveOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archiveoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AribDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aribdestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AudioChannelMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiochannelmapping.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AudioCodecSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiocodecsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AudioDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AudioNormalizationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AudioOnlyHlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audioonlyhlssettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AudioTrack](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiotrack.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AudioTrackSelection](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiotrackselection.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AutomaticInputFailoverSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-automaticinputfailoversettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AvailBlanking](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availblanking.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AvailConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availconfiguration.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.AvailSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.BlackoutSlate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-blackoutslate.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.BurnInDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-burnindestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.CaptionDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.CaptionDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.CaptionLanguageMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionlanguagemapping.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.ColorSpacePassthroughSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-colorspacepassthroughsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.DvbNitSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbnitsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.DvbSdtSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsdtsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.DvbSubDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsubdestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.DvbTdtSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbtdtsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Eac3Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-eac3settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.EbuTtDDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ebuttddestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.EmbeddedDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-embeddeddestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.EmbeddedPlusScte20DestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-embeddedplusscte20destinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.EncoderSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-encodersettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.FeatureActivations](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-featureactivations.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.FecOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fecoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Fmp4HlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fmp4hlssettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.FrameCaptureGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturegroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.FrameCaptureOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecaptureoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.FrameCaptureSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturesettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.GlobalConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.H264ColorSpaceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264colorspacesettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.H264FilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264filtersettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.H264Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.H265ColorSpaceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265colorspacesettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.H265FilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265filtersettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.H265Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Hdr10Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hdr10settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.HlsAkamaiSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsakamaisettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.HlsBasicPutSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsbasicputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.HlsCdnSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlscdnsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.HlsGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsgroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.HlsMediaStoreSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsmediastoresettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.HlsOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.HlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlssettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.HlsWebdavSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlswebdavsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.InputChannelLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputchannellevel.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.InputLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlocation.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.InputLossBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlossbehavior.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.KeyProviderSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-keyprovidersettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.M2tsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-m2tssettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.M3u8Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-m3u8settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.MediaPackageGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mediapackagegroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.MediaPackageOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mediapackageoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Mp2Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mp2settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.MsSmoothGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mssmoothgroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.MsSmoothOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mssmoothoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.MultiplexGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexgroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.MultiplexOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.NielsenConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsenconfiguration.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-output.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.OutputGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroup.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.OutputGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.OutputLocationRef](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputlocationref.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.OutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.PassThroughSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-passthroughsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Rec601Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rec601settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Rec709Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rec709settings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.RemixSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-remixsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.RtmpCaptionInfoDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpcaptioninfodestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.RtmpGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.RtmpOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Scte20PlusEmbeddedDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte20plusembeddeddestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Scte27DestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte27destinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Scte35SpliceInsert](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35spliceinsert.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.Scte35TimeSignalApos](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35timesignalapos.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.SmpteTtDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-smptettdestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.StandardHlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-standardhlssettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.StaticKeySettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-statickeysettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.TeletextDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-teletextdestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.TemporalFilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-temporalfiltersettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.TimecodeConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-timecodeconfig.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.TtmlDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ttmldestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.UdpContainerSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpcontainersettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.UdpGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpgroupsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.UdpOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpoutputsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.VideoCodecSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videocodecsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.VideoDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videodescription.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Channel.WebvttDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-webvttdestinationsettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Input.InputDeviceRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::MediaLive::Input.InputDeviceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html)
+    - `ap-northeast-1`
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-west-1`
+    - `us-west-2`
+
+  - Since v18.2.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v18.2.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+- New PropertyType(s) Missing
+  - [AWS::LakeFormation::Permissions.TableWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewildcard.html)
+    - `ap-northeast-1`
+    - `us-west-2`
 
 ## [18.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.2.0) (2020-09-05)
 
