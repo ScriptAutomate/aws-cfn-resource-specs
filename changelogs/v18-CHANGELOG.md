@@ -8,30 +8,2054 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [18.3.0](#1830-2020-09-10)
+- [18.4.0](#1840-2020-09-17)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [18.2.0](#1820-2020-09-05)
+- [18.3.0](#1830-2020-09-10)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-1)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
-- [18.1.0](#1810-2020-08-28)
+- [18.2.0](#1820-2020-09-05)
   - [Totals](#totals-2)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
-- [18.0.0](#1800-2020-08-24)
+- [18.1.0](#1810-2020-08-28)
   - [Totals](#totals-3)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-3)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-3)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-2)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-3)
+- [18.0.0](#1800-2020-08-24)
+  - [Totals](#totals-4)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-4)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-4)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-2)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-4)
+
+## [18.4.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.4.0) (2020-09-17)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v18-changelog.json)
+  - Change source is a diff between [v18.4.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.4.0) and [v18.3.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.3.0)
+
+### Totals
+
+- TotalPropertyTypes: 1729 **(+70)**
+- TotalPropertyTypesSupportedGlobally: 490 **(+2)**
+- TotalResourceTypes: 571 **(+3)**
+- TotalResourceTypesSupportedGlobally: 187 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::AppFlow::ConnectorProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CloudFormation::StackSet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::ApiGateway::DomainName.MutualTlsAuthentication](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-mutualtlsauthentication.html)
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::ApiGatewayV2::DomainName.MutualTlsAuthentication](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html)
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.AmplitudeConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.ConnectorOAuthRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.ConnectorProfileConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileconfig.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.ConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.ConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.DatadogConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.DatadogConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-datadogconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.DynatraceConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.DynatraceConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.GoogleAnalyticsConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-googleanalyticsconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.InforNexusConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.InforNexusConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.MarketoConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.MarketoConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.RedshiftConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.RedshiftConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.SalesforceConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.SalesforceConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.ServiceNowConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.ServiceNowConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.SingularConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.SlackConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-slackconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.SlackConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-slackconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.SnowflakeConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.SnowflakeConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.TrendmicroConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.VeevaConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.VeevaConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.ZendeskConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::ConnectorProfile.ZendeskConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.AggregationConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.AmplitudeSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-amplitudesourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.ConnectorOperator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.DatadogSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-datadogsourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.DestinationConnectorProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationconnectorproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.DestinationFlowConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-destinationflowconfig.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.DynatraceSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-dynatracesourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.ErrorHandlingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.EventBridgeDestinationProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.GoogleAnalyticsSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-googleanalyticssourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.InforNexusSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-infornexussourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.MarketoSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketosourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.PrefixConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.RedshiftDestinationProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.S3DestinationProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3destinationproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.S3OutputFormatConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3outputformatconfig.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.S3SourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.SalesforceDestinationProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcedestinationproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.SalesforceSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcesourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.ScheduledTriggerProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.ServiceNowSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-servicenowsourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.SingularSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-singularsourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.SlackSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-slacksourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.SnowflakeDestinationProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.SourceConnectorProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceconnectorproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.SourceFlowConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sourceflowconfig.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.Task](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.TaskPropertiesObject](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.TrendmicroSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-trendmicrosourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.TriggerConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-triggerconfig.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.VeevaSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::AppFlow::Flow.ZendeskSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendesksourceproperties.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CloudFormation::StackSet.AutoDeployment](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-autodeployment.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CloudFormation::StackSet.DeploymentTargets](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CloudFormation::StackSet.OperationPreferences](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CloudFormation::StackSet.Parameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CloudFormation::StackSet.StackInstances](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-stackinstances.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::ECS::Service.CapacityProviderStrategyItem](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html)
+  - `ap-northeast-1`
+  - `ap-southeast-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `us-east-1`
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::Route53Resolver::ResolverEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html)
+  - `ap-southeast-2`
+
+- [AWS::Route53Resolver::ResolverRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html)
+  - `ap-southeast-2`
+
+- [AWS::StepFunctions::StateMachine](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)
+  - `ap-south-1`
+  - `sa-east-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `ap-southeast-2`
+
+- [AWS::LakeFormation::Permissions.ColumnWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-columnwildcard.html)
+  - `us-east-2`
+
+- [AWS::LakeFormation::Permissions.DataLocationResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-datalocationresource.html)
+  - `us-east-2`
+
+- [AWS::LakeFormation::Permissions.TableWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewildcard.html)
+  - `eu-west-1`
+  - `us-east-2`
+  - `us-east-1`
+
+- [AWS::LakeFormation::Permissions.TableWithColumnsResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tablewithcolumnsresource.html)
+  - `us-east-2`
+
+- [AWS::MSK::Cluster.Sasl](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-sasl.html)
+  - `ap-south-1`
+  - `us-gov-east-1`
+  - `sa-east-1`
+  - `us-east-2`
+  - `eu-west-3`
+  - `cn-northwest-1`
+  - `eu-north-1`
+  - `us-gov-west-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `me-south-1`
+
+- [AWS::MSK::Cluster.Scram](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-scram.html)
+  - `ap-south-1`
+  - `us-gov-east-1`
+  - `sa-east-1`
+  - `us-east-2`
+  - `eu-west-3`
+  - `cn-northwest-1`
+  - `eu-north-1`
+  - `us-gov-west-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `me-south-1`
+
+- [AWS::MediaLive::Channel.AacSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Ac3Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.ArchiveContainerSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archivecontainersettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.ArchiveGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archivegroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.ArchiveOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archiveoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AribDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aribdestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AudioChannelMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiochannelmapping.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AudioCodecSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiocodecsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AudioDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AudioNormalizationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AudioOnlyHlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audioonlyhlssettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AudioTrack](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiotrack.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AudioTrackSelection](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiotrackselection.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AutomaticInputFailoverSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-automaticinputfailoversettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AvailBlanking](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availblanking.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AvailConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availconfiguration.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.AvailSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.BlackoutSlate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-blackoutslate.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.BurnInDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-burnindestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.CaptionDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.CaptionDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.CaptionLanguageMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionlanguagemapping.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.ColorSpacePassthroughSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-colorspacepassthroughsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.DvbNitSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbnitsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.DvbSdtSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsdtsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.DvbSubDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsubdestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.DvbTdtSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbtdtsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Eac3Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-eac3settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.EbuTtDDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ebuttddestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.EmbeddedDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-embeddeddestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.EmbeddedPlusScte20DestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-embeddedplusscte20destinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.EncoderSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-encodersettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.FeatureActivations](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-featureactivations.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.FecOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fecoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Fmp4HlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fmp4hlssettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.FrameCaptureGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturegroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.FrameCaptureOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecaptureoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.FrameCaptureSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturesettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.GlobalConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.H264ColorSpaceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264colorspacesettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.H264FilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264filtersettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.H264Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.H265ColorSpaceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265colorspacesettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.H265FilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265filtersettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.H265Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Hdr10Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hdr10settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.HlsAkamaiSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsakamaisettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.HlsBasicPutSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsbasicputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.HlsCdnSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlscdnsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.HlsGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsgroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.HlsMediaStoreSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsmediastoresettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.HlsOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.HlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlssettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.HlsWebdavSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlswebdavsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.InputChannelLevel](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputchannellevel.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.InputLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlocation.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.InputLossBehavior](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlossbehavior.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.KeyProviderSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-keyprovidersettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.M2tsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-m2tssettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.M3u8Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-m3u8settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.MediaPackageGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mediapackagegroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.MediaPackageOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mediapackageoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Mp2Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mp2settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.MsSmoothGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mssmoothgroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.MsSmoothOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mssmoothoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.MultiplexGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexgroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.MultiplexOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.NielsenConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsenconfiguration.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-output.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.OutputGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroup.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.OutputGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.OutputLocationRef](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputlocationref.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.OutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.PassThroughSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-passthroughsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Rec601Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rec601settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Rec709Settings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rec709settings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.RemixSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-remixsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.RtmpCaptionInfoDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpcaptioninfodestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.RtmpGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.RtmpOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Scte20PlusEmbeddedDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte20plusembeddeddestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Scte27DestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte27destinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Scte35SpliceInsert](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35spliceinsert.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.Scte35TimeSignalApos](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35timesignalapos.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.SmpteTtDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-smptettdestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.StandardHlsSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-standardhlssettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.StaticKeySettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-statickeysettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.TeletextDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-teletextdestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.TemporalFilterSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-temporalfiltersettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.TimecodeConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-timecodeconfig.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.TtmlDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ttmldestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.UdpContainerSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpcontainersettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.UdpGroupSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpgroupsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.UdpOutputSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpoutputsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.VideoCodecSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videocodecsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.VideoDescription](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videodescription.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Channel.WebvttDestinationSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-webvttdestinationsettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Input.InputDeviceRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicerequest.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::MediaLive::Input.InputDeviceSettings](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdevicesettings.html)
+  - `ap-northeast-2`
+  - `sa-east-1`
+  - `us-east-1`
+
+- [AWS::Route53::HostedZone.HostedZoneConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Route53::HostedZone.QueryLoggingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Route53Resolver::ResolverEndpoint.IpAddressRequest](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverendpoint-ipaddressrequest.html)
+  - `ap-southeast-2`
+
+- [AWS::Route53Resolver::ResolverRule.TargetAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html)
+  - `ap-southeast-2`
+
+- [AWS::StepFunctions::StateMachine.CloudWatchLogsLogGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html)
+  - `ap-south-1`
+  - `sa-east-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `ap-southeast-2`
+
+- [AWS::StepFunctions::StateMachine.DefinitionSubstitutions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-definitionsubstitutions.html)
+  - `ap-south-1`
+  - `sa-east-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `ap-southeast-2`
+
+- [AWS::StepFunctions::StateMachine.LogDestination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html)
+  - `ap-south-1`
+  - `sa-east-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `ap-southeast-2`
+
+- [AWS::StepFunctions::StateMachine.LoggingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-loggingconfiguration.html)
+  - `ap-south-1`
+  - `sa-east-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `ap-southeast-2`
+
+- [AWS::StepFunctions::StateMachine.S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-s3location.html)
+  - `ap-south-1`
+  - `sa-east-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `ap-southeast-2`
+
+- [AWS::StepFunctions::StateMachine.TagsEntry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tagsentry.html)
+  - `ap-south-1`
+  - `sa-east-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `ap-southeast-2`
+
+- [AWS::StepFunctions::StateMachine.TracingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tracingconfiguration.html)
+  - `ap-south-1`
+  - `sa-east-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-west-1`
+  - `ap-southeast-2`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- ResourceType Still Missing
+  - Since v18.3.0: [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.3.0: [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.3.0: [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+- PropertyType Still Missing
+  - Since v18.3.0: [AWS::AppSync::FunctionConfiguration.LambdaConflictHandlerConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html)
+    - `ap-northeast-2`
+
+  - Since v18.3.0: [AWS::AppSync::FunctionConfiguration.SyncConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html)
+    - `ap-northeast-2`
+
+  - Since v18.3.0: [AWS::ECS::Cluster.ClusterSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersetting.html)
+    - `af-south-1`
+    - `ap-northeast-3`
+    - `eu-south-1`
+
+  - Since v18.3.0: [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.3.0: [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.3.0: [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.3.0: [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.3.0: [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.3.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v18.3.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
 
 ## [18.3.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.3.0) (2020-09-10)
 
