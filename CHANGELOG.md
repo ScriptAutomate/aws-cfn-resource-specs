@@ -8,40 +8,1000 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [18.5.0](#1850-2020-09-25)
+- [18.6.0](#1860-2020-10-02)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [18.4.0](#1840-2020-09-17)
+- [18.5.0](#1850-2020-09-25)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
-- [18.3.0](#1830-2020-09-10)
+- [18.4.0](#1840-2020-09-17)
   - [Totals](#totals-2)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
-- [18.2.0](#1820-2020-09-05)
+- [18.3.0](#1830-2020-09-10)
   - [Totals](#totals-3)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-3)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-3)
   - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-3)
-- [18.1.0](#1810-2020-08-28)
+- [18.2.0](#1820-2020-09-05)
   - [Totals](#totals-4)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-4)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-4)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-2)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-4)
-- [18.0.0](#1800-2020-08-24)
+- [18.1.0](#1810-2020-08-28)
   - [Totals](#totals-5)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-5)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-5)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-2)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-5)
+- [18.0.0](#1800-2020-08-24)
+  - [Totals](#totals-6)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-6)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes-1)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-6)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-3)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-6)
+
+## [18.6.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.6.0) (2020-10-02)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v18-changelog.json)
+  - Change source is a diff between [v18.6.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.6.0) and [v18.5.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.5.0)
+
+### Totals
+
+- TotalPropertyTypes: 1736 **(+1)**
+- TotalPropertyTypesSupportedGlobally: 495 **(+5)**
+- TotalResourceTypes: 572 **(+1)**
+- TotalResourceTypesSupportedGlobally: 189 **(+2)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::WorkSpaces::ConnectionAlias](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::Backup::BackupPlan.AdvancedBackupSettingResourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-advancedbackupsettingresourcetype.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+
+- [AWS::DynamoDB::Table.ContributorInsightsSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-contributorinsightsspecification.html)
+  - `us-west-2`
+
+- [AWS::WorkSpaces::ConnectionAlias.ConnectionAliasAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-connectionalias-connectionaliasassociation.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-west-2`
+
+### Complete Removal of ResourceTypes and/or PropertyTypes
+
+- [AWS::SSM::Document.AttachmentsSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-attachmentssource.html)
+  - `ca-central-1`
+  - `us-west-2`
+
+- [AWS::SSM::Document.DocumentRequires](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-documentrequires.html)
+  - `ca-central-1`
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::ACMPCA::Certificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ACMPCA::CertificateAuthority](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ACMPCA::CertificateAuthorityActivation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthorityactivation.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::AccessAnalyzer::Analyzer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Chatbot::SlackChannelConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::CachePolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::OriginRequestPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-originrequestpolicy.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::RealtimeLogConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudWatch::CompositeAlarm](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Detective::Graph](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Detective::MemberInvitation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EC2::LocalGatewayRoute](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html)
+  - `af-south-1`
+
+- [AWS::EC2::LocalGatewayRouteTableVPCAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html)
+  - `af-south-1`
+
+- [AWS::EC2::PrefixList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EFS::AccessPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EKS::FargateProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-fargateprofile.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::GlobalAccelerator::Accelerator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::GlobalAccelerator::EndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::GlobalAccelerator::Listener](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+  - `af-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+  - `af-south-1`
+
+- [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+  - `af-south-1`
+
+- [AWS::ImageBuilder::Component](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::DistributionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::Image](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::ImagePipeline](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::ImageRecipe](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::InfrastructureConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::CustomerGatewayAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::Device](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::GlobalNetwork](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::Link](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::LinkAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::Site](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::TransitGatewayRegistration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ResourceGroups::Group](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Route53Resolver::ResolverQueryLoggingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html)
+  - `eu-south-1`
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+  - `af-south-1`
+
+- [AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html)
+  - `eu-south-1`
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+  - `af-south-1`
+
+- [AWS::S3::AccessPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html)
+  - Now available to **ALL** regions.
+
+- [AWS::StepFunctions::StateMachine](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Synthetics::Canary](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Transfer::Server](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::Transfer::User](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::WAFv2::IPSet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-ipset.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RegexPatternSet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-rulegroup.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACLAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ACMPCA::Certificate.Validity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-validity.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ACMPCA::CertificateAuthority.CrlConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ACMPCA::CertificateAuthority.RevocationConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-revocationconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ACMPCA::CertificateAuthority.Subject](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-subject.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::AccessAnalyzer::Analyzer.ArchiveRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::AccessAnalyzer::Analyzer.Filter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApiGateway::DomainName.MutualTlsAuthentication](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-mutualtlsauthentication.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.Alarm](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarm.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.AlarmMetric](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.ComponentConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.ComponentMonitoringSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.ConfigurationDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.CustomComponent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.Log](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.LogPattern](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.LogPatternSet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.SubComponentConfigurationDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponentconfigurationdetails.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.SubComponentTypeConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponenttypeconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ApplicationInsights::Application.WindowsEvent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::CachePolicy.CachePolicyConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cachepolicyconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::CachePolicy.CookiesConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::CachePolicy.HeadersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-headersconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::CachePolicy.ParametersInCacheKeyAndForwardedToOrigin](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::CachePolicy.QueryStringsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-querystringsconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::OriginRequestPolicy.CookiesConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-cookiesconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::OriginRequestPolicy.HeadersConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::OriginRequestPolicy.OriginRequestPolicyConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-originrequestpolicyconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::OriginRequestPolicy.QueryStringsConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-querystringsconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::RealtimeLogConfig.EndPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-endpoint.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::CloudFront::RealtimeLogConfig.KinesisStreamConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EC2::LocalGatewayRouteTableVPCAssociation.Tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-localgatewayroutetablevpcassociation-tags.html)
+  - `af-south-1`
+
+- [AWS::EC2::PrefixList.Entry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-prefixlist-entry.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ECS::Service.CapacityProviderStrategyItem](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html)
+  - `eu-west-3`
+  - `cn-northwest-1`
+  - `ap-east-1`
+  - `me-south-1`
+  - `us-gov-west-1`
+  - `us-gov-east-1`
+  - `eu-north-1`
+
+- [AWS::EFS::AccessPoint.AccessPointTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-accesspointtag.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EFS::AccessPoint.CreationInfo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-creationinfo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EFS::AccessPoint.PosixUser](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EFS::AccessPoint.RootDirectory](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EFS::FileSystem.BackupPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EKS::Cluster.KubernetesNetworkConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)
+  - `us-west-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `ap-east-1`
+
+- [AWS::EKS::FargateProfile.Label](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-fargateprofile-label.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::EKS::FargateProfile.Selector](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-fargateprofile-selector.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::GlobalAccelerator::EndpointGroup.EndpointConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::GlobalAccelerator::Listener.PortRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-listener-portrange.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+  - `af-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+  - `af-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+  - `af-south-1`
+
+- [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+  - `af-south-1`
+
+- [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+  - `af-south-1`
+
+- [AWS::ImageBuilder::DistributionConfiguration.Distribution](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::Image.ImageTestsConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagetestsconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::ImagePipeline.ImageTestsConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::ImagePipeline.Schedule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::ImageRecipe.ComponentConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::ImageRecipe.EbsInstanceBlockDeviceSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::ImageRecipe.InstanceBlockDeviceMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::InfrastructureConfiguration.Logging](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-logging.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ImageBuilder::InfrastructureConfiguration.S3Logs](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::KinesisFirehose::DeliveryStream.HttpEndpointCommonAttribute](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-httpendpointcommonattribute.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::KinesisFirehose::DeliveryStream.HttpEndpointConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-httpendpointconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::KinesisFirehose::DeliveryStream.HttpEndpointDestinationConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::KinesisFirehose::DeliveryStream.HttpEndpointRequestConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-httpendpointrequestconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::KinesisFirehose::DeliveryStream.RedshiftRetryOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftretryoptions.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::KinesisFirehose::DeliveryStream.RetryOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-retryoptions.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::KinesisFirehose::DeliveryStream.VpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-vpcconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::Device.Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-device-location.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::Link.Bandwidth](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-link-bandwidth.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::NetworkManager::Site.Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::ResourceGroups::Group.Query](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html)
+  - Now available to **ALL** regions.
+
+- [AWS::ResourceGroups::Group.ResourceQuery](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-resourcequery.html)
+  - Now available to **ALL** regions.
+
+- [AWS::ResourceGroups::Group.TagFilter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-tagfilter.html)
+  - Now available to **ALL** regions.
+
+- [AWS::S3::AccessPoint.PublicAccessBlockConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-publicaccessblockconfiguration.html)
+  - Now available to **ALL** regions.
+
+- [AWS::S3::AccessPoint.VpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html)
+  - Now available to **ALL** regions.
+
+- [AWS::StepFunctions::StateMachine.CloudWatchLogsLogGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::StepFunctions::StateMachine.DefinitionSubstitutions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-definitionsubstitutions.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::StepFunctions::StateMachine.LogDestination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-logdestination.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::StepFunctions::StateMachine.LoggingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-loggingconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::StepFunctions::StateMachine.S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-s3location.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::StepFunctions::StateMachine.TagsEntry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tagsentry.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::StepFunctions::StateMachine.TracingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-tracingconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Synthetics::Canary.Code](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Synthetics::Canary.RunConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Synthetics::Canary.Schedule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Synthetics::Canary.VPCConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-vpcconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::Transfer::Server.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::Transfer::Server.IdentityProviderDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::Transfer::Server.Protocol]()
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::Transfer::User.HomeDirectoryMapEntry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::Transfer::User.SshPublicKey]()
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::WAFv2::RuleGroup.AndStatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-andstatementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.AndStatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-andstatementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.ByteMatchStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-bytematchstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.ForwardedIPConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-forwardedipconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.GeoMatchStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-geomatchstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.IPSetForwardedIPConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ipsetforwardedipconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.IPSetReferenceStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ipsetreferencestatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.NotStatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-notstatementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.NotStatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-notstatementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.OrStatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-orstatementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.OrStatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-orstatementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.RateBasedStatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.RateBasedStatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.RegexPatternSetReferenceStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-regexpatternsetreferencestatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.Rule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-rule.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.RuleAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ruleaction.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.SizeConstraintStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-sizeconstraintstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.SqliMatchStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-sqlimatchstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.StatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.StatementThree](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statementthree.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.StatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.TextTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-texttransformation.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.VisibilityConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::RuleGroup.XssMatchStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-xssmatchstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.AndStatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-andstatementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.AndStatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-andstatementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.ByteMatchStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-bytematchstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.DefaultAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-defaultaction.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.ExcludedRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-excludedrule.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.ForwardedIPConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-forwardedipconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.GeoMatchStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-geomatchstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.IPSetForwardedIPConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ipsetforwardedipconfiguration.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.IPSetReferenceStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ipsetreferencestatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.ManagedRuleGroupStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-managedrulegroupstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.NotStatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-notstatementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.NotStatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-notstatementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.OrStatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-orstatementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.OrStatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-orstatementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.OverrideAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-overrideaction.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.RateBasedStatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.RateBasedStatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.RegexPatternSetReferenceStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-regexpatternsetreferencestatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.Rule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-rule.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.RuleAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ruleaction.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.RuleGroupReferenceStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-rulegroupreferencestatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.SizeConstraintStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-sizeconstraintstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.SqliMatchStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-sqlimatchstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.StatementOne](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-statementone.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.StatementThree](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-statementthree.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.StatementTwo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-statementtwo.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.TextTransformation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-texttransformation.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.VisibilityConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-visibilityconfig.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+- [AWS::WAFv2::WebACL.XssMatchStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-xssmatchstatement.html)
+  - `eu-south-1`
+  - `af-south-1`
+
+### Existing ResourceTypes and PropertyTypes: Removed Regions
+
+- [AWS::AmazonMQ::Broker.InterBrokerCred](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-interbrokercred.html)
+  - `ap-southeast-2`
+
+- [AWS::AmazonMQ::Broker.LdapMetadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapmetadata.html)
+  - `ap-southeast-2`
+
+- [AWS::AmazonMQ::Broker.ServerMetadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-servermetadata.html)
+  - `ap-southeast-2`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- ResourceType Still Missing
+  - Since v18.5.0: [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.5.0: [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.5.0: [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+- PropertyType Still Missing
+  - Since v18.5.0: [AWS::AppSync::FunctionConfiguration.LambdaConflictHandlerConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html)
+    - `ap-northeast-2`
+
+  - Since v18.5.0: [AWS::AppSync::FunctionConfiguration.SyncConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html)
+    - `ap-northeast-2`
+
+  - Since v18.5.0: [AWS::ECS::Cluster.ClusterSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersetting.html)
+    - `af-south-1`
+    - `ap-northeast-3`
+    - `eu-south-1`
+
+  - Since v18.5.0: [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.5.0: [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.5.0: [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.5.0: [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.5.0: [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.5.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v18.5.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+- New PropertyType(s) Missing
+  - [AWS::DynamoDB::Table.ContributorInsightsSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-contributorinsightsspecification.html)
+    - `us-west-2`
 
 ## [18.5.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.5.0) (2020-09-25)
 
