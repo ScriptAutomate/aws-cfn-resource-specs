@@ -8,47 +8,262 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [18.6.0](#1860-2020-10-02)
+- [18.7.0](#1870-2020-10-08)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
   - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [18.5.0](#1850-2020-09-25)
+- [18.6.0](#1860-2020-10-02)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
-- [18.4.0](#1840-2020-09-17)
+- [18.5.0](#1850-2020-09-25)
   - [Totals](#totals-2)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
-- [18.3.0](#1830-2020-09-10)
+- [18.4.0](#1840-2020-09-17)
   - [Totals](#totals-3)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-3)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-3)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-3)
-- [18.2.0](#1820-2020-09-05)
+- [18.3.0](#1830-2020-09-10)
   - [Totals](#totals-4)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-4)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-4)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-2)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-4)
-- [18.1.0](#1810-2020-08-28)
+- [18.2.0](#1820-2020-09-05)
   - [Totals](#totals-5)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-5)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-5)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-2)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-5)
-- [18.0.0](#1800-2020-08-24)
+- [18.1.0](#1810-2020-08-28)
   - [Totals](#totals-6)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-6)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-6)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-3)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-6)
+- [18.0.0](#1800-2020-08-24)
+  - [Totals](#totals-7)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-7)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes-2)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-7)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions-3)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-7)
+
+## [18.7.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.7.0) (2020-10-08)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v18-changelog.json)
+  - Change source is a diff between [v18.7.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.7.0) and [v18.6.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.6.0)
+
+### Totals
+
+- TotalPropertyTypes: 1736 **(+0)**
+- TotalPropertyTypesSupportedGlobally: 495 **(+0)**
+- TotalResourceTypes: 576 **(+4)**
+- TotalResourceTypesSupportedGlobally: 190 **(+1)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::CodeArtifact::Domain](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::CodeArtifact::Repository](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::Timestream::Database](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::Timestream::Table](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::KinesisFirehose::DeliveryStream.DeliveryStreamEncryptionConfigurationInput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-deliverystreamencryptionconfigurationinput.html)
+  - `cn-north-1`
+  - `eu-central-1`
+  - `us-west-2`
+
+### Complete Removal of ResourceTypes and/or PropertyTypes
+
+- [AWS::DynamoDB::Table.ContributorInsightsSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-contributorinsightsspecification.html)
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::EC2::GatewayRouteTableAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html)
+  - Now available to **ALL** regions.
+
+- [AWS::IoT::Authorizer](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html)
+  - `us-gov-east-1`
+
+- [AWS::IoT::ProvisioningTemplate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html)
+  - `us-gov-east-1`
+
+- [AWS::Backup::BackupPlan.AdvancedBackupSettingResourceType](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-advancedbackupsettingresourcetype.html)
+  - `eu-west-1`
+  - `cn-northwest-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `us-gov-west-1`
+  - `us-west-2`
+  - `us-gov-east-1`
+
+- [AWS::IoT::Authorizer.Tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-authorizer-tags.html)
+  - `us-gov-east-1`
+
+- [AWS::IoT::Authorizer.TokenSigningPublicKeys](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-authorizer-tokensigningpublickeys.html)
+  - `us-gov-east-1`
+
+- [AWS::IoT::ProvisioningTemplate.ProvisioningHook](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-provisioningtemplate-provisioninghook.html)
+  - `us-gov-east-1`
+
+- [AWS::IoT::ProvisioningTemplate.Tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-provisioningtemplate-tags.html)
+  - `us-gov-east-1`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- ResourceType Still Missing
+  - Since v18.6.0: [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.6.0: [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.6.0: [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+- PropertyType Still Missing
+  - Since v18.6.0: [AWS::AppSync::FunctionConfiguration.LambdaConflictHandlerConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html)
+    - `ap-northeast-2`
+
+  - Since v18.6.0: [AWS::AppSync::FunctionConfiguration.SyncConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html)
+    - `ap-northeast-2`
+
+  - Since v18.6.0: [AWS::ECS::Cluster.ClusterSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersetting.html)
+    - `af-south-1`
+    - `ap-northeast-3`
+    - `eu-south-1`
+
+  - Since v18.6.0: [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.6.0: [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.6.0: [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.6.0: [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.6.0: [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v18.6.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v18.6.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+- New PropertyType(s) Missing
+  - [AWS::KinesisFirehose::DeliveryStream.DeliveryStreamEncryptionConfigurationInput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-deliverystreamencryptionconfigurationinput.html)
+    - `cn-north-1`
+    - `eu-central-1`
+    - `us-west-2`
 
 ## [18.6.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v18.6.0) (2020-10-02)
 
