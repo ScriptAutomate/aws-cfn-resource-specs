@@ -1,11 +1,10 @@
 {
   "PropertyTypes": {
-    "BrokenDocLinks": {
-      "AWS::DynamoDB::Table.TimeToLiveSpecification": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-timetolivespecification.html"
-    },
+    "BrokenDocLinks": {},
     "MissingDocLinks": [
       "AWS::SSM::PatchBaseline.PatchStringDate",
       "AWS::Transfer::Server.Protocol",
+      "AWS::Transfer::Server.SecurityGroupId",
       "AWS::Transfer::User.SshPublicKey"
     ],
     "MissingFromAWSGitHubSourceRepo": {
@@ -15,6 +14,8 @@
       "AWS::AutoScaling::AutoScalingGroup.LaunchTemplate": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/cfn-as-mixedinstancespolicy-launchtemplate.md",
       "AWS::AutoScaling::AutoScalingGroup.LaunchTemplateOverrides": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/cfn-as-mixedinstancespolicy-launchtemplateoverrides.md",
       "AWS::AutoScaling::AutoScalingGroup.MixedInstancesPolicy": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/cfn-as-group-mixedinstancespolicy.md",
+      "AWS::AutoScaling::LaunchConfiguration.MetadataOption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-autoscaling-launchconfig-metadataoption.md",
+      "AWS::CloudFront::Distribution.OriginShield": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-cloudfront-distribution-originshield.md",
       "AWS::DynamoDB::Table.AttributeDefinition": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-dynamodb-attributedef.md",
       "AWS::DynamoDB::Table.GlobalSecondaryIndex": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-dynamodb-gsi.md",
       "AWS::DynamoDB::Table.KeySchema": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-dynamodb-keyschema.md",
@@ -24,15 +25,64 @@
       "AWS::DynamoDB::Table.StreamSpecification": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-dynamodb-streamspecification.md",
       "AWS::DynamoDB::Table.TimeToLiveSpecification": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-dynamodb-timetolivespecification.md",
       "AWS::ECS::Cluster.ClusterSetting": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-ecs-cluster-clustersetting.md",
+      "AWS::EMR::Cluster.ComputeLimits": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-elasticmapreduce-cluster-computelimits.md",
+      "AWS::EMR::Cluster.ManagedScalingPolicy": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-elasticmapreduce-cluster-managedscalingpolicy.md",
+      "AWS::EMR::Cluster.OnDemandProvisioningSpecification": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-elasticmapreduce-cluster-ondemandprovisioningspecification.md",
+      "AWS::EMR::InstanceFleetConfig.OnDemandProvisioningSpecification": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification.md",
+      "AWS::Events::Rule.DeadLetterConfig": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-events-rule-deadletterconfig.md",
+      "AWS::Events::Rule.RedshiftDataParameters": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-events-rule-redshiftdataparameters.md",
+      "AWS::Events::Rule.RetryPolicy": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-events-rule-retrypolicy.md",
       "AWS::KinesisFirehose::DeliveryStream.DeliveryStreamEncryptionConfigurationInput": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-kinesisfirehose-deliverystream-deliverystreamencryptionconfigurationinput.md",
+      "AWS::Lambda::CodeSigningConfig.AllowedPublishers": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lambda-codesigningconfig-allowedpublishers.md",
+      "AWS::Lambda::CodeSigningConfig.CodeSigningPolicies": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lambda-codesigningconfig-codesigningpolicies.md",
+      "AWS::Lambda::EventSourceMapping.SourceAccessConfiguration": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.md",
+      "AWS::MediaPackage::Asset.EgressEndpoint": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-asset-egressendpoint.md",
+      "AWS::MediaPackage::Channel.HlsIngest": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-channel-hlsingest.md",
+      "AWS::MediaPackage::Channel.IngestEndpoint": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-channel-ingestendpoint.md",
+      "AWS::MediaPackage::OriginEndpoint.AdTriggers": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-adtriggers.md",
+      "AWS::MediaPackage::OriginEndpoint.Authorization": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-authorization.md",
+      "AWS::MediaPackage::OriginEndpoint.CmafEncryption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-cmafencryption.md",
+      "AWS::MediaPackage::OriginEndpoint.CmafPackage": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-cmafpackage.md",
+      "AWS::MediaPackage::OriginEndpoint.DashEncryption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-dashencryption.md",
+      "AWS::MediaPackage::OriginEndpoint.DashPackage": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-dashpackage.md",
+      "AWS::MediaPackage::OriginEndpoint.HlsEncryption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-hlsencryption.md",
+      "AWS::MediaPackage::OriginEndpoint.HlsManifest": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-hlsmanifest.md",
+      "AWS::MediaPackage::OriginEndpoint.HlsPackage": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-hlspackage.md",
+      "AWS::MediaPackage::OriginEndpoint.MssEncryption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-mssencryption.md",
+      "AWS::MediaPackage::OriginEndpoint.MssPackage": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-msspackage.md",
+      "AWS::MediaPackage::OriginEndpoint.SpekeKeyProvider": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-spekekeyprovider.md",
+      "AWS::MediaPackage::OriginEndpoint.StreamSelection": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-originendpoint-streamselection.md",
+      "AWS::MediaPackage::PackagingConfiguration.CmafEncryption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-cmafencryption.md",
+      "AWS::MediaPackage::PackagingConfiguration.CmafPackage": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-cmafpackage.md",
+      "AWS::MediaPackage::PackagingConfiguration.DashEncryption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-dashencryption.md",
+      "AWS::MediaPackage::PackagingConfiguration.DashManifest": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-dashmanifest.md",
+      "AWS::MediaPackage::PackagingConfiguration.DashPackage": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-dashpackage.md",
+      "AWS::MediaPackage::PackagingConfiguration.HlsEncryption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-hlsencryption.md",
+      "AWS::MediaPackage::PackagingConfiguration.HlsManifest": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.md",
+      "AWS::MediaPackage::PackagingConfiguration.HlsPackage": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-hlspackage.md",
+      "AWS::MediaPackage::PackagingConfiguration.MssEncryption": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-mssencryption.md",
+      "AWS::MediaPackage::PackagingConfiguration.MssManifest": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-mssmanifest.md",
+      "AWS::MediaPackage::PackagingConfiguration.MssPackage": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-msspackage.md",
+      "AWS::MediaPackage::PackagingConfiguration.SpekeKeyProvider": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-spekekeyprovider.md",
+      "AWS::MediaPackage::PackagingConfiguration.StreamSelection": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packagingconfiguration-streamselection.md",
+      "AWS::MediaPackage::PackagingGroup.Authorization": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-mediapackage-packaginggroup-authorization.md",
       "AWS::Route53::HealthCheck.AlarmIdentifier": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-route53-healthcheck-alarmidentifier.md",
-      "AWS::Route53::HealthCheck.HealthCheckConfig": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-route53-healthcheck-healthcheckconfig.md"
+      "AWS::Route53::HealthCheck.HealthCheckConfig": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-route53-healthcheck-healthcheckconfig.md",
+      "AWS::S3::Bucket.ReplicaModifications": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-s3-bucket-replicamodifications.md",
+      "AWS::SageMaker::Model.ImageConfig": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-sagemaker-model-containerdefinition-imageconfig.md"
     }
   },
-  "ResourceSpecificationVersion": "18.7.0",
+  "ResourceSpecificationVersion": "19.0.0",
   "ResourceTypes": {
     "BrokenDocLinks": {},
     "MissingDocLinks": [],
-    "MissingFromAWSGitHubSourceRepo": {}
+    "MissingFromAWSGitHubSourceRepo": {
+      "AWS::Lambda::CodeSigningConfig": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-lambda-codesigningconfig.md",
+      "AWS::MediaPackage::Asset": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-mediapackage-asset.md",
+      "AWS::MediaPackage::Channel": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-mediapackage-channel.md",
+      "AWS::MediaPackage::OriginEndpoint": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-mediapackage-originendpoint.md",
+      "AWS::MediaPackage::PackagingConfiguration": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-mediapackage-packagingconfiguration.md",
+      "AWS::MediaPackage::PackagingGroup": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-mediapackage-packaginggroup.md"
+    }
   }
 }
