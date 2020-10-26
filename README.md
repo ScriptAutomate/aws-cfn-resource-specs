@@ -2,7 +2,76 @@
 
 > *A Completely Tracked, Versioned, and Audited Collection Store of CloudFormationResource.json Resource Specification Files*
 
-## Purpose
+## Quick Rundown and Example Use Case
+
+Do you auto-generate toolsets, sdks, modules, packages, etc. from AWS CFN Resource Specification files? Or do you wish there was a more detailed breakdown of all the newly supported resourcetypes and propertytypes in CloudFormation? Or do you wish it was easier to know what regions seem to support certain resourcetypes/propertytypes? I have an auditing repository that monitors CFN resource specs provided by AWS, and then generates JSON files that can be ingested by other tools. For example, some workflows out there depend on looking at the `us-east-1` region resource spec, but they end up missing the types that aren't listed in that region:
+- JSON output of the latest audit of all regions, with what is missing from `us-east-1` along with the regions these types are found in: https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v19-changelog.json#L1979-L2220
+- A more human-readable version of the JSON converted into markdown: https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/CHANGELOG.md#existing-resourcetypes-and-propertytypes-not-in-us-east-1
+
+It also does things like audit documentation links to see if they truly exist, both in the AWS published docs and the GitHub repo:
+- https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/documentation-lookup-errors.json
+
+If people were wanting to make a tool for easily viewing what CFN resource/property types are supported by what regions, this may act as a good datasource as I have them compiled into a single massive JSON:
+- https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/supported-regions-per-resource.json
+
+I made this repo in early 2020, and it is mostly self-writing with GitHub Actions that are auditing the CFN resource specs each day for updates, along with the CFN GitHub-hosted official AWS docs. Auto-updates result in PRs (I could never get the auto-merge GitHub Action to work properly, so I go hit the merge button periodically). I don't really update it much, and the code was hacked out since I was originally needing it for a project where I was auto-generating help documentation for some CFN tools.
+
+### Example Use Case
+
+You find yourself generating CFN templates, but aren't sure whether your target region is supported for certain resources. This repository compiles audits of all supported services in:
+- https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/supported-regions-per-resource.json
+
+```
+# Download json
+wget https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/supported-regions-per-resource.json
+```
+
+```
+# Parse json, using jq for easy examples
+## jq: https://stedolan.github.io/jq/
+$ cat supported-regions-per-resource.json | jq '.ResourceTypes."AWS::ACMPCA::Certificate".AllRegions'
+false
+$ cat supported-regions-per-resource.json | jq '.ResourceTypes."AWS::ACMPCA::Certificate".Regions'
+[
+  "af-south-1",
+  "ap-east-1",
+  "ap-northeast-1",
+  "ap-northeast-2",
+  "ap-south-1",
+  "ap-southeast-1",
+  "ap-southeast-2",
+  "ca-central-1",
+  "eu-central-1",
+  "eu-north-1",
+  "eu-south-1",
+  "eu-west-1",
+  "eu-west-2",
+  "eu-west-3",
+  "me-south-1",
+  "sa-east-1",
+  "us-east-1",
+  "us-east-2",
+  "us-gov-east-1",
+  "us-gov-west-1",
+  "us-west-1",
+  "us-west-2"
+]
+```
+
+Hmmm, `AWS::ACMPCA::Certificate` isn't supported in *all* regions, but it is supported in most. And likely would be in your targeted regions.
+
+What about **AWS Workspaces**?
+
+```
+# Parse json, using jq for easy examples
+## jq: https://stedolan.github.io/jq/
+$ cat supported-regions-per-resource.json | jq '.ResourceTypes."AWS::WorkSpaces::Workspace".AllRegions'
+true
+```
+
+You now know that `AWS::WorkSpaces::Workspace` is supported in all regions (as of Oct. 2020)!
+
+## Why This Repo was Created
 
 I created this repository as an easy, versioned git repository that shows changes across `CloudFormationResource.json` files over time. It also can work as a location for conversation around errors within CloudFormationResource files, as I was unable to find where else I could log these issues publicly.
 
@@ -100,12 +169,15 @@ The following files may be updated:
 
 #### Step: Generate changelog markdown file
 
+TODO: Not documented
+
 #### Yet to Automate
 
-The following is still manually managed:
+The following was manually managed:
 
 - `documentation-broken-links-detailed.json`
 
-Some of the troubleshooting steps for finding a fix to the documentation errors can be rather involved. I'd like to reduce this to the most helpful potential-fix steps done in an automated fashion.
+Some of the troubleshooting steps for finding a fix to the documentation errors can be rather involved. I'd like to reduce this to the most helpful potential-fix steps done in an automated fashion. Though, this isn't currently supported and the json file is no longer manually updated.
 
-> ***NOTE:*** _This doc also tracks the amount of days passed since certain bugs were discovered. This has helped in understanding that the [AWS CloudFormation User Guide source](https://github.com/awsdocs/aws-cloudformation-user-guide/) is being managed in a confusing (mostly manual) fashion by AWS._
+> ***NOTE:*** _`documentation-broken-links-detailed.json` was also used to track the amount of days passed since certain bugs were discovered. This had helped in understanding that the [AWS CloudFormation User Guide source](https://github.com/awsdocs/aws-cloudformation-user-guide/) is being managed in a confusing (mostly manual) fashion by AWS:_
+> - Issues I made as a result of this project: https://github.com/awsdocs/aws-cloudformation-user-guide/issues?q=is%3Aissue+author%3Ascriptautomate+
