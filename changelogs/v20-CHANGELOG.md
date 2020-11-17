@@ -8,21 +8,537 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [20.2.0](#2020-2020-11-10)
+- [20.3.0](#2030-2020-11-13)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [20.1.0](#2010-2020-11-05)
+- [20.2.0](#2020-2020-11-10)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
-  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
-- [20.0.0](#2000-2020-10-30)
+- [20.1.0](#2010-2020-11-05)
   - [Totals](#totals-2)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
+- [20.0.0](#2000-2020-10-30)
+  - [Totals](#totals-3)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-3)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-3)
+
+## [20.3.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v20.3.0) (2020-11-13)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v20-changelog.json)
+  - Change source is a diff between [v20.3.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v20.3.0) and [v20.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v20.2.0)
+
+### Totals
+
+- TotalPropertyTypes: 1829 **(+17)**
+- TotalPropertyTypesSupportedGlobally: 516 **(+0)**
+- TotalResourceTypes: 597 **(+5)**
+- TotalResourceTypesSupportedGlobally: 191 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::DataBrew::Dataset](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Job](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Project](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-project.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Recipe](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Schedule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DLM::LifecyclePolicy.Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-action.html)
+  - `ap-south-1`
+  - `sa-east-1`
+
+- [AWS::DLM::LifecyclePolicy.CrossRegionCopyAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyaction.html)
+  - `ap-south-1`
+  - `sa-east-1`
+
+- [AWS::DLM::LifecyclePolicy.EncryptionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-encryptionconfiguration.html)
+  - `ap-south-1`
+  - `sa-east-1`
+
+- [AWS::DLM::LifecyclePolicy.EventParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-eventparameters.html)
+  - `ap-south-1`
+  - `sa-east-1`
+
+- [AWS::DLM::LifecyclePolicy.EventSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-eventsource.html)
+  - `ap-south-1`
+  - `sa-east-1`
+
+- [AWS::DLM::LifecyclePolicy.ShareRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-sharerule.html)
+  - `ap-south-1`
+  - `eu-west-1`
+  - `sa-east-1`
+  - `us-east-2`
+
+- [AWS::DataBrew::Job.Output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Job.S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-s3location.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Recipe.Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Recipe.ConditionExpression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-conditionexpression.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Recipe.DataCatalogInputDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-datacataloginputdefinition.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Recipe.RecipeParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-recipeparameters.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Recipe.RecipeStep](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-recipestep.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Recipe.S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::DataBrew::Recipe.SecondaryInput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::EC2::LaunchTemplate.EnclaveOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-enclaveoptions.html)
+  - `cn-north-1`
+  - `eu-central-1`
+  - `sa-east-1`
+
+- [AWS::SageMaker::Model.MultiModelConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-multimodelconfig.html)
+  - `eu-central-1`
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::AppMesh::VirtualGateway.VirtualGatewayConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html)
+  - `eu-west-1`
+  - `ap-east-1`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `me-south-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `us-west-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `us-east-2`
+  - `eu-north-1`
+  - `us-west-1`
+  - `sa-east-1`
+  - `ap-southeast-2`
+  - `us-east-1`
+
+- [AWS::AppMesh::VirtualGateway.VirtualGatewayGrpcConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.html)
+  - `eu-west-1`
+  - `ap-east-1`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `me-south-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `us-west-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `us-east-2`
+  - `eu-north-1`
+  - `us-west-1`
+  - `sa-east-1`
+  - `ap-southeast-2`
+  - `us-east-1`
+
+- [AWS::AppMesh::VirtualGateway.VirtualGatewayHttp2ConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.html)
+  - `eu-west-1`
+  - `ap-east-1`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `me-south-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `us-west-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `us-east-2`
+  - `eu-north-1`
+  - `us-west-1`
+  - `sa-east-1`
+  - `ap-southeast-2`
+  - `us-east-1`
+
+- [AWS::AppMesh::VirtualGateway.VirtualGatewayHttpConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html)
+  - `eu-west-1`
+  - `ap-east-1`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `me-south-1`
+  - `ap-northeast-2`
+  - `ca-central-1`
+  - `us-west-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `us-east-2`
+  - `eu-north-1`
+  - `us-west-1`
+  - `sa-east-1`
+  - `ap-southeast-2`
+  - `us-east-1`
+
+- [AWS::AppMesh::VirtualNode.OutlierDetection](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-outlierdetection.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-southeast-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::VirtualNode.VirtualNodeConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodeconnectionpool.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-southeast-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::VirtualNode.VirtualNodeGrpcConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodegrpcconnectionpool.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-southeast-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::VirtualNode.VirtualNodeHttp2ConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodehttp2connectionpool.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-southeast-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::VirtualNode.VirtualNodeHttpConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodehttpconnectionpool.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-southeast-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::VirtualNode.VirtualNodeTcpConnectionPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodetcpconnectionpool.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-southeast-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::EC2::ClientVpnEndpoint.ClientConnectOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html)
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `ap-south-1`
+  - `ap-northeast-1`
+  - `eu-central-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `ap-southeast-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- ResourceType Still Missing
+  - Since v20.2.0: [AWS::GroundStation::Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v20.2.0: [AWS::GroundStation::DataflowEndpointGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v20.2.0: [AWS::GroundStation::MissionProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v20.2.0: [AWS::Lambda::CodeSigningConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html)
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ca-central-1`
+    - `eu-central-1`
+    - `eu-west-1`
+
+- PropertyType Still Missing
+  - Since v20.2.0: [AWS::ECS::Cluster.ClusterSetting](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersetting.html)
+    - `af-south-1`
+    - `ap-northeast-3`
+    - `eu-south-1`
+
+  - Since v20.2.0: [AWS::GroundStation::DataflowEndpointGroup.DataflowEndpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v20.2.0: [AWS::GroundStation::DataflowEndpointGroup.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-endpointdetails.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v20.2.0: [AWS::GroundStation::DataflowEndpointGroup.SecurityDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v20.2.0: [AWS::GroundStation::DataflowEndpointGroup.SocketAddress](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-socketaddress.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v20.2.0: [AWS::GroundStation::MissionProfile.DataflowEdge](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+    - `af-south-1`
+    - `ap-southeast-2`
+    - `eu-central-1`
+    - `eu-north-1`
+    - `eu-west-1`
+    - `me-south-1`
+    - `us-east-2`
+    - `us-west-2`
+
+  - Since v20.2.0: [AWS::Lambda::CodeSigningConfig.AllowedPublishers](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-codesigningconfig-allowedpublishers.html)
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ca-central-1`
+    - `eu-central-1`
+    - `eu-west-1`
+
+  - Since v20.2.0: [AWS::Lambda::CodeSigningConfig.CodeSigningPolicies](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-codesigningconfig-codesigningpolicies.html)
+    - `ap-south-1`
+    - `ap-southeast-1`
+    - `ca-central-1`
+    - `eu-central-1`
+    - `eu-west-1`
+
+  - Since v20.2.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v20.2.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+- New PropertyType(s) Missing
+  - [AWS::DLM::LifecyclePolicy.Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-action.html)
+    - `ap-south-1`
+    - `sa-east-1`
+
+  - [AWS::DLM::LifecyclePolicy.CrossRegionCopyAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyaction.html)
+    - `ap-south-1`
+    - `sa-east-1`
+
+  - [AWS::DLM::LifecyclePolicy.EncryptionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-encryptionconfiguration.html)
+    - `ap-south-1`
+    - `sa-east-1`
+
+  - [AWS::DLM::LifecyclePolicy.EventParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-eventparameters.html)
+    - `ap-south-1`
+    - `sa-east-1`
+
+  - [AWS::DLM::LifecyclePolicy.EventSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-eventsource.html)
+    - `ap-south-1`
+    - `sa-east-1`
+
+  - [AWS::DLM::LifecyclePolicy.ShareRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-sharerule.html)
+    - `ap-south-1`
+    - `eu-west-1`
+    - `sa-east-1`
+    - `us-east-2`
+
+  - [AWS::EC2::LaunchTemplate.EnclaveOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-enclaveoptions.html)
+    - `cn-north-1`
+    - `eu-central-1`
+    - `sa-east-1`
+
+  - [AWS::SageMaker::Model.MultiModelConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-multimodelconfig.html)
+    - `eu-central-1`
+    - `us-west-2`
 
 ## [20.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v20.2.0) (2020-11-10)
 
