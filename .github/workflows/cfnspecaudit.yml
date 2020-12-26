@@ -16,13 +16,14 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.9
-    - name: Install dependencies
+    - name: Install dependencies, pipenv check for safety
       run: |
         git fetch --depth=1 origin +refs/tags/*:refs/tags/*
         git submodule update --init --recursive --remote
         python -m pip install --upgrade pip setuptools
         pip install pipenv
         pipenv install --dev
+        pipenv check
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
