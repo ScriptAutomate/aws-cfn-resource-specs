@@ -51,7 +51,7 @@ jobs:
       id: cpr
       uses: peter-evans/create-pull-request@v3
       with:
-        GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_PR_TOKEN }}
+        token: ${{ secrets.PUBLIC_REPO_PR_TOKEN }}
         labels: automerge
     - name: Check outputs and automerge if PR was made
       env:
