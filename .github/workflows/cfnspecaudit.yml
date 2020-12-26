@@ -52,7 +52,7 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_PR_TOKEN }}
         labels: automerge
-    - name: Check PR outputs
+    - name: Check outputs
       run: |
-        echo "Pull Request Number - ${{ env.PULL_REQUEST_NUMBER }}"
-        echo "Pull Request Number - ${{ steps.cpr.outputs.pr_number }}"
+        echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+        echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
