@@ -1,4 +1,5 @@
 import json
+import time
 from pathlib import Path
 
 # Third-Party modules
@@ -67,6 +68,9 @@ with Path.cwd().joinpath(f"{resource_spec_dir}/{master_resource_spec}/{cfn_json}
     for key, value in json_contents["ResourceTypes"].items():
         current_lookup += 1
         percentage_done = int(current_lookup / total_lookups * 100)
+        if percentage_done % 25 == 0:
+            print("Backing off URL validation for 60 seconds...")
+            time.sleep(60)
         supported_resources["ResourceTypes"][key] = {
             "Regions" : [
                 master_resource_spec
