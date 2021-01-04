@@ -60,6 +60,7 @@ documentation_lookup = {
     }
 }
 
+backoffs = {25: False, 50: False, 75: False, 100: False}
 total_lookups = resource_count[master_resource_spec]
 current_lookup = 0
 with Path.cwd().joinpath(f"{resource_spec_dir}/{master_resource_spec}/{cfn_json}").open('r') as master_file:
@@ -68,7 +69,8 @@ with Path.cwd().joinpath(f"{resource_spec_dir}/{master_resource_spec}/{cfn_json}
     for key, value in json_contents["ResourceTypes"].items():
         current_lookup += 1
         percentage_done = int(current_lookup / total_lookups * 100)
-        if percentage_done % 25 == 0:
+        if percentage_done != 0 and percentage_done % 25 == 0 and backoffs[percentage_done] is False:
+            backoffs[percentage_done] = True
             print("Backing off URL validation for 60 seconds...")
             time.sleep(60)
         supported_resources["ResourceTypes"][key] = {
@@ -98,7 +100,8 @@ with Path.cwd().joinpath(f"{resource_spec_dir}/{master_resource_spec}/{cfn_json}
     for key, value in json_contents["PropertyTypes"].items():
         current_lookup += 1
         percentage_done = int(current_lookup / total_lookups * 100)
-        if percentage_done % 25 == 0:
+        if percentage_done != 0 and percentage_done % 25 == 0 and backoffs[percentage_done] is False:
+            backoffs[percentage_done] = True
             print("Backing off URL validation for 60 seconds...")
             time.sleep(60)
         supported_resources["PropertyTypes"][key] = {
