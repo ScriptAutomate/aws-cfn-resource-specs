@@ -18315,7 +18315,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "25.0.0",
+  "ResourceSpecificationVersion": "26.0.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -30503,6 +30503,14 @@
       }
     },
     "AWS::S3::AccessPoint": {
+      "Attributes": {
+        "NetworkOrigin": {
+          "PrimitiveType": "String"
+        },
+        "PolicyStatus": {
+          "PrimitiveType": "Json"
+        }
+      },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html",
       "Properties": {
         "Bucket": {
@@ -30517,20 +30525,8 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
-        "NetworkOrigin": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-networkorigin",
-          "PrimitiveType": "String",
-          "Required": false,
-          "UpdateType": "Mutable"
-        },
         "Policy": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policy",
-          "PrimitiveType": "Json",
-          "Required": false,
-          "UpdateType": "Mutable"
-        },
-        "PolicyStatus": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policystatus",
           "PrimitiveType": "Json",
           "Required": false,
           "UpdateType": "Mutable"
