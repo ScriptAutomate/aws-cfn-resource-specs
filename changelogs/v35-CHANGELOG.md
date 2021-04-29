@@ -8,12 +8,560 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [35.0.0](#3500-2021-04-24)
+- [35.1.0](#3510-2021-04-29)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
-  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
+- [35.0.0](#3500-2021-04-24)
+  - [Totals](#totals-1)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+
+## [35.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v35.1.0) (2021-04-29)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v35-changelog.json)
+  - Change source is a diff between [v35.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v35.1.0) and [v35.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v35.0.0)
+
+### Totals
+
+- TotalPropertyTypes: 2385 **(+18)**
+- TotalPropertyTypesSupportedGlobally: 595 **(+2)**
+- TotalResourceTypes: 742 **(+8)**
+- TotalResourceTypesSupportedGlobally: 213 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::IoTFleetHub::Application](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleethub-application.html)
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::IoTWireless::PartnerAccount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html)
+  - `us-east-1`
+
+- [AWS::IoTWireless::TaskDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)
+  - `eu-west-1`
+  - `us-east-1`
+
+- [AWS::NimbleStudio::LaunchProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StreamingImage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::Studio](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::SES::ContactList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html)
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::ECS::TaskDefinition.EphemeralStorage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html)
+  - `eu-central-1`
+  - `us-west-2`
+
+- [AWS::IoTWireless::PartnerAccount.SidewalkAccountInfo](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html)
+  - `us-east-1`
+
+- [AWS::IoTWireless::PartnerAccount.SidewalkUpdateAccount](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html)
+  - `us-east-1`
+
+- [AWS::IoTWireless::TaskDefinition.LoRaWANGatewayVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html)
+  - `eu-west-1`
+  - `us-east-1`
+
+- [AWS::IoTWireless::TaskDefinition.LoRaWANUpdateGatewayTaskCreate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate.html)
+  - `eu-west-1`
+  - `us-east-1`
+
+- [AWS::IoTWireless::TaskDefinition.LoRaWANUpdateGatewayTaskEntry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskentry.html)
+  - `eu-west-1`
+  - `us-east-1`
+
+- [AWS::IoTWireless::TaskDefinition.UpdateWirelessGatewayTaskCreate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html)
+  - `eu-west-1`
+  - `us-east-1`
+
+- [AWS::NimbleStudio::LaunchProfile.StreamConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::Studio.StudioEncryptionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studio-studioencryptionconfiguration.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent.ActiveDirectoryComputerAttribute](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent.ActiveDirectoryConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent.ComputeFarmConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent.LicenseServiceConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-licenseserviceconfiguration.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent.ScriptParameterKeyValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent.SharedFileSystemConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-sharedfilesystemconfiguration.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent.StudioComponentConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentconfiguration.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::NimbleStudio::StudioComponent.StudioComponentInitializationScript](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html)
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::SES::ContactList.Topic](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-contactlist-topic.html)
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::LicenseManager::Grant](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::LicenseManager::License](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::NetworkFirewall::Firewall](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::FirewallPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::LoggingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::S3ObjectLambda::AccessPoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::S3ObjectLambda::AccessPointPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspointpolicy.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::ServiceCatalog::CloudFormationProduct](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html)
+  - `cn-northwest-1`
+  - `cn-north-1`
+
+- [AWS::ServiceCatalog::Portfolio](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html)
+  - `cn-northwest-1`
+  - `cn-north-1`
+
+- [AWS::Timestream::Database](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html)
+  - `eu-central-1`
+
+- [AWS::Timestream::Table](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html)
+  - `eu-central-1`
+
+- [AWS::Transfer::Server](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)
+  - `eu-south-1`
+
+- [AWS::Transfer::User](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)
+  - `eu-south-1`
+
+- [AWS::LicenseManager::License.BorrowConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-borrowconfiguration.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::LicenseManager::License.ConsumptionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-consumptionconfiguration.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::LicenseManager::License.Entitlement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::LicenseManager::License.IssuerData](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::LicenseManager::License.Metadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-metadata.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::LicenseManager::License.ProvisionalConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-provisionalconfiguration.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::LicenseManager::License.ValidityDateFormat](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-validitydateformat.html)
+  - `ca-central-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-2`
+  - `ap-southeast-1`
+  - `us-west-1`
+  - `ap-south-1`
+  - `eu-north-1`
+
+- [AWS::NetworkFirewall::Firewall.SubnetMapping](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewall-subnetmapping.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::FirewallPolicy.ActionDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-actiondefinition.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::FirewallPolicy.CustomAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-customaction.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::FirewallPolicy.Dimension](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-dimension.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::FirewallPolicy.FirewallPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::FirewallPolicy.PublishMetricAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-publishmetricaction.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::FirewallPolicy.StatefulRuleGroupReference](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::FirewallPolicy.StatelessRuleGroupReference](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statelessrulegroupreference.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::LoggingConfiguration.LogDestinationConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::LoggingConfiguration.LoggingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-loggingconfiguration.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.ActionDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-actiondefinition.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.Address](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.CustomAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-customaction.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.Dimension](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-dimension.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.Header](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.IPSet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ipset.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.MatchAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.PortRange](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portrange.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.PortSet](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-portset.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.PublishMetricAction](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-publishmetricaction.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.RuleDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.RuleGroup](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulegroup.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.RuleOption](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.RuleVariables](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.RulesSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.RulesSourceList](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.StatefulRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.StatelessRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.StatelessRulesAndCustomActions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::NetworkFirewall::RuleGroup.TCPFlagField](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-tcpflagfield.html)
+  - `ap-south-1`
+  - `eu-west-2`
+  - `ap-southeast-1`
+
+- [AWS::ResourceGroups::Group.ConfigurationItem](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html)
+  - Now available to **ALL** regions.
+
+- [AWS::ResourceGroups::Group.ConfigurationParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html)
+  - Now available to **ALL** regions.
+
+- [AWS::S3ObjectLambda::AccessPoint.ObjectLambdaConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::S3ObjectLambda::AccessPoint.TransformationConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-transformationconfiguration.html)
+  - `us-gov-east-1`
+  - `us-gov-west-1`
+
+- [AWS::ServiceCatalog::CloudFormationProduct.ProvisioningArtifactProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html)
+  - `cn-northwest-1`
+  - `cn-north-1`
+
+- [AWS::Transfer::Server.EndpointDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html)
+  - `eu-south-1`
+
+- [AWS::Transfer::Server.IdentityProviderDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html)
+  - `eu-south-1`
+
+- [AWS::Transfer::Server.Protocol]()
+  - `eu-south-1`
+
+- [AWS::Transfer::User.HomeDirectoryMapEntry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html)
+  - `eu-south-1`
+
+- [AWS::Transfer::User.PosixProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html)
+  - `eu-south-1`
+
+- [AWS::Transfer::User.SshPublicKey]()
+  - `eu-south-1`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- PropertyType Still Missing
+  - Since v35.0.0: [AWS::CloudFront::Distribution.FunctionAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-functionassociation.html)
+    - `eu-central-1`
+
+  - Since v35.0.0: [AWS::CloudFront::Distribution.LegacyCustomOrigin](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html)
+    - `eu-central-1`
+
+  - Since v35.0.0: [AWS::CloudFront::Distribution.LegacyS3Origin](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacys3origin.html)
+    - `eu-central-1`
+
+  - Since v35.0.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v35.0.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+- New PropertyType(s) Missing
+  - [AWS::ECS::TaskDefinition.EphemeralStorage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html)
+    - `eu-central-1`
+    - `us-west-2`
 
 ## [35.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v35.0.0) (2021-04-24)
 
