@@ -4296,6 +4296,23 @@
         }
       }
     },
+    "AWS::Cloud9::EnvironmentEC2.Repository": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html",
+      "Properties": {
+        "PathComponent": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-pathcomponent",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "RepositoryUrl": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-repositoryurl",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::CloudFormation::ResourceVersion.LoggingConfig": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-resourceversion-loggingconfig.html",
       "Properties": {
@@ -18621,6 +18638,12 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "DataCompressionType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-datacompressiontype",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "DeploymentType": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-deploymenttype",
           "PrimitiveType": "String",
@@ -23961,6 +23984,28 @@
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Location::Map.MapConfiguration": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-location-map-mapconfiguration.html",
+      "Properties": {
+        "Style": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-location-map-mapconfiguration.html#cfn-location-map-mapconfiguration-style",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Location::PlaceIndex.DataSourceConfiguration": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-location-placeindex-datasourceconfiguration.html",
+      "Properties": {
+        "IntendedUse": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-location-placeindex-datasourceconfiguration.html#cfn-location-placeindex-datasourceconfiguration-intendeduse",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
         }
       }
     },
@@ -34558,7 +34603,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "37.1.0",
+  "ResourceSpecificationVersion": "38.0.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -35777,7 +35822,7 @@
         "IdentitySource": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-identitysource",
           "PrimitiveItemType": "String",
-          "Required": true,
+          "Required": false,
           "Type": "List",
           "UpdateType": "Mutable"
         },
@@ -36673,7 +36718,7 @@
         "CreationTime": {
           "PrimitiveType": "String"
         },
-        "EffectiveEngineVersion": {
+        "WorkGroupConfiguration.EngineVersion.EffectiveEngineVersion": {
           "PrimitiveType": "String"
         }
       },
@@ -37636,6 +37681,81 @@
         }
       }
     },
+    "AWS::Cloud9::EnvironmentEC2": {
+      "Attributes": {
+        "Arn": {
+          "PrimitiveType": "String"
+        },
+        "Name": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html",
+      "Properties": {
+        "AutomaticStopTimeMinutes": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-automaticstoptimeminutes",
+          "PrimitiveType": "Integer",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "ConnectionType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-connectiontype",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-description",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "ImageId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-imageid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "InstanceType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-instancetype",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "Name": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-name",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "OwnerArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-ownerarn",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Repositories": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-repositories",
+          "ItemType": "Repository",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Immutable"
+        },
+        "SubnetId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-subnetid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Tags": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-tags",
+          "ItemType": "Tag",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::CloudFormation::CustomResource": {
       "AdditionalProperties": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html",
@@ -38050,6 +38170,9 @@
     "AWS::CloudFront::Function": {
       "Attributes": {
         "FunctionARN": {
+          "PrimitiveType": "String"
+        },
+        "FunctionMetadata.FunctionARN": {
           "PrimitiveType": "String"
         },
         "Stage": {
@@ -47328,6 +47451,9 @@
     },
     "AWS::FSx::FileSystem": {
       "Attributes": {
+        "DNSName": {
+          "PrimitiveType": "String"
+        },
         "LustreMountName": {
           "PrimitiveType": "String"
         }
@@ -51121,6 +51247,244 @@
         }
       }
     },
+    "AWS::Location::GeofenceCollection": {
+      "Attributes": {
+        "CollectionArn": {
+          "PrimitiveType": "String"
+        },
+        "CreateTime": {
+          "PrimitiveType": "String"
+        },
+        "UpdateTime": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html",
+      "Properties": {
+        "CollectionName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-collectionname",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-description",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "KmsKeyId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-kmskeyid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "PricingPlan": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-pricingplan",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "PricingPlanDataSource": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-pricingplandatasource",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Location::Map": {
+      "Attributes": {
+        "CreateTime": {
+          "PrimitiveType": "String"
+        },
+        "DataSource": {
+          "PrimitiveType": "String"
+        },
+        "MapArn": {
+          "PrimitiveType": "String"
+        },
+        "UpdateTime": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html",
+      "Properties": {
+        "Configuration": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html#cfn-location-map-configuration",
+          "Required": true,
+          "Type": "MapConfiguration",
+          "UpdateType": "Immutable"
+        },
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html#cfn-location-map-description",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "MapName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html#cfn-location-map-mapname",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "PricingPlan": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html#cfn-location-map-pricingplan",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Location::PlaceIndex": {
+      "Attributes": {
+        "CreateTime": {
+          "PrimitiveType": "String"
+        },
+        "IndexArn": {
+          "PrimitiveType": "String"
+        },
+        "UpdateTime": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html",
+      "Properties": {
+        "DataSource": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-datasource",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "DataSourceConfiguration": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-datasourceconfiguration",
+          "Required": false,
+          "Type": "DataSourceConfiguration",
+          "UpdateType": "Immutable"
+        },
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-description",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "IndexName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-indexname",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "PricingPlan": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html#cfn-location-placeindex-pricingplan",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Location::RouteCalculator": {
+      "Attributes": {
+        "CalculatorArn": {
+          "PrimitiveType": "String"
+        },
+        "CreateTime": {
+          "PrimitiveType": "String"
+        },
+        "UpdateTime": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html",
+      "Properties": {
+        "CalculatorName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html#cfn-location-routecalculator-calculatorname",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "DataSource": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html#cfn-location-routecalculator-datasource",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html#cfn-location-routecalculator-description",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "PricingPlan": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html#cfn-location-routecalculator-pricingplan",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Location::Tracker": {
+      "Attributes": {
+        "CreateTime": {
+          "PrimitiveType": "String"
+        },
+        "TrackerArn": {
+          "PrimitiveType": "String"
+        },
+        "UpdateTime": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html",
+      "Properties": {
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-description",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "KmsKeyId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-kmskeyid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "PricingPlan": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-pricingplan",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "PricingPlanDataSource": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-pricingplandatasource",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "TrackerName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html#cfn-location-tracker-trackername",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Location::TrackerConsumer": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-trackerconsumer.html",
+      "Properties": {
+        "ConsumerArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-trackerconsumer.html#cfn-location-trackerconsumer-consumerarn",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "TrackerName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-trackerconsumer.html#cfn-location-trackerconsumer-trackername",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
     "AWS::Logs::Destination": {
       "Attributes": {
         "Arn": {
@@ -51440,6 +51804,9 @@
         "Arn": {
           "PrimitiveType": "String"
         },
+        "LoggingConfiguration.DagProcessingLogs.CloudWatchLogGroupArn": {
+          "PrimitiveType": "String"
+        },
         "WebserverUrl": {
           "PrimitiveType": "String"
         }
@@ -51699,10 +52066,10 @@
         "FlowAvailabilityZone": {
           "PrimitiveType": "String"
         },
-        "IngestIp": {
+        "Source.IngestIp": {
           "PrimitiveType": "String"
         },
-        "SourceArn": {
+        "Source.SourceArn": {
           "PrimitiveType": "String"
         }
       },
@@ -55622,7 +55989,7 @@
     },
     "AWS::S3::StorageLens": {
       "Attributes": {
-        "StorageLensArn": {
+        "StorageLensConfiguration.StorageLensArn": {
           "PrimitiveType": "String"
         }
       },
@@ -56146,7 +56513,7 @@
         },
         "Parameters": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-parameters",
-          "ItemType": "List",
+          "PrimitiveItemType": "Json",
           "Required": false,
           "Type": "Map",
           "UpdateType": "Mutable"

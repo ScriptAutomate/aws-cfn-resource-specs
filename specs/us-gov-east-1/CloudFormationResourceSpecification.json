@@ -13302,6 +13302,12 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "DataCompressionType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-datacompressiontype",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "DeploymentType": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-deploymenttype",
           "PrimitiveType": "String",
@@ -22404,7 +22410,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "37.1.0",
+  "ResourceSpecificationVersion": "38.0.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -23589,7 +23595,7 @@
         "IdentitySource": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html#cfn-apigatewayv2-authorizer-identitysource",
           "PrimitiveItemType": "String",
-          "Required": true,
+          "Required": false,
           "Type": "List",
           "UpdateType": "Mutable"
         },
@@ -27418,6 +27424,34 @@
       "Properties": {
         "VpcId": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html#cfn-ec2-egressonlyinternetgateway-vpcid",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::EC2::EnclaveCertificateIamRoleAssociation": {
+      "Attributes": {
+        "CertificateS3BucketName": {
+          "PrimitiveType": "String"
+        },
+        "CertificateS3ObjectKey": {
+          "PrimitiveType": "String"
+        },
+        "EncryptionKmsKeyId": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html",
+      "Properties": {
+        "CertificateArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html#cfn-ec2-enclavecertificateiamroleassociation-certificatearn",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "RoleArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html#cfn-ec2-enclavecertificateiamroleassociation-rolearn",
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Immutable"
@@ -32212,6 +32246,9 @@
     },
     "AWS::FSx::FileSystem": {
       "Attributes": {
+        "DNSName": {
+          "PrimitiveType": "String"
+        },
         "LustreMountName": {
           "PrimitiveType": "String"
         }
@@ -38393,7 +38430,7 @@
         },
         "Parameters": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-parameters",
-          "ItemType": "List",
+          "PrimitiveItemType": "Json",
           "Required": false,
           "Type": "Map",
           "UpdateType": "Mutable"
