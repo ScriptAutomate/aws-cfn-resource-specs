@@ -8,16 +8,460 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [39.2.0](#3920-2021-06-18)
+- [39.3.0](#3930-2021-06-25)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [39.1.0](#3910-2021-06-11)
+- [39.2.0](#3920-2021-06-18)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+- [39.1.0](#3910-2021-06-11)
+  - [Totals](#totals-2)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
+
+## [39.3.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.3.0) (2021-06-25)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v39-changelog.json)
+  - Change source is a diff between [v39.3.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.3.0) and [v39.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.2.0)
+
+### Totals
+
+- TotalPropertyTypes: 2513 **(+12)**
+- TotalPropertyTypesSupportedGlobally: 688 **(+0)**
+- TotalResourceTypes: 772 **(+4)**
+- TotalResourceTypesSupportedGlobally: 233 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::CloudFormation::PublicTypeVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CloudFormation::Publisher](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::CloudFormation::TypeActivation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-typeactivation.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::Connect::QuickConnect](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-gov-west-1`
+  - `us-west-2`
+
+- [AWS::AppSync::GraphQLApi.LambdaAuthorizerConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html)
+  - `ap-northeast-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::CloudFormation::TypeActivation.LoggingConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-typeactivation-loggingconfig.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::Connect::QuickConnect.PhoneNumberQuickConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-phonenumberquickconnectconfig.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-gov-west-1`
+  - `us-west-2`
+
+- [AWS::Connect::QuickConnect.QueueQuickConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-queuequickconnectconfig.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-gov-west-1`
+  - `us-west-2`
+
+- [AWS::Connect::QuickConnect.QuickConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-quickconnectconfig.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-gov-west-1`
+  - `us-west-2`
+
+- [AWS::Connect::QuickConnect.UserQuickConnectConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-userquickconnectconfig.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-gov-west-1`
+  - `us-west-2`
+
+- [AWS::FSx::FileSystem.AuditLogConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-auditlogconfiguration.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::IoTAnalytics::Datastore.DatastorePartition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartition.html)
+  - `us-east-2`
+
+- [AWS::IoTAnalytics::Datastore.DatastorePartitions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html)
+  - `us-east-2`
+
+- [AWS::IoTAnalytics::Datastore.Partition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-partition.html)
+  - `us-east-2`
+
+- [AWS::IoTAnalytics::Datastore.TimestampPartition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html)
+  - `us-east-2`
+
+- [AWS::Redshift::Cluster.Endpoint](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-endpoint.html)
+  - `ap-northeast-1`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::Config::ConfigurationAggregator](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html)
+  - `eu-west-3`
+  - `ap-northeast-2`
+
+- [AWS::EC2::CarrierGateway](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carriergateway.html)
+  - `us-east-2`
+  - `eu-central-1`
+
+- [AWS::EC2::TransitGateway](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html)
+  - `eu-north-1`
+
+- [AWS::AppMesh::GatewayRoute.GatewayRouteHostnameMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutehostnamematch.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.GatewayRouteHostnameRewrite](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutehostnamerewrite.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.GatewayRouteMetadataMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutemetadatamatch.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.GatewayRouteRangeMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayrouterangematch.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.GrpcGatewayRouteMetadata](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-grpcgatewayroutemetadata.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.GrpcGatewayRouteRewrite](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-grpcgatewayrouterewrite.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.HttpGatewayRouteHeader](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheader.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.HttpGatewayRouteHeaderMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheadermatch.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.HttpGatewayRoutePathRewrite](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroutepathrewrite.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.HttpGatewayRoutePrefixRewrite](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteprefixrewrite.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.HttpGatewayRouteRewrite](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouterewrite.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.HttpPathMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httppathmatch.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.HttpQueryParameterMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpqueryparametermatch.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::GatewayRoute.QueryParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-queryparameter.html)
+  - `us-west-1`
+  - `eu-west-3`
+  - `eu-north-1`
+  - `me-south-1`
+  - `eu-west-2`
+  - `us-east-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::Route.HttpPathMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httppathmatch.html)
+  - `us-west-1`
+  - `us-east-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::Route.HttpQueryParameterMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httpqueryparametermatch.html)
+  - `us-west-1`
+  - `us-east-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::AppMesh::Route.QueryParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-queryparameter.html)
+  - `us-west-1`
+  - `us-east-2`
+  - `eu-west-2`
+  - `ap-northeast-2`
+
+- [AWS::Config::ConfigurationAggregator.AccountAggregationSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html)
+  - `eu-west-3`
+  - `ap-northeast-2`
+
+- [AWS::Config::ConfigurationAggregator.OrganizationAggregationSource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html)
+  - `eu-west-3`
+  - `ap-northeast-2`
+
+- [AWS::DataBrew::Recipe.ParameterMap](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-parametermap.html)
+  - `eu-north-1`
+  - `cn-northwest-1`
+
+- [AWS::Transfer::Server.ProtocolDetails](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html)
+  - `us-west-2`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `ap-south-1`
+  - `sa-east-1`
+  - `ca-central-1`
+  - `ap-southeast-1`
+  - `ap-northeast-1`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- PropertyType Still Missing
+  - Since v39.2.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v39.2.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+- New PropertyType(s) Missing
+  - [AWS::IoTAnalytics::Datastore.DatastorePartition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartition.html)
+    - `us-east-2`
+
+  - [AWS::IoTAnalytics::Datastore.DatastorePartitions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html)
+    - `us-east-2`
+
+  - [AWS::IoTAnalytics::Datastore.Partition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-partition.html)
+    - `us-east-2`
+
+  - [AWS::IoTAnalytics::Datastore.TimestampPartition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html)
+    - `us-east-2`
 
 ## [39.2.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.2.0) (2021-06-18)
 
