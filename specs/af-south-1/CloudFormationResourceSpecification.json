@@ -1941,6 +1941,12 @@
           "PrimitiveType": "Timestamp",
           "Required": false,
           "UpdateType": "Mutable"
+        },
+        "Timezone": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html#cfn-applicationautoscaling-scalabletarget-scheduledaction-timezone",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -8634,6 +8640,12 @@
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
+        },
+        "Context": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-context",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
         },
         "ExcessCapacityTerminationPolicy": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy",
@@ -21677,22 +21689,39 @@
     "AWS::Transfer::Server.IdentityProviderDetails": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html",
       "Properties": {
+        "DirectoryId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-directoryid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "InvocationRole": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-invocationrole",
           "PrimitiveType": "String",
-          "Required": true,
+          "Required": false,
           "UpdateType": "Mutable"
         },
         "Url": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html#cfn-transfer-server-identityproviderdetails-url",
           "PrimitiveType": "String",
-          "Required": true,
+          "Required": false,
           "UpdateType": "Mutable"
         }
       }
     },
     "AWS::Transfer::Server.Protocol": {
       "PrimitiveType": "String"
+    },
+    "AWS::Transfer::Server.ProtocolDetails": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html",
+      "Properties": {
+        "PassiveIp": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html#cfn-transfer-server-protocoldetails-passiveip",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
     },
     "AWS::Transfer::User.HomeDirectoryMapEntry": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-homedirectorymapentry.html",
@@ -24426,6 +24455,12 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "Mode": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-mode",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Name": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-name",
           "PrimitiveType": "String",
@@ -25775,7 +25810,7 @@
         },
         "LoadBalancerNames": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#cfn-as-group-loadbalancernames",
-          "DuplicatesAllowed": true,
+          "DuplicatesAllowed": false,
           "PrimitiveItemType": "String",
           "Required": false,
           "Type": "List",
@@ -29176,6 +29211,12 @@
       },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html",
       "Properties": {
+        "Context": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-context",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "ExcessCapacityTerminationPolicy": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-excesscapacityterminationpolicy",
           "PrimitiveType": "String",
@@ -37987,6 +38028,12 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "CopyTagsToSnapshot": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-copytagstosnapshot",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "DBClusterIdentifier": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbclusteridentifier",
           "PrimitiveType": "String",
@@ -42088,6 +42135,12 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-loggingrole",
           "PrimitiveType": "String",
           "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "ProtocolDetails": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-protocoldetails",
+          "Required": false,
+          "Type": "ProtocolDetails",
           "UpdateType": "Mutable"
         },
         "Protocols": {
