@@ -8,26 +8,444 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [39.5.0](#3950-2021-07-09)
+- [39.6.0](#3960-2021-07-17)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [39.3.0](#3930-2021-06-25)
+- [39.5.0](#3950-2021-07-09)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
-- [39.2.0](#3920-2021-06-18)
+- [39.3.0](#3930-2021-06-25)
   - [Totals](#totals-2)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
-- [39.1.0](#3910-2021-06-11)
+- [39.2.0](#3920-2021-06-18)
   - [Totals](#totals-3)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-3)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-3)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-3)
+- [39.1.0](#3910-2021-06-11)
+  - [Totals](#totals-4)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-4)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-4)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-4)
+
+## [39.6.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.6.0) (2021-07-17)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v39-changelog.json)
+  - Change source is a diff between [v39.6.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.6.0) and [v39.5.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.5.0)
+
+### Totals
+
+- TotalPropertyTypes: 2535 **(+4)**
+- TotalPropertyTypesSupportedGlobally: 884 **(+0)**
+- TotalResourceTypes: 773 **(+1)**
+- TotalResourceTypesSupportedGlobally: 320 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::Logs::ResourcePolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-resourcepolicy.html)
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::Cassandra::Table.EncryptionSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html)
+  - `eu-central-1`
+
+- [AWS::ImageBuilder::ImageRecipe.AdditionalInstanceConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::ImageBuilder::ImageRecipe.ComponentParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::ImageBuilder::ImageRecipe.SystemsManagerAgent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html)
+  - `ap-northeast-1`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::DataBrew::Dataset](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Project](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-project.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Schedule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html)
+  - `ap-east-1`
+
+- [AWS::IoTWireless::Destination](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::DeviceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::ServiceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::TaskDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessGateway](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::DataBrew::Dataset.CsvOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.DataCatalogInputDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datacataloginputdefinition.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.DatabaseInputDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-databaseinputdefinition.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.DatasetParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.DatetimeOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datetimeoptions.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.ExcelOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-exceloptions.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.FilesLimit](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.FilterExpression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.FilterValue](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.FormatOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-formatoptions.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.Input](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.JsonOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.PathOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-pathoptions.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.PathParameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-pathparameter.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Dataset.S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job.CsvOutputOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-csvoutputoptions.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job.DataCatalogOutput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-datacatalogoutput.html)
+  - `ca-central-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `eu-north-1`
+  - `eu-west-2`
+  - `ap-south-1`
+  - `cn-northwest-1`
+  - `ap-southeast-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-1`
+  - `us-west-1`
+
+- [AWS::DataBrew::Job.DatabaseTableOutputOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-databasetableoutputoptions.html)
+  - `ca-central-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `eu-north-1`
+  - `eu-west-2`
+  - `ap-south-1`
+  - `cn-northwest-1`
+  - `ap-southeast-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-1`
+  - `us-west-1`
+
+- [AWS::DataBrew::Job.JobSample](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-jobsample.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job.Output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job.OutputFormatOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-outputformatoptions.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job.OutputLocation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-outputlocation.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job.Recipe](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-recipe.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job.S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-s3location.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Job.S3TableOutputOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-s3tableoutputoptions.html)
+  - `ca-central-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `eu-north-1`
+  - `eu-west-2`
+  - `ap-south-1`
+  - `cn-northwest-1`
+  - `ap-southeast-2`
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `eu-west-3`
+  - `eu-west-1`
+  - `us-west-1`
+
+- [AWS::DataBrew::Project.Sample](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-project-sample.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe.Action](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-action.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe.ConditionExpression](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-conditionexpression.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe.DataCatalogInputDefinition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-datacataloginputdefinition.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe.ParameterMap](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-parametermap.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe.RecipeParameters](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-recipeparameters.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe.RecipeStep](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-recipestep.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe.S3Location](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html)
+  - `ap-east-1`
+
+- [AWS::DataBrew::Recipe.SecondaryInput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html)
+  - `ap-east-1`
+
+- [AWS::Glue::Crawler.RecrawlPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html)
+  - `us-west-2`
+  - `ap-southeast-1`
+  - `us-east-1`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `us-east-2`
+  - `ap-southeast-2`
+
+- [AWS::Glue::Database.DataLakePrincipal](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html)
+  - `us-west-2`
+  - `us-east-2`
+  - `ap-southeast-1`
+  - `us-east-1`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `eu-west-1`
+  - `ap-southeast-2`
+
+- [AWS::Glue::Database.DatabaseIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html)
+  - `cn-northwest-1`
+
+- [AWS::Glue::Database.PrincipalPrivileges](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-principalprivileges.html)
+  - `us-west-2`
+  - `us-east-2`
+  - `ap-southeast-1`
+  - `us-east-1`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `eu-west-1`
+  - `ap-southeast-2`
+
+- [AWS::Glue::Partition.SchemaId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html)
+  - `cn-northwest-1`
+
+- [AWS::Glue::Partition.SchemaReference](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html)
+  - `cn-northwest-1`
+
+- [AWS::Glue::Table.SchemaId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html)
+  - `cn-northwest-1`
+
+- [AWS::Glue::Table.SchemaReference](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html)
+  - `cn-northwest-1`
+
+- [AWS::Glue::Table.TableIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html)
+  - `cn-northwest-1`
+
+- [AWS::IoTWireless::DeviceProfile.LoRaWANDeviceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::ServiceProfile.LoRaWANServiceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::TaskDefinition.LoRaWANGatewayVersion](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawangatewayversion.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::TaskDefinition.LoRaWANUpdateGatewayTaskCreate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::TaskDefinition.LoRaWANUpdateGatewayTaskEntry](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskentry.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::TaskDefinition.UpdateWirelessGatewayTaskCreate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessDevice.AbpV10x](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessDevice.AbpV11](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv11.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessDevice.LoRaWANDevice](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessDevice.OtaaV10x](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav10x.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessDevice.OtaaV11](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessDevice.SessionKeysAbpV10x](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessDevice.SessionKeysAbpV11](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+- [AWS::IoTWireless::WirelessGateway.LoRaWANGateway](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessgateway-lorawangateway.html)
+  - `us-west-2`
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- PropertyType Still Missing
+  - Since v39.5.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v39.5.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+- New PropertyType(s) Missing
+  - [AWS::Cassandra::Table.EncryptionSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html)
+    - `eu-central-1`
 
 ## [39.5.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.5.0) (2021-07-09)
 
