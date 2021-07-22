@@ -7690,6 +7690,23 @@
         }
       }
     },
+    "AWS::Cassandra::Table.EncryptionSpecification": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html",
+      "Properties": {
+        "EncryptionType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-encryptiontype",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "KmsKeyIdentifier": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-kmskeyidentifier",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Cassandra::Table.ProvisionedThroughput": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html",
       "Properties": {
@@ -8452,6 +8469,12 @@
     "AWS::CloudWatch::Alarm.MetricDataQuery": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html",
       "Properties": {
+        "AccountId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-accountid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Expression": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-expression",
           "PrimitiveType": "String",
@@ -24434,6 +24457,23 @@
         }
       }
     },
+    "AWS::ImageBuilder::ImageRecipe.AdditionalInstanceConfiguration": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.html",
+      "Properties": {
+        "SystemsManagerAgent": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.html#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration-systemsmanageragent",
+          "Required": false,
+          "Type": "SystemsManagerAgent",
+          "UpdateType": "Mutable"
+        },
+        "UserDataOverride": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.html#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration-userdataoverride",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::ImageBuilder::ImageRecipe.ComponentConfiguration": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentconfiguration.html",
       "Properties": {
@@ -24441,6 +24481,31 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentconfiguration.html#cfn-imagebuilder-imagerecipe-componentconfiguration-componentarn",
           "PrimitiveType": "String",
           "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Parameters": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentconfiguration.html#cfn-imagebuilder-imagerecipe-componentconfiguration-parameters",
+          "ItemType": "ComponentParameter",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::ImageBuilder::ImageRecipe.ComponentParameter": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html",
+      "Properties": {
+        "Name": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-name",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "Value": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-value",
+          "PrimitiveItemType": "String",
+          "Required": true,
+          "Type": "List",
           "UpdateType": "Immutable"
         }
       }
@@ -24518,6 +24583,17 @@
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::ImageBuilder::ImageRecipe.SystemsManagerAgent": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html",
+      "Properties": {
+        "UninstallAfterBuild": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html#cfn-imagebuilder-imagerecipe-systemsmanageragent-uninstallafterbuild",
+          "PrimitiveType": "Boolean",
+          "Required": true,
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -38236,7 +38312,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "39.6.0",
+  "ResourceSpecificationVersion": "39.7.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -42725,6 +42801,12 @@
           "Required": false,
           "Type": "List",
           "UpdateType": "Immutable"
+        },
+        "EncryptionSpecification": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-encryptionspecification",
+          "Required": false,
+          "Type": "EncryptionSpecification",
+          "UpdateType": "Mutable"
         },
         "KeyspaceName": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-keyspacename",
@@ -49690,6 +49772,18 @@
           "Required": false,
           "UpdateType": "Immutable"
         },
+        "Ipv6CidrBlock": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblock",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Ipv6Pool": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6pool",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
         "VpcId": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-vpcid",
           "PrimitiveType": "String",
@@ -55633,6 +55727,13 @@
       },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html",
       "Properties": {
+        "AdditionalInstanceConfiguration": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration",
+          "PrimitiveType": "Json",
+          "Required": false,
+          "Type": "AdditionalInstanceConfiguration",
+          "UpdateType": "Mutable"
+        },
         "BlockDeviceMappings": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-blockdevicemappings",
           "ItemType": "InstanceBlockDeviceMapping",
@@ -61295,6 +61396,12 @@
     },
     "AWS::S3::AccessPoint": {
       "Attributes": {
+        "Arn": {
+          "PrimitiveType": "String"
+        },
+        "Name": {
+          "PrimitiveType": "String"
+        },
         "NetworkOrigin": {
           "PrimitiveType": "String"
         }
@@ -61307,14 +61414,14 @@
           "Required": true,
           "UpdateType": "Immutable"
         },
-        "Name": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-name",
-          "PrimitiveType": "String",
+        "Policy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policy",
+          "PrimitiveType": "Json",
           "Required": false,
           "UpdateType": "Mutable"
         },
-        "Policy": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policy",
+        "PolicyStatus": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policystatus",
           "PrimitiveType": "Json",
           "Required": false,
           "UpdateType": "Mutable"

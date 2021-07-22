@@ -7690,6 +7690,23 @@
         }
       }
     },
+    "AWS::Cassandra::Table.EncryptionSpecification": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html",
+      "Properties": {
+        "EncryptionType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-encryptiontype",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "KmsKeyIdentifier": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html#cfn-cassandra-table-encryptionspecification-kmskeyidentifier",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Cassandra::Table.ProvisionedThroughput": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html",
       "Properties": {
@@ -9351,6 +9368,12 @@
     "AWS::CloudWatch::Alarm.MetricDataQuery": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html",
       "Properties": {
+        "AccountId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-accountid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Expression": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html#cfn-cloudwatch-alarm-metricdataquery-expression",
           "PrimitiveType": "String",
@@ -24389,7 +24412,7 @@
         "ConnectionProperties": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-connectioninput.html#cfn-glue-connection-connectioninput-connectionproperties",
           "PrimitiveType": "Json",
-          "Required": true,
+          "Required": false,
           "UpdateType": "Mutable"
         },
         "ConnectionType": {
@@ -24502,9 +24525,26 @@
         }
       }
     },
+    "AWS::Glue::Crawler.RecrawlPolicy": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html",
+      "Properties": {
+        "RecrawlBehavior": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html#cfn-glue-crawler-recrawlpolicy-recrawlbehavior",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Glue::Crawler.S3Target": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-s3target.html",
       "Properties": {
+        "ConnectionName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-s3target.html#cfn-glue-crawler-s3target-connectionname",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Exclusions": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-s3target.html#cfn-glue-crawler-s3target-exclusions",
           "PrimitiveItemType": "String",
@@ -24632,9 +24672,44 @@
         }
       }
     },
+    "AWS::Glue::Database.DataLakePrincipal": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html",
+      "Properties": {
+        "DataLakePrincipalIdentifier": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html#cfn-glue-database-datalakeprincipal-datalakeprincipalidentifier",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Glue::Database.DatabaseIdentifier": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html",
+      "Properties": {
+        "CatalogId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-catalogid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "DatabaseName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html#cfn-glue-database-databaseidentifier-databasename",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Glue::Database.DatabaseInput": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html",
       "Properties": {
+        "CreateTableDefaultPermissions": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-createtabledefaultpermissions",
+          "ItemType": "PrincipalPrivileges",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
+        },
         "Description": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-description",
           "PrimitiveType": "String",
@@ -24657,6 +24732,30 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-parameters",
           "PrimitiveType": "Json",
           "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "TargetDatabase": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html#cfn-glue-database-databaseinput-targetdatabase",
+          "Required": false,
+          "Type": "DatabaseIdentifier",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Glue::Database.PrincipalPrivileges": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-principalprivileges.html",
+      "Properties": {
+        "Permissions": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-principalprivileges.html#cfn-glue-database-principalprivileges-permissions",
+          "PrimitiveItemType": "String",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
+        },
+        "Principal": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-principalprivileges.html#cfn-glue-database-principalprivileges-principal",
+          "Required": false,
+          "Type": "DataLakePrincipal",
           "UpdateType": "Mutable"
         }
       }
@@ -24788,6 +24887,40 @@
         }
       }
     },
+    "AWS::Glue::MLTransform.MLUserDataEncryption": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption-mluserdataencryption.html",
+      "Properties": {
+        "KmsKeyId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption-mluserdataencryption.html#cfn-glue-mltransform-transformencryption-mluserdataencryption-kmskeyid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "MLUserDataEncryptionMode": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption-mluserdataencryption.html#cfn-glue-mltransform-transformencryption-mluserdataencryption-mluserdataencryptionmode",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Glue::MLTransform.TransformEncryption": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html",
+      "Properties": {
+        "MLUserDataEncryption": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-mluserdataencryption",
+          "Required": false,
+          "Type": "MLUserDataEncryption",
+          "UpdateType": "Mutable"
+        },
+        "TaskRunSecurityConfigurationName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html#cfn-glue-mltransform-transformencryption-taskrunsecurityconfigurationname",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Glue::MLTransform.TransformParameters": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformparameters.html",
       "Properties": {
@@ -24866,6 +24999,52 @@
           "Required": true,
           "Type": "List",
           "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Glue::Partition.SchemaId": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html",
+      "Properties": {
+        "RegistryName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-registryname",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "SchemaArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaarn",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "SchemaName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html#cfn-glue-partition-schemaid-schemaname",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Glue::Partition.SchemaReference": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html",
+      "Properties": {
+        "SchemaId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaid",
+          "Required": false,
+          "Type": "SchemaId",
+          "UpdateType": "Mutable"
+        },
+        "SchemaVersionId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "SchemaVersionNumber": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html#cfn-glue-partition-schemareference-schemaversionnumber",
+          "PrimitiveType": "Integer",
+          "Required": false,
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -24968,6 +25147,12 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-parameters",
           "PrimitiveType": "Json",
           "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "SchemaReference": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-schemareference",
+          "Required": false,
+          "Type": "SchemaReference",
           "UpdateType": "Mutable"
         },
         "SerdeInfo": {
@@ -25175,6 +25360,52 @@
         }
       }
     },
+    "AWS::Glue::Table.SchemaId": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html",
+      "Properties": {
+        "RegistryName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-registryname",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "SchemaArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaarn",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "SchemaName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaname",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Glue::Table.SchemaReference": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html",
+      "Properties": {
+        "SchemaId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaid",
+          "Required": false,
+          "Type": "SchemaId",
+          "UpdateType": "Mutable"
+        },
+        "SchemaVersionId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "SchemaVersionNumber": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionnumber",
+          "PrimitiveType": "Integer",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Glue::Table.SerdeInfo": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html",
       "Properties": {
@@ -25276,6 +25507,12 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "SchemaReference": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-schemareference",
+          "Required": false,
+          "Type": "SchemaReference",
+          "UpdateType": "Mutable"
+        },
         "SerdeInfo": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-serdeinfo",
           "Required": false,
@@ -25298,6 +25535,29 @@
         "StoredAsSubDirectories": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-storedassubdirectories",
           "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Glue::Table.TableIdentifier": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html",
+      "Properties": {
+        "CatalogId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-catalogid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "DatabaseName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-databasename",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-name",
+          "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Mutable"
         }
@@ -25353,6 +25613,12 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-tabletype",
           "PrimitiveType": "String",
           "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "TargetTable": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-targettable",
+          "Required": false,
+          "Type": "TableIdentifier",
           "UpdateType": "Mutable"
         },
         "ViewExpandedText": {
@@ -26235,6 +26501,23 @@
         }
       }
     },
+    "AWS::ImageBuilder::ImageRecipe.AdditionalInstanceConfiguration": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.html",
+      "Properties": {
+        "SystemsManagerAgent": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.html#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration-systemsmanageragent",
+          "Required": false,
+          "Type": "SystemsManagerAgent",
+          "UpdateType": "Mutable"
+        },
+        "UserDataOverride": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.html#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration-userdataoverride",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::ImageBuilder::ImageRecipe.ComponentConfiguration": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentconfiguration.html",
       "Properties": {
@@ -26242,6 +26525,31 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentconfiguration.html#cfn-imagebuilder-imagerecipe-componentconfiguration-componentarn",
           "PrimitiveType": "String",
           "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Parameters": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentconfiguration.html#cfn-imagebuilder-imagerecipe-componentconfiguration-parameters",
+          "ItemType": "ComponentParameter",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::ImageBuilder::ImageRecipe.ComponentParameter": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html",
+      "Properties": {
+        "Name": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-name",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "Value": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html#cfn-imagebuilder-imagerecipe-componentparameter-value",
+          "PrimitiveItemType": "String",
+          "Required": true,
+          "Type": "List",
           "UpdateType": "Immutable"
         }
       }
@@ -26319,6 +26627,17 @@
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::ImageBuilder::ImageRecipe.SystemsManagerAgent": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html",
+      "Properties": {
+        "UninstallAfterBuild": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html#cfn-imagebuilder-imagerecipe-systemsmanageragent-uninstallafterbuild",
+          "PrimitiveType": "Boolean",
+          "Required": true,
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -46832,7 +47151,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "39.6.0",
+  "ResourceSpecificationVersion": "39.7.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -51321,6 +51640,12 @@
           "Required": false,
           "Type": "List",
           "UpdateType": "Immutable"
+        },
+        "EncryptionSpecification": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-encryptionspecification",
+          "Required": false,
+          "Type": "EncryptionSpecification",
+          "UpdateType": "Mutable"
         },
         "KeyspaceName": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-keyspacename",
@@ -58562,35 +58887,41 @@
           "Required": false,
           "UpdateType": "Immutable"
         },
+        "AssociationDefaultRouteTableId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-associationdefaultroutetableid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "AutoAcceptSharedAttachments": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-autoacceptsharedattachments",
           "PrimitiveType": "String",
           "Required": false,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         },
         "DefaultRouteTableAssociation": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetableassociation",
           "PrimitiveType": "String",
           "Required": false,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         },
         "DefaultRouteTablePropagation": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-defaultroutetablepropagation",
           "PrimitiveType": "String",
           "Required": false,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         },
         "Description": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-description",
           "PrimitiveType": "String",
           "Required": false,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         },
         "DnsSupport": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-dnssupport",
           "PrimitiveType": "String",
           "Required": false,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         },
         "MulticastSupport": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-multicastsupport",
@@ -58598,19 +58929,32 @@
           "Required": false,
           "UpdateType": "Immutable"
         },
+        "PropagationDefaultRouteTableId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-propagationdefaultroutetableid",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Tags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-tags",
           "DuplicatesAllowed": true,
           "ItemType": "Tag",
           "Required": false,
           "Type": "List",
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
+        },
+        "TransitGatewayCidrBlocks": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-transitgatewaycidrblocks",
+          "PrimitiveItemType": "String",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
         },
         "VpnEcmpSupport": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-vpnecmpsupport",
           "PrimitiveType": "String",
           "Required": false,
-          "UpdateType": "Immutable"
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -59010,6 +59354,18 @@
         },
         "CidrBlock": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-cidrblock",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Ipv6CidrBlock": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblock",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Ipv6Pool": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6pool",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
@@ -63205,6 +63561,12 @@
           "Required": false,
           "UpdateType": "Immutable"
         },
+        "RecrawlPolicy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-recrawlpolicy",
+          "Required": false,
+          "Type": "RecrawlPolicy",
+          "UpdateType": "Mutable"
+        },
         "Role": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-role",
           "PrimitiveType": "String",
@@ -63548,6 +63910,12 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html#cfn-glue-mltransform-timeout",
           "PrimitiveType": "Integer",
           "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "TransformEncryption": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html#cfn-glue-mltransform-transformencryption",
+          "Required": false,
+          "Type": "TransformEncryption",
           "UpdateType": "Mutable"
         },
         "TransformParameters": {
@@ -65079,6 +65447,13 @@
       },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html",
       "Properties": {
+        "AdditionalInstanceConfiguration": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration",
+          "PrimitiveType": "Json",
+          "Required": false,
+          "Type": "AdditionalInstanceConfiguration",
+          "UpdateType": "Mutable"
+        },
         "BlockDeviceMappings": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-blockdevicemappings",
           "ItemType": "InstanceBlockDeviceMapping",
@@ -72014,6 +72389,12 @@
     },
     "AWS::S3::AccessPoint": {
       "Attributes": {
+        "Arn": {
+          "PrimitiveType": "String"
+        },
+        "Name": {
+          "PrimitiveType": "String"
+        },
         "NetworkOrigin": {
           "PrimitiveType": "String"
         }
@@ -72026,14 +72407,14 @@
           "Required": true,
           "UpdateType": "Immutable"
         },
-        "Name": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-name",
-          "PrimitiveType": "String",
+        "Policy": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policy",
+          "PrimitiveType": "Json",
           "Required": false,
           "UpdateType": "Mutable"
         },
-        "Policy": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policy",
+        "PolicyStatus": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policystatus",
           "PrimitiveType": "Json",
           "Required": false,
           "UpdateType": "Mutable"
@@ -73361,6 +73742,7 @@
         },
         "Regions": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html#cfn-ssmincidents-replicationset-regions",
+          "DuplicatesAllowed": false,
           "ItemType": "ReplicationRegion",
           "Required": true,
           "Type": "List",
