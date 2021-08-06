@@ -8,42 +8,234 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [39.8.0](#3980-2021-07-30)
+- [39.9.0](#3990-2021-08-06)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [39.7.0](#3970-2021-07-22)
+- [39.8.0](#3980-2021-07-30)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
-- [39.6.0](#3960-2021-07-17)
+- [39.7.0](#3970-2021-07-22)
   - [Totals](#totals-2)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
-- [39.5.0](#3950-2021-07-09)
+- [39.6.0](#3960-2021-07-17)
   - [Totals](#totals-3)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-3)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-3)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-3)
-- [39.3.0](#3930-2021-06-25)
+- [39.5.0](#3950-2021-07-09)
   - [Totals](#totals-4)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-4)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-4)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-4)
-- [39.2.0](#3920-2021-06-18)
+- [39.3.0](#3930-2021-06-25)
   - [Totals](#totals-5)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-5)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-5)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-5)
-- [39.1.0](#3910-2021-06-11)
+- [39.2.0](#3920-2021-06-18)
   - [Totals](#totals-6)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-6)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-6)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-6)
+- [39.1.0](#3910-2021-06-11)
+  - [Totals](#totals-7)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-7)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-7)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-7)
+
+## [39.9.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.9.0) (2021-08-06)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v39-changelog.json)
+  - Change source is a diff between [v39.9.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.9.0) and [v39.8.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.8.0)
+
+### Totals
+
+- TotalPropertyTypes: 2562 **(+3)**
+- TotalPropertyTypesSupportedGlobally: 894 **(+7)**
+- TotalResourceTypes: 783 **(+1)**
+- TotalResourceTypesSupportedGlobally: 321 **(+1)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::Athena::PreparedStatement](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::SageMaker::Model.RepositoryAuthConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-imageconfig-repositoryauthconfig.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::Synthetics::Canary.BaseScreenshot](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-basescreenshot.html)
+  - Available in **ALL** regions.
+
+- [AWS::Synthetics::Canary.VisualReference](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html)
+  - Available in **ALL** regions.
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::DataSync::Agent](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationEFS](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationNFS](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationObjectStorage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationS3](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationSMB](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::Task](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)
+  - `ap-northeast-3`
+
+- [AWS::FSx::FileSystem](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)
+  - Now available to **ALL** regions.
+
+- [AWS::AppSync::GraphQLApi.LambdaAuthorizerConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html)
+  - `eu-south-1`
+  - `ap-south-1`
+  - `ap-northeast-3`
+  - `us-east-1`
+  - `us-west-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `ap-east-1`
+  - `ap-southeast-2`
+  - `ap-northeast-2`
+  - `ap-southeast-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `eu-west-2`
+  - `ap-northeast-1`
+  - `eu-west-1`
+  - `ca-central-1`
+
+- [AWS::DLM::LifecyclePolicy.CrossRegionCopyDeprecateRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopydeprecaterule.html)
+  - Now available to **ALL** regions.
+
+- [AWS::DLM::LifecyclePolicy.DeprecateRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-deprecaterule.html)
+  - Now available to **ALL** regions.
+
+- [AWS::DataSync::LocationEFS.Ec2Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationefs-ec2config.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationNFS.MountOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-mountoptions.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationNFS.OnPremConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationS3.S3Config](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locations3-s3config.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::LocationSMB.MountOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationsmb-mountoptions.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::Task.FilterRule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-filterrule.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::Task.Options](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html)
+  - `ap-northeast-3`
+
+- [AWS::DataSync::Task.TaskSchedule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html)
+  - `ap-northeast-3`
+
+- [AWS::FSx::FileSystem.AuditLogConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-auditlogconfiguration.html)
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `eu-north-1`
+  - `ap-northeast-1`
+  - `ap-northeast-3`
+  - `ap-east-1`
+
+- [AWS::FSx::FileSystem.LustreConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html)
+  - Now available to **ALL** regions.
+
+- [AWS::FSx::FileSystem.SelfManagedActiveDirectoryConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.html)
+  - Now available to **ALL** regions.
+
+- [AWS::FSx::FileSystem.WindowsConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Glue::Database.DataLakePrincipal](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html)
+  - `us-gov-west-1`
+
+- [AWS::Glue::Database.PrincipalPrivileges](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-principalprivileges.html)
+  - `us-gov-west-1`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- PropertyType Still Missing
+  - Since v39.8.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v39.8.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
 
 ## [39.8.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.8.0) (2021-07-30)
 
