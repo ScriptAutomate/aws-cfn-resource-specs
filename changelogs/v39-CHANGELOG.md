@@ -8,47 +8,186 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [39.9.0](#3990-2021-08-06)
+- [39.10.0](#39100-2021-08-13)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
-- [39.8.0](#3980-2021-07-30)
+- [39.9.0](#3990-2021-08-06)
   - [Totals](#totals-1)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
-- [39.7.0](#3970-2021-07-22)
+- [39.8.0](#3980-2021-07-30)
   - [Totals](#totals-2)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-2)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-2)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-2)
-- [39.6.0](#3960-2021-07-17)
+- [39.7.0](#3970-2021-07-22)
   - [Totals](#totals-3)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-3)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-3)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-3)
-- [39.5.0](#3950-2021-07-09)
+- [39.6.0](#3960-2021-07-17)
   - [Totals](#totals-4)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-4)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-4)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-4)
-- [39.3.0](#3930-2021-06-25)
+- [39.5.0](#3950-2021-07-09)
   - [Totals](#totals-5)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-5)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-5)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-5)
-- [39.2.0](#3920-2021-06-18)
+- [39.3.0](#3930-2021-06-25)
   - [Totals](#totals-6)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-6)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-6)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-6)
-- [39.1.0](#3910-2021-06-11)
+- [39.2.0](#3920-2021-06-18)
   - [Totals](#totals-7)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-7)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-7)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-7)
+- [39.1.0](#3910-2021-06-11)
+  - [Totals](#totals-8)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-8)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-8)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-8)
+
+## [39.10.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.10.0) (2021-08-13)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v39-changelog.json)
+  - Change source is a diff between [v39.10.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.10.0) and [v39.9.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.9.0)
+
+### Totals
+
+- TotalPropertyTypes: 2566 **(+4)**
+- TotalPropertyTypesSupportedGlobally: 906 **(+12)**
+- TotalResourceTypes: 784 **(+1)**
+- TotalResourceTypesSupportedGlobally: 322 **(+1)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::WAFv2::LoggingConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html)
+  - Available in **ALL** regions.
+
+- [AWS::Elasticsearch::Domain.ColdStorageOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-coldstorageoptions.html)
+  - Available in **ALL** regions.
+
+- [AWS::IoTAnalytics::Datastore.CustomerManagedS3Storage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::IoTAnalytics::Datastore.IotSiteWiseMultiLayerStorage](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.html)
+  - `ap-northeast-1`
+  - `ap-southeast-2`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::WAFv2::LoggingConfiguration.FieldToMatch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-fieldtomatch.html)
+  - Available in **ALL** regions.
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::Cassandra::Table.EncryptionSpecification](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-encryptionspecification.html)
+  - `cn-northwest-1`
+  - `ap-northeast-2`
+
+- [AWS::ECR::Repository.EncryptionConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-encryptionconfiguration.html)
+  - Now available to **ALL** regions.
+
+- [AWS::ECR::Repository.ImageScanningConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-imagescanningconfiguration.html)
+  - Now available to **ALL** regions.
+
+- [AWS::FSx::FileSystem.AuditLogConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration-auditlogconfiguration.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Glue::Crawler.RecrawlPolicy](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-recrawlpolicy.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Glue::Database.DataLakePrincipal](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-datalakeprincipal.html)
+  - `af-south-1`
+  - `cn-northwest-1`
+  - `ap-east-1`
+
+- [AWS::Glue::Database.DatabaseIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Glue::Database.PrincipalPrivileges](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-principalprivileges.html)
+  - `af-south-1`
+  - `cn-northwest-1`
+  - `ap-east-1`
+
+- [AWS::Glue::MLTransform.MLUserDataEncryption](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption-mluserdataencryption.html)
+  - `ap-east-1`
+  - `af-south-1`
+  - `me-south-1`
+
+- [AWS::Glue::MLTransform.TransformEncryption](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformencryption.html)
+  - `ap-east-1`
+  - `af-south-1`
+  - `me-south-1`
+
+- [AWS::Glue::Partition.SchemaId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemaid.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Glue::Partition.SchemaReference](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-schemareference.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Glue::Table.SchemaId](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Glue::Table.SchemaReference](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html)
+  - Now available to **ALL** regions.
+
+- [AWS::Glue::Table.TableIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html)
+  - Now available to **ALL** regions.
+
+- [AWS::IoTAnalytics::Datastore.DatastorePartition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartition.html)
+  - `cn-north-1`
+
+- [AWS::IoTAnalytics::Datastore.DatastorePartitions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html)
+  - `cn-north-1`
+
+- [AWS::IoTAnalytics::Datastore.Partition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-partition.html)
+  - `cn-north-1`
+
+- [AWS::IoTAnalytics::Datastore.TimestampPartition](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-timestamppartition.html)
+  - `cn-north-1`
+
+- [AWS::SageMaker::Model.RepositoryAuthConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-imageconfig-repositoryauthconfig.html)
+  - `cn-northwest-1`
+  - `us-gov-west-1`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- PropertyType Still Missing
+  - Since v39.9.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v39.9.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
 
 ## [39.9.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v39.9.0) (2021-08-06)
 
