@@ -15554,7 +15554,13 @@
         "TransitionToIA": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoia",
           "PrimitiveType": "String",
-          "Required": true,
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "TransitionToPrimaryStorageClass": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-lifecyclepolicy.html#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass",
+          "PrimitiveType": "String",
+          "Required": false,
           "UpdateType": "Mutable"
         }
       }
@@ -32015,7 +32021,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "40.0.0",
+  "ResourceSpecificationVersion": "40.1.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -39315,16 +39321,21 @@
       }
     },
     "AWS::EC2::DHCPOptions": {
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html",
+      "Attributes": {
+        "DhcpOptionsId": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html",
       "Properties": {
         "DomainName": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-domainname",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-domainname",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
         },
         "DomainNameServers": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-domainnameservers",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-domainnameservers",
           "DuplicatesAllowed": false,
           "PrimitiveItemType": "String",
           "Required": false,
@@ -39332,7 +39343,7 @@
           "UpdateType": "Immutable"
         },
         "NetbiosNameServers": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-netbiosnameservers",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-netbiosnameservers",
           "DuplicatesAllowed": false,
           "PrimitiveItemType": "String",
           "Required": false,
@@ -39340,13 +39351,13 @@
           "UpdateType": "Immutable"
         },
         "NetbiosNodeType": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-netbiosnodetype",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-netbiosnodetype",
           "PrimitiveType": "Integer",
           "Required": false,
           "UpdateType": "Immutable"
         },
         "NtpServers": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-ntpservers",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-ntpservers",
           "DuplicatesAllowed": true,
           "PrimitiveItemType": "String",
           "Required": false,
@@ -39354,7 +39365,7 @@
           "UpdateType": "Immutable"
         },
         "Tags": {
-          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html#cfn-ec2-dhcpoptions-tags",
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-tags",
           "DuplicatesAllowed": true,
           "ItemType": "Tag",
           "Required": false,
@@ -39521,6 +39532,11 @@
       }
     },
     "AWS::EC2::EgressOnlyInternetGateway": {
+      "Attributes": {
+        "Id": {
+          "PrimitiveType": "String"
+        }
+      },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html",
       "Properties": {
         "VpcId": {
