@@ -5615,6 +5615,14 @@
           "Type": "List",
           "UpdateType": "Mutable"
         },
+        "ExcludeManagementEventSources": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-excludemanagementeventsources",
+          "DuplicatesAllowed": false,
+          "PrimitiveItemType": "String",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
+        },
         "IncludeManagementEvents": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents",
           "PrimitiveType": "Boolean",
@@ -5623,6 +5631,17 @@
         },
         "ReadWriteType": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::CloudTrail::Trail.InsightSelector": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-insightselector.html",
+      "Properties": {
+        "InsightType": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-insightselector.html#cfn-cloudtrail-trail-insightselector-insighttype",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Mutable"
@@ -27881,7 +27900,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "41.0.0",
+  "ResourceSpecificationVersion": "41.1.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -30704,6 +30723,35 @@
         }
       }
     },
+    "AWS::Athena::PreparedStatement": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html",
+      "Properties": {
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html#cfn-athena-preparedstatement-description",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "QueryStatement": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html#cfn-athena-preparedstatement-querystatement",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "StatementName": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html#cfn-athena-preparedstatement-statementname",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "WorkGroup": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html#cfn-athena-preparedstatement-workgroup",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
     "AWS::Athena::WorkGroup": {
       "Attributes": {
         "CreationTime": {
@@ -32534,6 +32582,14 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "InsightSelectors": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-insightselectors",
+          "DuplicatesAllowed": false,
+          "ItemType": "InsightSelector",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
+        },
         "IsLogging": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-islogging",
           "PrimitiveType": "Boolean",
@@ -32542,6 +32598,12 @@
         },
         "IsMultiRegionTrail": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-ismultiregiontrail",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "IsOrganizationTrail": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-isorganizationtrail",
           "PrimitiveType": "Boolean",
           "Required": false,
           "UpdateType": "Mutable"
@@ -41751,7 +41813,6 @@
         },
         "InstanceConfiguration": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-instanceconfiguration",
-          "PrimitiveType": "Json",
           "Required": false,
           "Type": "InstanceConfiguration",
           "UpdateType": "Immutable"
@@ -41998,7 +42059,6 @@
       "Properties": {
         "AdditionalInstanceConfiguration": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration",
-          "PrimitiveType": "Json",
           "Required": false,
           "Type": "AdditionalInstanceConfiguration",
           "UpdateType": "Mutable"
@@ -42094,7 +42154,6 @@
         },
         "Logging": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-logging",
-          "PrimitiveType": "Json",
           "Required": false,
           "Type": "Logging",
           "UpdateType": "Mutable"
