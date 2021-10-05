@@ -1,7 +1,9 @@
 {
   "PropertyTypes": {
     "BrokenDocLinks": {
-      "AWS::AutoScaling::AutoScalingGroup.MixedInstancesPolicy": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-as-group-mixedinstancespolicy.html"
+      "AWS::Lightsail::Disk.AddOn": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html",
+      "AWS::Lightsail::Disk.AutoSnapshotAddOn": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html",
+      "AWS::Lightsail::Instance.AutoSnapshotAddOn": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-autosnapshotaddon.html"
     },
     "MissingDocLinks": [
       "AWS::SSM::PatchBaseline.PatchStringDate",
@@ -14,6 +16,8 @@
       "AWS::AutoScaling::AutoScalingGroup.LaunchTemplateOverrides": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/cfn-as-mixedinstancespolicy-launchtemplateoverrides.md",
       "AWS::AutoScaling::AutoScalingGroup.MixedInstancesPolicy": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/cfn-as-group-mixedinstancespolicy.md",
       "AWS::Backup::BackupVault.LockConfigurationType": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-backup-backupvault-lockconfigurationtype.md",
+      "AWS::Backup::Framework.ControlInputParameter": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-backup-framework-controlinputparameter.md",
+      "AWS::Backup::Framework.FrameworkControl": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-backup-framework-frameworkcontrol.md",
       "AWS::EC2::LaunchTemplate.AcceleratorCount": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-ec2-launchtemplate-acceleratorcount.md",
       "AWS::EC2::LaunchTemplate.AcceleratorTotalMemoryMiB": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-ec2-launchtemplate-acceleratortotalmemorymib.md",
       "AWS::EC2::LaunchTemplate.BaselineEbsBandwidthMbps": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.md",
@@ -38,6 +42,17 @@
       "AWS::KinesisFirehose::DeliveryStream.AmazonopensearchserviceBufferingHints": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-kinesisfirehose-deliverystream-amazonopensearchservicebufferinghints.md",
       "AWS::KinesisFirehose::DeliveryStream.AmazonopensearchserviceDestinationConfiguration": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-kinesisfirehose-deliverystream-amazonopensearchservicedestinationconfiguration.md",
       "AWS::KinesisFirehose::DeliveryStream.AmazonopensearchserviceRetryOptions": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-kinesisfirehose-deliverystream-amazonopensearchserviceretryoptions.md",
+      "AWS::Lightsail::Disk.AddOn": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-disk-addon.md",
+      "AWS::Lightsail::Disk.AutoSnapshotAddOn": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-disk-autosnapshotaddon.md",
+      "AWS::Lightsail::Instance.AddOn": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-addon.md",
+      "AWS::Lightsail::Instance.AutoSnapshotAddOn": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-autosnapshotaddon.md",
+      "AWS::Lightsail::Instance.Disk": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-disk.md",
+      "AWS::Lightsail::Instance.Hardware": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-hardware.md",
+      "AWS::Lightsail::Instance.Location": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-location.md",
+      "AWS::Lightsail::Instance.MonthlyTransfer": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-monthlytransfer.md",
+      "AWS::Lightsail::Instance.Networking": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-networking.md",
+      "AWS::Lightsail::Instance.Port": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-port.md",
+      "AWS::Lightsail::Instance.State": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-lightsail-instance-state.md",
       "AWS::MSK::Cluster.Unauthenticated": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-msk-cluster-unauthenticated.md",
       "AWS::Route53::HealthCheck.AlarmIdentifier": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-route53-healthcheck-alarmidentifier.md",
       "AWS::Route53::HealthCheck.HealthCheckConfig": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-properties-route53-healthcheck-healthcheckconfig.md",
@@ -50,10 +65,17 @@
   },
   "ResourceSpecificationVersion": "43.0.0",
   "ResourceTypes": {
-    "BrokenDocLinks": {},
+    "BrokenDocLinks": {
+      "AWS::Backup::Framework": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html",
+      "AWS::Backup::ReportPlan": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html"
+    },
     "MissingDocLinks": [],
     "MissingFromAWSGitHubSourceRepo": {
       "AWS::APS::RuleGroupsNamespace": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-aps-rulegroupsnamespace.md",
+      "AWS::Backup::Framework": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-backup-framework.md",
+      "AWS::Backup::ReportPlan": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-backup-reportplan.md",
+      "AWS::Lightsail::Disk": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-lightsail-disk.md",
+      "AWS::Lightsail::Instance": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-lightsail-instance.md",
       "AWS::SQS::QueuePolicy": "https://github.com/awsdocs/aws-cloudformation-user-guide/tree/master/doc_source/aws-resource-sqs-queuepolicy.md"
     }
   }
