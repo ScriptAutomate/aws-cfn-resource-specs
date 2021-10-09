@@ -35076,6 +35076,18 @@
         }
       }
     },
+    "AWS::Synthetics::Canary.ArtifactConfig": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html",
+      "Properties": {
+        "S3Encryption": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html#cfn-synthetics-canary-artifactconfig-s3encryption",
+          "PrimitiveType": "Json",
+          "Required": false,
+          "Type": "S3Encryption",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
     "AWS::Synthetics::Canary.BaseScreenshot": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-basescreenshot.html",
       "Properties": {
@@ -35154,6 +35166,23 @@
         "TimeoutInSeconds": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html#cfn-synthetics-canary-runconfig-timeoutinseconds",
           "PrimitiveType": "Integer",
+          "Required": false,
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Synthetics::Canary.S3Encryption": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html",
+      "Properties": {
+        "EncryptionMode": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-encryptionmode",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
+        "KmsKeyArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-s3encryption.html#cfn-synthetics-canary-s3encryption-kmskeyarn",
+          "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Mutable"
         }
@@ -37257,7 +37286,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "43.0.0",
+  "ResourceSpecificationVersion": "43.1.0",
   "ResourceTypes": {
     "AWS::AccessAnalyzer::Analyzer": {
       "Attributes": {
@@ -40834,6 +40863,12 @@
           "PrimitiveType": "String",
           "Required": true,
           "UpdateType": "Immutable"
+        },
+        "UnmanagedvCpus": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-unmanagedvcpus",
+          "PrimitiveType": "Integer",
+          "Required": false,
+          "UpdateType": "Mutable"
         }
       }
     },
@@ -40883,6 +40918,12 @@
           "Type": "RetryStrategy",
           "UpdateType": "Mutable"
         },
+        "SchedulingPriority": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-schedulingpriority",
+          "PrimitiveType": "Integer",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "Tags": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-tags",
           "PrimitiveType": "Json",
@@ -40923,6 +40964,12 @@
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-priority",
           "PrimitiveType": "Integer",
           "Required": true,
+          "UpdateType": "Mutable"
+        },
+        "SchedulingPolicyArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-schedulingpolicyarn",
+          "PrimitiveType": "String",
+          "Required": false,
           "UpdateType": "Mutable"
         },
         "State": {
@@ -52666,6 +52713,77 @@
         }
       }
     },
+    "AWS::IoT::JobTemplate": {
+      "Attributes": {
+        "Arn": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html",
+      "Properties": {
+        "AbortConfig": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-abortconfig",
+          "PrimitiveType": "Json",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Description": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-description",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "Document": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-document",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "DocumentSource": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-documentsource",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "JobArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-jobarn",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "JobExecutionsRolloutConfig": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-jobexecutionsrolloutconfig",
+          "PrimitiveType": "Json",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "JobTemplateId": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-jobtemplateid",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "PresignedUrlConfig": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-presignedurlconfig",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Tags": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-tags",
+          "DuplicatesAllowed": false,
+          "ItemType": "Tag",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Immutable"
+        },
+        "TimeoutConfig": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-timeoutconfig",
+          "PrimitiveType": "Json",
+          "Required": false,
+          "UpdateType": "Immutable"
+        }
+      }
+    },
     "AWS::IoT::MitigationAction": {
       "Attributes": {
         "MitigationActionArn": {
@@ -59730,6 +59848,12 @@
       },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html",
       "Properties": {
+        "ArtifactConfig": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-artifactconfig",
+          "Required": false,
+          "Type": "ArtifactConfig",
+          "UpdateType": "Mutable"
+        },
         "ArtifactS3Location": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-artifacts3location",
           "PrimitiveType": "String",
