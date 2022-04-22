@@ -10014,7 +10014,7 @@
       ]
     },
     "AWS::Athena::WorkGroup.EngineVersion": {
-      "AllRegions": false,
+      "AllRegions": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-engineversion.html",
       "Regions": [
         "af-south-1",
@@ -10038,6 +10038,7 @@
         "sa-east-1",
         "us-east-1",
         "us-east-2",
+        "us-gov-east-1",
         "us-gov-west-1",
         "us-west-1",
         "us-west-2"
@@ -10074,16 +10075,6 @@
         "us-west-2"
       ]
     },
-    "AWS::Athena::WorkGroup.ResultConfigurationUpdates": {
-      "AllRegions": false,
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html",
-      "Regions": [
-        "ap-northeast-1",
-        "ca-central-1",
-        "eu-west-3",
-        "us-gov-east-1"
-      ]
-    },
     "AWS::Athena::WorkGroup.WorkGroupConfiguration": {
       "AllRegions": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html",
@@ -10113,16 +10104,6 @@
         "us-gov-west-1",
         "us-west-1",
         "us-west-2"
-      ]
-    },
-    "AWS::Athena::WorkGroup.WorkGroupConfigurationUpdates": {
-      "AllRegions": false,
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html",
-      "Regions": [
-        "ap-northeast-1",
-        "ca-central-1",
-        "eu-west-3",
-        "us-gov-east-1"
       ]
     },
     "AWS::AuditManager::Assessment.AWSAccount": {
@@ -12064,6 +12045,37 @@
     "AWS::Batch::ComputeEnvironment.LaunchTemplateSpecification": {
       "AllRegions": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html",
+      "Regions": [
+        "af-south-1",
+        "ap-east-1",
+        "ap-northeast-1",
+        "ap-northeast-2",
+        "ap-northeast-3",
+        "ap-south-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "ca-central-1",
+        "cn-north-1",
+        "cn-northwest-1",
+        "eu-central-1",
+        "eu-north-1",
+        "eu-south-1",
+        "eu-west-1",
+        "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
+        "sa-east-1",
+        "us-east-1",
+        "us-east-2",
+        "us-gov-east-1",
+        "us-gov-west-1",
+        "us-west-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::Batch::ComputeEnvironment.UpdatePolicy": {
+      "AllRegions": true,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-updatepolicy.html",
       "Regions": [
         "af-south-1",
         "ap-east-1",
@@ -15484,7 +15496,7 @@
     },
     "AWS::CloudWatch::Alarm.Dimension": {
       "AllRegions": true,
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html",
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html",
       "Regions": [
         "af-south-1",
         "ap-east-1",
@@ -35929,6 +35941,21 @@
         "us-west-2"
       ]
     },
+    "AWS::Evidently::Experiment.RunningStatusObject": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-runningstatusobject.html",
+      "Regions": [
+        "ap-northeast-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-north-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-east-2",
+        "us-west-2"
+      ]
+    },
     "AWS::Evidently::Experiment.TreatmentObject": {
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmentobject.html",
@@ -35977,6 +36004,21 @@
     "AWS::Evidently::Feature.VariationObject": {
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-feature-variationobject.html",
+      "Regions": [
+        "ap-northeast-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-north-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-east-2",
+        "us-west-2"
+      ]
+    },
+    "AWS::Evidently::Launch.ExecutionStatusObject": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-executionstatusobject.html",
       "Regions": [
         "ap-northeast-1",
         "ap-southeast-1",
@@ -41558,43 +41600,63 @@
       ]
     },
     "AWS::ImageBuilder::DistributionConfiguration.AmiDistributionConfiguration": {
-      "AllRegions": false,
+      "AllRegions": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html",
       "Regions": [
+        "af-south-1",
+        "ap-east-1",
         "ap-northeast-1",
+        "ap-northeast-2",
         "ap-northeast-3",
         "ap-south-1",
         "ap-southeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "cn-north-1",
+        "cn-northwest-1",
         "eu-central-1",
+        "eu-north-1",
+        "eu-south-1",
         "eu-west-1",
         "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
         "sa-east-1",
         "us-east-1",
         "us-east-2",
+        "us-gov-east-1",
+        "us-gov-west-1",
         "us-west-1",
         "us-west-2"
       ]
     },
     "AWS::ImageBuilder::DistributionConfiguration.ContainerDistributionConfiguration": {
-      "AllRegions": false,
+      "AllRegions": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html",
       "Regions": [
+        "af-south-1",
+        "ap-east-1",
         "ap-northeast-1",
+        "ap-northeast-2",
         "ap-northeast-3",
         "ap-south-1",
         "ap-southeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "cn-north-1",
+        "cn-northwest-1",
         "eu-central-1",
+        "eu-north-1",
+        "eu-south-1",
         "eu-west-1",
         "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
         "sa-east-1",
         "us-east-1",
         "us-east-2",
+        "us-gov-east-1",
+        "us-gov-west-1",
         "us-west-1",
         "us-west-2"
       ]
@@ -41631,22 +41693,32 @@
       ]
     },
     "AWS::ImageBuilder::DistributionConfiguration.LaunchPermissionConfiguration": {
-      "AllRegions": false,
+      "AllRegions": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-launchpermissionconfiguration.html",
       "Regions": [
+        "af-south-1",
+        "ap-east-1",
         "ap-northeast-1",
+        "ap-northeast-2",
         "ap-northeast-3",
         "ap-south-1",
         "ap-southeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "cn-north-1",
+        "cn-northwest-1",
         "eu-central-1",
+        "eu-north-1",
+        "eu-south-1",
         "eu-west-1",
         "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
         "sa-east-1",
         "us-east-1",
         "us-east-2",
+        "us-gov-east-1",
+        "us-gov-west-1",
         "us-west-1",
         "us-west-2"
       ]
@@ -41683,22 +41755,32 @@
       ]
     },
     "AWS::ImageBuilder::DistributionConfiguration.TargetContainerRepository": {
-      "AllRegions": false,
+      "AllRegions": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-targetcontainerrepository.html",
       "Regions": [
+        "af-south-1",
+        "ap-east-1",
         "ap-northeast-1",
+        "ap-northeast-2",
         "ap-northeast-3",
         "ap-south-1",
         "ap-southeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "cn-north-1",
+        "cn-northwest-1",
         "eu-central-1",
+        "eu-north-1",
+        "eu-south-1",
         "eu-west-1",
         "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
         "sa-east-1",
         "us-east-1",
         "us-east-2",
+        "us-gov-east-1",
+        "us-gov-west-1",
         "us-west-1",
         "us-west-2"
       ]
@@ -46076,6 +46158,138 @@
       "Regions": [
         "ap-northeast-1",
         "ap-southeast-2",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::ComponentType.DataConnector": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::ComponentType.DataType": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-datatype.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::ComponentType.DataValue": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-datavalue.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::ComponentType.Function": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-function.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::ComponentType.LambdaFunction": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-lambdafunction.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::ComponentType.PropertyDefinition": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertydefinition.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::ComponentType.Relationship": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationship.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::Entity.Component": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-component.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::Entity.DataValue": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-datavalue.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::Entity.Property": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-property.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::Entity.Status": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-status.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
         "eu-west-1",
         "us-east-1",
         "us-west-2"
@@ -60063,6 +60277,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60074,6 +60289,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionstorage.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60085,6 +60301,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60096,6 +60313,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studio-studioencryptionconfiguration.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60107,6 +60325,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60118,6 +60337,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60129,6 +60349,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60140,6 +60361,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-licenseserviceconfiguration.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60151,6 +60373,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60162,6 +60385,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-sharedfilesystemconfiguration.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60173,6 +60397,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentconfiguration.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -60184,6 +60409,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -77209,7 +77435,7 @@
       ]
     }
   },
-  "ResourceSpecificationVersion": "66.1.0",
+  "ResourceSpecificationVersion": "68.0.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "AllRegions": false,
@@ -81342,7 +81568,7 @@
     },
     "AWS::CloudWatch::Alarm": {
       "AllRegions": true,
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html",
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html",
       "Regions": [
         "af-south-1",
         "ap-east-1",
@@ -82593,6 +82819,22 @@
         "eu-west-2",
         "us-east-1",
         "us-gov-west-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::Connect::PhoneNumber": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-phonenumber.html",
+      "Regions": [
+        "ap-northeast-1",
+        "ap-northeast-2",
+        "ap-south-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "ca-central-1",
+        "eu-central-1",
+        "eu-west-2",
+        "us-east-1",
         "us-west-2"
       ]
     },
@@ -91243,6 +91485,54 @@
         "us-west-2"
       ]
     },
+    "AWS::IoTTwinMaker::ComponentType": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-componenttype.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::Entity": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::Scene": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
+    "AWS::IoTTwinMaker::Workspace": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-workspace.html",
+      "Regions": [
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-west-2"
+      ]
+    },
     "AWS::IoTWireless::Destination": {
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html",
@@ -94012,6 +94302,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -94023,6 +94314,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -94034,6 +94326,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -94045,6 +94338,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html",
       "Regions": [
+        "ap-northeast-1",
         "ap-southeast-2",
         "ca-central-1",
         "eu-west-2",
@@ -100199,28 +100493,12 @@
       ]
     }
   },
-  "TotalPropertyTypes": 3089,
-  "TotalPropertyTypesSupportedGlobally": 1079,
-  "TotalResourceTypes": 911,
+  "TotalPropertyTypes": 3101,
+  "TotalPropertyTypesSupportedGlobally": 1085,
+  "TotalResourceTypes": 916,
   "TotalResourceTypesSupportedGlobally": 339,
   "TypesNotInUSEAST1": {
     "PropertyTypes": {
-      "AWS::Athena::WorkGroup.ResultConfigurationUpdates": {
-        "Regions": [
-          "ap-northeast-1",
-          "ca-central-1",
-          "eu-west-3",
-          "us-gov-east-1"
-        ]
-      },
-      "AWS::Athena::WorkGroup.WorkGroupConfigurationUpdates": {
-        "Regions": [
-          "ap-northeast-1",
-          "ca-central-1",
-          "eu-west-3",
-          "us-gov-east-1"
-        ]
-      },
       "AWS::DeviceFarm::DevicePool.Rule": {
         "Regions": [
           "us-west-2"
@@ -100300,6 +100578,6 @@
         ]
       }
     },
-    "Total": 15
+    "Total": 13
   }
 }
