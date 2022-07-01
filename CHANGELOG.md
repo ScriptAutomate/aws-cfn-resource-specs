@@ -8,12 +8,1310 @@ Changelogs are duplicated to the [changelogs](changelogs) sub-directory with eac
 
 ## Table of Contents
 
-- [78.0.0](#7800-2022-06-24)
+- [78.1.0](#7810-2022-07-01)
   - [Totals](#totals)
   - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes)
+  - [Complete Removal of ResourceTypes and/or PropertyTypes](#complete-removal-of-resourcetypes-andor-propertytypes)
   - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions)
-  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
   - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1)
+- [78.0.0](#7800-2022-06-24)
+  - [Totals](#totals-1)
+  - [Introduction of New ResourceTypes and/or PropertyTypes](#introduction-of-new-resourcetypes-andor-propertytypes-1)
+  - [Existing ResourceTypes and PropertyTypes: Added Regions](#existing-resourcetypes-and-propertytypes-added-regions-1)
+  - [Existing ResourceTypes and PropertyTypes: Removed Regions](#existing-resourcetypes-and-propertytypes-removed-regions)
+  - [Existing ResourceTypes and PropertyTypes Not in `us-east-1`](#existing-resourcetypes-and-propertytypes-not-in-us-east-1-1)
+
+## [78.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v78.1.0) (2022-07-01)
+
+- [ChangeLog Source JSON](https://github.com/ScriptAutomate/aws-cfn-resource-specs/blob/master/changelogs/v78-changelog.json)
+  - Change source is a diff between [v78.1.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v78.1.0) and [v78.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v78.0.0)
+
+### Totals
+
+- TotalPropertyTypes: 3251 **(+25)**
+- TotalPropertyTypesSupportedGlobally: 1125 **(+0)**
+- TotalResourceTypes: 941 **(+5)**
+- TotalResourceTypesSupportedGlobally: 342 **(+0)**
+
+### Introduction of New ResourceTypes and/or PropertyTypes
+
+- [AWS::DataSync::LocationFSxONTAP](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxontap.html)
+  - `af-south-1`
+  - `ap-northeast-2`
+  - `us-east-1`
+
+- [AWS::LakeFormation::DataCellsFilter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::TagAssociation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tagassociation.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::SES::DedicatedIpPool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-dedicatedippool.html)
+  - `af-south-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::SES::EmailIdentity](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html)
+  - `af-south-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::DataSync::LocationFSxONTAP.NFS](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-nfs.html)
+  - `af-south-1`
+  - `ap-northeast-2`
+  - `us-east-1`
+
+- [AWS::DataSync::LocationFSxONTAP.NfsMountOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-nfsmountoptions.html)
+  - `af-south-1`
+  - `ap-northeast-2`
+  - `us-east-1`
+
+- [AWS::DataSync::LocationFSxONTAP.Protocol](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-protocol.html)
+  - `af-south-1`
+  - `ap-northeast-2`
+  - `us-east-1`
+
+- [AWS::DataSync::LocationFSxONTAP.SMB](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html)
+  - `af-south-1`
+  - `ap-northeast-2`
+  - `us-east-1`
+
+- [AWS::DataSync::LocationFSxONTAP.SmbMountOptions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smbmountoptions.html)
+  - `af-south-1`
+  - `ap-northeast-2`
+  - `us-east-1`
+
+- [AWS::KinesisAnalyticsV2::Application.ApplicationMaintenanceConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::KinesisAnalyticsV2::Application.ApplicationRestoreConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationrestoreconfiguration.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::KinesisAnalyticsV2::Application.FlinkRunConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkrunconfiguration.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::KinesisAnalyticsV2::Application.RunConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::KinesisAnalyticsV2::Application.VpcConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::DataCellsFilter.ColumnWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datacellsfilter-columnwildcard.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::DataCellsFilter.RowFilter](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datacellsfilter-rowfilter.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::TagAssociation.CatalogResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-catalogresource.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::TagAssociation.DatabaseResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::TagAssociation.LFTagPair](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::TagAssociation.Resource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-resource.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::TagAssociation.TableResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tableresource.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::TagAssociation.TableWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tablewildcard.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::LakeFormation::TagAssociation.TableWithColumnsResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-tablewithcolumnsresource.html)
+  - `af-south-1`
+  - `ap-east-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::Logs::MetricFilter.Dimension](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-dimension.html)
+  - `eu-central-1`
+
+- [AWS::QuickSight::DataSet.DataSetUsageConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-datasetusageconfiguration.html)
+  - `ap-northeast-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-west-1`
+  - `us-east-1`
+  - `us-west-2`
+
+- [AWS::RefactorSpaces::Route.DefaultRouteInput](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-defaultrouteinput.html)
+  - `ap-northeast-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-west-2`
+
+- [AWS::SES::EmailIdentity.ConfigurationSetAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-configurationsetattributes.html)
+  - `af-south-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::SES::EmailIdentity.DkimAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html)
+  - `af-south-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::SES::EmailIdentity.DkimSigningAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html)
+  - `af-south-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::SES::EmailIdentity.FeedbackAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-feedbackattributes.html)
+  - `af-south-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+- [AWS::SES::EmailIdentity.MailFromAttributes](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html)
+  - `af-south-1`
+  - `ap-northeast-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `eu-central-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-east-1`
+  - `us-east-2`
+  - `us-gov-west-1`
+  - `us-west-1`
+  - `us-west-2`
+
+### Complete Removal of ResourceTypes and/or PropertyTypes
+
+- [AWS::AppSync::GraphQLApi.AdditionalAuthenticationProviders](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-additionalauthenticationproviders.html)
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-west-1`
+
+- [AWS::AppSync::GraphQLApi.Tags](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-tags.html)
+  - `ap-east-1`
+  - `ap-northeast-2`
+  - `ap-northeast-3`
+  - `ap-south-1`
+  - `ap-southeast-1`
+  - `ap-southeast-2`
+  - `ca-central-1`
+  - `cn-north-1`
+  - `cn-northwest-1`
+  - `eu-north-1`
+  - `eu-south-1`
+  - `eu-west-1`
+  - `eu-west-2`
+  - `eu-west-3`
+  - `me-south-1`
+  - `sa-east-1`
+  - `us-west-1`
+
+### Existing ResourceTypes and PropertyTypes: Added Regions
+
+- [AWS::CloudTrail::EventDataStore](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html)
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `ap-northeast-1`
+
+- [AWS::IoT::CACertificate](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-cacertificate.html)
+  - `ap-east-1`
+  - `cn-northwest-1`
+  - `me-south-1`
+  - `ap-northeast-2`
+
+- [AWS::LakeFormation::PrincipalPermissions](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-principalpermissions.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::Tag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tag.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::AppFlow::ConnectorProfile.ApiKeyCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-apikeycredentials.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.BasicAuthCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-basicauthcredentials.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.CredentialsMap](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-credentialsmap.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.CustomAuthCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customauthcredentials.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.CustomConnectorProfileCredentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.CustomConnectorProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.OAuth2Credentials](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.OAuth2Properties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.ProfileProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-profileproperties.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::ConnectorProfile.TokenUrlCustomProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-tokenurlcustomproperties.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::Flow.CustomConnectorDestinationProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectordestinationproperties.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::Flow.CustomConnectorSourceProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::AppFlow::Flow.CustomProperties](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customproperties.html)
+  - `eu-west-1`
+  - `ap-northeast-2`
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `ca-central-1`
+  - `eu-west-3`
+  - `ap-south-1`
+  - `us-west-1`
+  - `us-west-2`
+  - `us-east-2`
+  - `eu-west-2`
+  - `sa-east-1`
+  - `ap-northeast-1`
+
+- [AWS::CloudTrail::EventDataStore.AdvancedEventSelector](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html)
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `ap-northeast-1`
+
+- [AWS::CloudTrail::EventDataStore.AdvancedFieldSelector](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedfieldselector.html)
+  - `eu-central-1`
+  - `ap-southeast-1`
+  - `us-west-2`
+  - `ap-northeast-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.CatalogResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-catalogresource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.ColumnWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-columnwildcard.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.DataCellsFilterResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datacellsfilterresource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.DataLakePrincipal](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalakeprincipal.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.DataLocationResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-datalocationresource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.DatabaseResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.LFTag](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.LFTagKeyResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagkeyresource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.LFTagPolicyResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftagpolicyresource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.Resource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-resource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.TableResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tableresource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.TableWildcard](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tablewildcard.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+- [AWS::LakeFormation::PrincipalPermissions.TableWithColumnsResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tablewithcolumnsresource.html)
+  - `ap-northeast-2`
+  - `ap-southeast-2`
+  - `ap-southeast-1`
+  - `ap-northeast-3`
+  - `us-west-2`
+  - `eu-west-2`
+  - `cn-northwest-1`
+  - `us-east-1`
+  - `me-south-1`
+  - `ap-northeast-1`
+  - `cn-north-1`
+  - `eu-west-1`
+  - `eu-south-1`
+  - `ap-east-1`
+  - `eu-west-3`
+  - `ca-central-1`
+  - `ap-south-1`
+  - `eu-north-1`
+  - `us-west-1`
+  - `us-east-2`
+  - `sa-east-1`
+  - `af-south-1`
+
+### Existing ResourceTypes and PropertyTypes Not in `us-east-1`
+
+- ResourceType Still Missing
+  - Since v78.0.0: [AWS::DeviceFarm::DevicePool](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-devicepool.html)
+    - `us-west-2`
+
+  - Since v78.0.0: [AWS::DeviceFarm::InstanceProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-instanceprofile.html)
+    - `us-west-2`
+
+  - Since v78.0.0: [AWS::DeviceFarm::NetworkProfile](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-networkprofile.html)
+    - `us-west-2`
+
+  - Since v78.0.0: [AWS::DeviceFarm::Project](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-project.html)
+    - `us-west-2`
+
+  - Since v78.0.0: [AWS::DeviceFarm::TestGridProject](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-testgridproject.html)
+    - `us-west-2`
+
+  - Since v78.0.0: [AWS::DeviceFarm::VPCEConfiguration](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-vpceconfiguration.html)
+    - `us-west-2`
+
+- PropertyType Still Missing
+  - Since v78.0.0: [AWS::DeviceFarm::DevicePool.Rule](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devicefarm-devicepool-rule.html)
+    - `us-west-2`
+
+  - Since v78.0.0: [AWS::DeviceFarm::TestGridProject.VpcConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devicefarm-testgridproject-vpcconfig.html)
+    - `us-west-2`
+
+  - Since v78.0.0: [AWS::EC2::Subnet.PrivateDnsNameOptionsOnLaunch](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-subnet-privatednsnameoptionsonlaunch.html)
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v78.0.0: [AWS::Route53::HealthCheck.AlarmIdentifier](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+  - Since v78.0.0: [AWS::Route53::HealthCheck.HealthCheckConfig](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+    - `af-south-1`
+    - `cn-north-1`
+    - `cn-northwest-1`
+    - `eu-south-1`
+    - `us-gov-east-1`
+    - `us-gov-west-1`
+
+- New PropertyType(s) Missing
+  - [AWS::Logs::MetricFilter.Dimension](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-dimension.html)
+    - `eu-central-1`
 
 ## [78.0.0](https://github.com/ScriptAutomate/aws-cfn-resource-specs/releases/tag/v78.0.0) (2022-06-24)
 
