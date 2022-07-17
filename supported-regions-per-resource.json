@@ -8840,7 +8840,6 @@
         "ap-southeast-1",
         "ap-southeast-2",
         "ca-central-1",
-        "eu-central-1",
         "eu-west-1",
         "eu-west-2",
         "us-east-1",
@@ -11549,7 +11548,7 @@
     },
     "AWS::AutoScaling::ScalingPolicy.StepAdjustment": {
       "AllRegions": true,
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustments.html",
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-stepadjustment.html",
       "Regions": [
         "af-south-1",
         "ap-east-1",
@@ -13441,6 +13440,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-anomalymonitor-resourcetag.html",
       "Regions": [
+        "cn-northwest-1",
         "us-east-1"
       ]
     },
@@ -13448,6 +13448,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-anomalysubscription-resourcetag.html",
       "Regions": [
+        "cn-northwest-1",
         "us-east-1"
       ]
     },
@@ -13455,6 +13456,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-anomalysubscription-subscriber.html",
       "Regions": [
+        "cn-northwest-1",
         "us-east-1"
       ]
     },
@@ -15654,8 +15656,12 @@
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedeventselector.html",
       "Regions": [
         "ap-northeast-1",
+        "ap-south-1",
         "ap-southeast-1",
+        "ap-southeast-2",
         "eu-central-1",
+        "eu-west-1",
+        "sa-east-1",
         "us-east-1",
         "us-west-2"
       ]
@@ -15665,8 +15671,12 @@
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedfieldselector.html",
       "Regions": [
         "ap-northeast-1",
+        "ap-south-1",
         "ap-southeast-1",
+        "ap-southeast-2",
         "eu-central-1",
+        "eu-west-1",
+        "sa-east-1",
         "us-east-1",
         "us-west-2"
       ]
@@ -19434,6 +19444,37 @@
         "us-west-2"
       ]
     },
+    "AWS::Config::ConfigRule.CustomPolicyDetails": {
+      "AllRegions": true,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html",
+      "Regions": [
+        "af-south-1",
+        "ap-east-1",
+        "ap-northeast-1",
+        "ap-northeast-2",
+        "ap-northeast-3",
+        "ap-south-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "ca-central-1",
+        "cn-north-1",
+        "cn-northwest-1",
+        "eu-central-1",
+        "eu-north-1",
+        "eu-south-1",
+        "eu-west-1",
+        "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
+        "sa-east-1",
+        "us-east-1",
+        "us-east-2",
+        "us-gov-east-1",
+        "us-gov-west-1",
+        "us-west-1",
+        "us-west-2"
+      ]
+    },
     "AWS::Config::ConfigRule.Scope": {
       "AllRegions": true,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-scope.html",
@@ -19688,11 +19729,17 @@
         "eu-south-1",
         "eu-west-1",
         "eu-west-3",
-        "me-south-1",
         "us-east-1",
         "us-gov-east-1",
         "us-gov-west-1",
         "us-west-1"
+      ]
+    },
+    "AWS::Config::OrganizationConfigRule.OrganizationCustomPolicyRuleMetadata": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustompolicyrulemetadata.html",
+      "Regions": [
+        "me-south-1"
       ]
     },
     "AWS::Config::OrganizationConfigRule.OrganizationCustomRuleMetadata": {
@@ -36703,6 +36750,21 @@
     "AWS::Evidently::Launch.MetricDefinitionObject": {
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-metricdefinitionobject.html",
+      "Regions": [
+        "ap-northeast-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "eu-central-1",
+        "eu-north-1",
+        "eu-west-1",
+        "us-east-1",
+        "us-east-2",
+        "us-west-2"
+      ]
+    },
+    "AWS::Evidently::Launch.SegmentOverride": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-segmentoverride.html",
       "Regions": [
         "ap-northeast-1",
         "ap-southeast-1",
@@ -55508,11 +55570,26 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-dimension.html",
       "Regions": [
+        "af-south-1",
+        "ap-east-1",
         "ap-northeast-1",
+        "ap-northeast-2",
+        "ap-northeast-3",
+        "ap-south-1",
         "ap-southeast-1",
+        "ap-southeast-2",
+        "ca-central-1",
         "eu-central-1",
+        "eu-north-1",
+        "eu-south-1",
         "eu-west-1",
+        "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
+        "sa-east-1",
         "us-east-1",
+        "us-east-2",
+        "us-west-1",
         "us-west-2"
       ]
     },
@@ -76079,8 +76156,20 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstance-instancemetadataserviceconfiguration.html",
       "Regions": [
+        "ap-northeast-1",
+        "ap-northeast-3",
+        "ap-south-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "ca-central-1",
         "cn-north-1",
         "eu-central-1",
+        "eu-west-1",
+        "eu-west-2",
+        "sa-east-1",
+        "us-east-1",
+        "us-east-2",
+        "us-west-1",
         "us-west-2"
       ]
     },
@@ -76401,8 +76490,19 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-oidcmemberdefinition.html",
       "Regions": [
+        "ap-northeast-1",
+        "ap-south-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "ca-central-1",
         "cn-north-1",
         "eu-central-1",
+        "eu-west-1",
+        "eu-west-2",
+        "sa-east-1",
+        "us-east-1",
+        "us-east-2",
+        "us-west-1",
         "us-west-2"
       ]
     },
@@ -77609,6 +77709,13 @@
         "us-east-1",
         "us-east-2",
         "us-west-2"
+      ]
+    },
+    "AWS::Transfer::Server.As2Transport": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-as2transport.html",
+      "Regions": [
+        "us-east-2"
       ]
     },
     "AWS::Transfer::Server.EndpointDetails": {
@@ -81455,7 +81562,7 @@
       ]
     }
   },
-  "ResourceSpecificationVersion": "79.0.0",
+  "ResourceSpecificationVersion": "81.0.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "AllRegions": false,
@@ -84132,7 +84239,7 @@
     },
     "AWS::AutoScaling::ScalingPolicy": {
       "AllRegions": true,
-      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html",
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html",
       "Regions": [
         "af-south-1",
         "ap-east-1",
@@ -84595,6 +84702,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html",
       "Regions": [
+        "cn-northwest-1",
         "us-east-1"
       ]
     },
@@ -84602,6 +84710,7 @@
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html",
       "Regions": [
+        "cn-northwest-1",
         "us-east-1"
       ]
     },
@@ -85571,8 +85680,12 @@
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html",
       "Regions": [
         "ap-northeast-1",
+        "ap-south-1",
         "ap-southeast-1",
+        "ap-southeast-2",
         "eu-central-1",
+        "eu-west-1",
+        "sa-east-1",
         "us-east-1",
         "us-west-2"
       ]
@@ -100729,6 +100842,31 @@
         "us-west-2"
       ]
     },
+    "AWS::RolesAnywhere::CRL": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html",
+      "Regions": [
+        "ap-east-1",
+        "ap-northeast-1",
+        "ap-northeast-2",
+        "ap-northeast-3",
+        "ap-south-1",
+        "ap-southeast-1",
+        "ap-southeast-2",
+        "ca-central-1",
+        "eu-central-1",
+        "eu-north-1",
+        "eu-west-1",
+        "eu-west-2",
+        "eu-west-3",
+        "me-south-1",
+        "sa-east-1",
+        "us-east-1",
+        "us-east-2",
+        "us-west-1",
+        "us-west-2"
+      ]
+    },
     "AWS::RolesAnywhere::Profile": {
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html",
@@ -104186,6 +104324,13 @@
         "us-west-2"
       ]
     },
+    "AWS::Synthetics::Group": {
+      "AllRegions": false,
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-group.html",
+      "Regions": [
+        "eu-central-1"
+      ]
+    },
     "AWS::Timestream::Database": {
       "AllRegions": false,
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html",
@@ -105209,12 +105354,17 @@
       ]
     }
   },
-  "TotalPropertyTypes": 3256,
-  "TotalPropertyTypesSupportedGlobally": 1132,
-  "TotalResourceTypes": 944,
+  "TotalPropertyTypes": 3260,
+  "TotalPropertyTypesSupportedGlobally": 1133,
+  "TotalResourceTypes": 946,
   "TotalResourceTypesSupportedGlobally": 344,
   "TypesNotInUSEAST1": {
     "PropertyTypes": {
+      "AWS::Config::OrganizationConfigRule.OrganizationCustomPolicyRuleMetadata": {
+        "Regions": [
+          "me-south-1"
+        ]
+      },
       "AWS::DeviceFarm::DevicePool.Rule": {
         "Regions": [
           "us-west-2"
@@ -105251,18 +105401,9 @@
           "us-gov-west-1"
         ]
       },
-      "AWS::SageMaker::NotebookInstance.InstanceMetadataServiceConfiguration": {
+      "AWS::Transfer::Server.As2Transport": {
         "Regions": [
-          "cn-north-1",
-          "eu-central-1",
-          "us-west-2"
-        ]
-      },
-      "AWS::SageMaker::Workteam.OidcMemberDefinition": {
-        "Regions": [
-          "cn-north-1",
-          "eu-central-1",
-          "us-west-2"
+          "us-east-2"
         ]
       }
     },
@@ -105296,8 +105437,13 @@
         "Regions": [
           "us-west-2"
         ]
+      },
+      "AWS::Synthetics::Group": {
+        "Regions": [
+          "eu-central-1"
+        ]
       }
     },
-    "Total": 13
+    "Total": 14
   }
 }
