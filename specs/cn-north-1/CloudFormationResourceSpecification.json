@@ -44478,7 +44478,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "86.0.0",
+  "ResourceSpecificationVersion": "87.0.0",
   "ResourceTypes": {
     "AWS::AccessAnalyzer::Analyzer": {
       "Attributes": {
@@ -52656,6 +52656,12 @@
         },
         "ConnectivityType": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-connectivitytype",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "PrivateIpAddress": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-privateipaddress",
           "PrimitiveType": "String",
           "Required": false,
           "UpdateType": "Immutable"
@@ -65959,6 +65965,49 @@
           "Required": false,
           "Type": "List",
           "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::Route53Resolver::ResolverQueryLoggingConfig": {
+      "Attributes": {
+        "Arn": {
+          "PrimitiveType": "String"
+        },
+        "AssociationCount": {
+          "PrimitiveType": "Integer"
+        },
+        "CreationTime": {
+          "PrimitiveType": "String"
+        },
+        "CreatorRequestId": {
+          "PrimitiveType": "String"
+        },
+        "Id": {
+          "PrimitiveType": "String"
+        },
+        "OwnerId": {
+          "PrimitiveType": "String"
+        },
+        "ShareStatus": {
+          "PrimitiveType": "String"
+        },
+        "Status": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html",
+      "Properties": {
+        "DestinationArn": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html#cfn-route53resolver-resolverqueryloggingconfig-destinationarn",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
+        },
+        "Name": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html#cfn-route53resolver-resolverqueryloggingconfig-name",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable"
         }
       }
     },
