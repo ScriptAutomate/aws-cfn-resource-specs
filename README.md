@@ -1,3 +1,5 @@
+> :warning: **NOTE:** This repository is **archived**, but others are free to fork and maintain a version if they'd like. I haven't used CloudFormation for a long time now, and this repository was for the most part automatically able to just run by itself up until recently. It may still be able to continue running automatically if spun-up, as-is, with tokens that had the proper permissions to open PRs and automatically merge them. The Python code is rather gnarly, as it was one of those things that went from a script I just wrote to help make insight more convenient for feedback to people at AWS, along with auto-generative code and detailed help documentation for modules meant to assist with CloudFormation template creation. With that being said, it may be difficult to extend due to how it was created.
+
 # AWS CloudFormation Resource Specification Auditor
 
 > *A Completely Tracked, Versioned, and Audited Collection Store of CloudFormationResource.json Resource Specification Files*
